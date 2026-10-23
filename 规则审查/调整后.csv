@@ -1,0 +1,124 @@
+﻿project,hash,name,aliases,type,folder,secret,action,reason,before,changed
+B22026LD001,cf11d75cd61b9ae4ce5b5b2a13d3adacba24d3a6972dd5b7895080d0076ca1e5,核酸电泳+蓝光仪一体100%进项票.pdf,核酸电泳+蓝光仪一体100%进项票.pdf,发票（国内货物类）,结算移交,True,归档,文件名规则匹配：发票（国内货物类）,发票（国内货物类）,False
+B22026LD001,f10f3ebf44470844469545c3e98553958cf778b000e3cb1adecf09661fdec25e,004-武汉赛维尔-产品合同-郭秀武1836.8（核酸电泳+蓝光仪一体机、掌上离心机）.pdf,004-武汉赛维尔-产品合同-郭秀武1836.8（核酸电泳+蓝光仪一体机、掌上离心机）.pdf,采购合同,合同,False,归档,文件名规则匹配：采购合同,采购合同,False
+B22026LD001,25bb571f5640d079220d0173eb8232f3771e8a1474a053ce551c7d3347909451,付款记录.png,付款记录.png / 付款记录_2.png,付款凭证,收付款,True,归档,按凭证用途和收付款方向识别，合同关键词仅为引用,付款凭证,False
+B22026LD001,326786c739eed95dcee227bfdbe09c18727b0579e45cef5c32e230ec971bc7d3,可行性测算表.xlsx,可行性测算表.xlsx,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+B22026LD001,50a797ace9f996777234addd2c776d151cb520d97e985051d7626aa1b27b400e,四方外贸合同.docx,四方外贸合同.docx,外贸报关合同,合同,False,归档,文件名规则匹配：外贸报关合同,外贸报关合同,False
+B22026LD001,4362627271d7842118860ac1450484b22769a9615d13006c2463b9b2db7bd966,开票资料.pdf,开票资料.pdf,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+B22026LD001,2b267b09e04686e66676e3eeeb72a552af05baee004096e0e0d89804060fc864,总合作协议书9.10(2).pdf,总合作协议书9.10(2).pdf,协议,合同,False,归档,文件名规则匹配：协议,协议,False
+B22026LD001,d4f736c8a21ba9a052c8328b1c11ee7a830bc886251e6e68de4a6f939ef8b516,深圳理工大学（免税进口）设备采购内贸合同.doc,深圳理工大学（免税进口）设备采购内贸合同.doc,中标合同（内贸）,合同,False,归档,文件名规则匹配：中标合同（内贸）,中标合同（内贸）,False
+B22026LD001,841417ca2e029f42f16c41b8cc71858242ae6e5b6549ae7f58e481e149e29337,GD20260907-深圳市立达方圆-注射泵DMP900_扫描版盖章.pdf,GD20260907-深圳市立达方圆-注射泵DMP900_扫描版盖章.pdf,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+B22026LD001,558751a6dda8b640d11aeb32d789f28b4337f0564f2a761c4e6558fb20e8d821,付款记录.png,付款记录.png,付款凭证,收付款,True,归档,按凭证用途和收付款方向识别，合同关键词仅为引用,付款凭证,False
+B22026LD001,6a076706b3e846a878bef75e20c0dfa52be939e88dbde688fd53c477e2d81bc9,二方采购合同（国产）Ts2R显微注射显微镜.pdf,二方采购合同（国产）Ts2R显微注射显微镜.pdf,采购合同,合同,False,归档,文件名规则匹配：采购合同,采购合同,False
+B22026LD001,b577dea4af7e24bd976f57d2bc55a75f952067b4bb0dc0caeb8fc78fcbd3da25,付款记录_2.png,付款记录_2.png,付款凭证,收付款,True,归档,按凭证用途和收付款方向识别，合同关键词仅为引用,付款凭证,False
+B22026LD001,f2b6022ed30a0e953c38ee9cf922156a05cceb04ce6a6db5bc153e54ac10153c,开票资料.png,开票资料.png,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+B22026LD001,edc9ff6233a5ca7c4ed36891e607e01d7c208947e037469faf049e5db6b0f874,可移动麻醉机(三通道)100%进项发票.pdf,可移动麻醉机(三通道)100%进项发票.pdf,发票（国内货物类）,结算移交,True,归档,文件名规则匹配：发票（国内货物类）,发票（国内货物类）,False
+B22026LD001,2d5b0fcc92e1e23374e1d45e87cdeeff7bc22e78a0cba91ef1fdf3a9e20ca6d8,二方采购合同（国产）可移动麻醉机(三通道)9.8.pdf,二方采购合同（国产）可移动麻醉机(三通道)9.8.pdf,采购合同,合同,False,归档,文件名规则匹配：采购合同,采购合同,False
+B22026LD001,ce62597907d1ef89ebbd062fd207bb5bf34715a64ed0c3a1ac6f2b9c43958740,两方合同（进口）双独立注射泵9.16.pdf,两方合同（进口）双独立注射泵9.16.pdf,采购合同,合同,False,归档,文件名规则匹配：采购合同,采购合同,False
+B22026LD001,6a77c0ba0f51a3a3e1a2cbda5dea90f32dfc9d244d85f151de66d849e4f52bfe,二方发票.pdf,二方发票.pdf,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+B22026LD001,61699237faee8a7442beb217e9d89dec8a61bfa01d6a4181c94f2e53863adcc7,大小鼠冷热板测痛仪100%进项票.pdf,大小鼠冷热板测痛仪100%进项票.pdf,发票（国内货物类）,结算移交,True,归档,文件名规则匹配：发票（国内货物类）,发票（国内货物类）,False
+B22026LD001,605a8dc7e97865ee0265a852d99d03bf839776e52376055da6a2e1f74164e445,二方采购合同大小鼠冷热板测痛仪9.18.pdf,二方采购合同大小鼠冷热板测痛仪9.18.pdf,采购合同,合同,False,归档,文件名规则匹配：采购合同,采购合同,False
+24JZBTPFB157-401,bf258cc31ef53a2da368c421b52895b25eabac1708225503b9552cacaf3a657a,Your confirned PO 799-2024 厂商确认采购合同版本.jpg,Your confirned PO 799-2024 厂商确认采购合同版本.jpg,采购合同,合同,False,归档,文件名规则匹配：采购合同,采购合同,False
+24JZBTPFB157-401,90bab8fefa8191cccf5a728833e71867da386b100ef413901e59f160643636ff,sample of PO-779-2024.docx,sample of PO-779-2024.docx,,,False,跳过,样稿、模板或形式发票不作为正式归档文件,,False
+24JZBTPFB157-401,281d4f5b5c6700d286a1be2928a39e101549d7d40c83625e3e5341a5465bc17e,可行性测算表-残余气体分析仪等采购.xlsx,可行性测算表-残余气体分析仪等采购.xlsx,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,877c2764781039917aabbca2afd7a1865a0cb6ea08934e41bd3fde6be2347574,Invoice-387-3-2024-Spare gaskets-Tiangang Yang-by Precise Instrumets COM. LIM.April 27.2024 更新.pdf,Invoice-387-3-2024-Spare gaskets-Tiangang Yang-by Precise Instrumets COM. LIM.April 27.2024 更新.pdf,发票（进口）,清关送货,False,归档,英文文件名推定为进口发票，尚未核验正文和贸易性质,发票（进口）,False
+24JZBTPFB157-401,e7395855d1ccb16ca1c0c2ea1d6979587c5f44bee449799e7391a481040464e8,PO 779-2024.pdf,PO 779-2024.pdf / 垫片合同PO 779-2024.pdf,采购合同,合同,False,归档,英文文件名识别为采购订单，请核对是否为正式订单,采购合同,False
+24JZBTPFB157-401,2b297dfd2841fef796d287b84e6ca7b85dbee1c532880e20a8de56fe071aacd3,发展告知先下单买配件.png,发展告知先下单买配件.png,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,330161e8fe0a728002ae71215d5a9b2858d97504e801ad7aa1e639ef0b0cf741,3183019442.awb.202405021725340003.tif,3183019442.awb.202405021725340003.tif,运单/提单,清关送货,False,归档,英文文件名识别：AWB / Air waybill / Bill of lading,,True
+24JZBTPFB157-401,8de4e5a583cd0d345712f964da5faea838a9737087205b1c33eccaf182201cac,Pascking list-Spare gaskets-Tiangang Yang-by Precise Instrumets COM. LIM.Mai-1.2024 原厂.pdf,Pascking list-Spare gaskets-Tiangang Yang-by Precise Instrumets COM. LIM.Mai-1.2024 原厂.pdf,箱单,清关送货,False,归档,英文文件名识别：Packing list（箱单）,,True
+24JZBTPFB157-401,58c73032f11dc8f3e26e9a59ee869e35d4b11d99f3023a6e3a6d3aa8cd9de48f,以色列阀报关说明.docx,以色列阀报关说明.docx,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,6dd3380cdc8f08479513fa062e194e259e2bdb5b83c3d1fca8f2fdeea82fc636,杨天罡 身份证正反面.png,杨天罡 身份证正反面.png,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,579dd40d177692cf3f7f88ec8061cff339c83999c7c44fb19ca7272bcbd27e17,申报要素.png,申报要素.png,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,e2813d025cba7fb42f03f467790085ede7c2d50be23b2a49aa3a38294bd1b06a,dzfp_24952000000064835536_深圳市深业晋展物料供应有限公司_20240511100523.pdf,dzfp_24952000000064835536_深圳市深业晋展物料供应有限公司_20240511100523.pdf / 垫片报关费dzfp_24952000000064835536_深圳市深业晋展物料供应有限公司_20240511100523.pdf,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,9d2b667fa489b96cbb4035309a2d056f0aff6e30789a743df8e3aa0794313ba7,两方合同（进口货物）修订.doc,两方合同（进口货物）修订.doc,采购合同,合同,False,归档,文件名规则匹配：采购合同,采购合同,False
+24JZBTPFB157-401,8140fb0f412a95cd4f46dabf0c580696b1fa7a6786caeb25084b4cbede56c9d2,产品1-5彩页.docx,产品1-5彩页.docx,彩页说明书,办证,False,归档,文件名规则匹配：彩页说明书,彩页说明书,False
+24JZBTPFB157-401,f9fb98d6058f6a5cfcb6d0f3fb1255b4f5f90812338ef92d521cdfbe21ea1270,产品6压电陶瓷脉冲阀彩页.pdf,产品6压电陶瓷脉冲阀彩页.pdf,彩页说明书,办证,False,归档,文件名规则匹配：彩页说明书,彩页说明书,False
+24JZBTPFB157-401,e486c3a2af3fb587e25fb9d4b18df5c41b1bd63ca6927064a7892bb2f8cb99f6,发展确认两方合同迟交货和不能交货条款.png,发展确认两方合同迟交货和不能交货条款.png,,,False,跳过,文件名指向合同条款确认或沟通材料，不能据此认定为合同正文,,False
+24JZBTPFB157-401,d015f5527cc5ac96cf38da1e88c7ef672c5b69fea095d093e03c5e4eaf802848,发展确认两方合同迟交货和不能交货条款2.png,发展确认两方合同迟交货和不能交货条款2.png,,,False,跳过,文件名指向合同条款确认或沟通材料，不能据此认定为合同正文,,False
+24JZBTPFB157-401,34d7170d28f4da6d85756c5ff7c0e9aba6a361184849b6898f05aba529010563,可行性测算表 商务.xlsx,可行性测算表 商务.xlsx,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,8677f7c9bd276d5e16d6cfa55a1592b15dd7189f07395e0a2535953fd3e0e936,进口增值税发票.pdf,垫片 进口税费发票.pdf / 进口增值税发票.pdf,,,False,跳过,进口税费凭证不能按国内货物发票归档，现有分类未定义该类型,发票（国内货物类）,True
+24JZBTPFB157-401,51b840e5904f8944c377ee2294f2fe3d2b697b98fdf4ed1189ebc8cb2a4f7bb0,PO-contract-2024.6.18 UPDATE.doc,PO-contract-2024.6.18 UPDATE.doc,采购合同,合同,False,归档,英文文件名识别为采购订单，请核对是否为正式订单,采购合同,False
+24JZBTPFB157-401,e1acfe101b0dec2a2bcedb762024bd7d8b51feb00921bf437e9afeb911f7d17f,三方合同 残余气体分析仪、压电陶瓷脉冲阀等设备采购.docx,三方合同 残余气体分析仪、压电陶瓷脉冲阀等设备采购.docx,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,d6725210ae1e1c9dccb73c84c93f8e841e36a7e958c30dc1a021f3edac6af11c,两方合同（进口货物）残余气体分析仪等.pdf,两方合同（进口货物）残余气体分析仪等.pdf,采购合同,合同,False,归档,文件名规则匹配：采购合同,采购合同,False
+24JZBTPFB157-401,e0122afa5c94cc10cdbec2f386ed9621b91d75cea29a663dc94d877d61eb4674,中标通知书.pdf,中标通知书.pdf,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,305e0bb252c80b4ce5812d7a080d7ac10e78a1cda86c093f3daf1ebdc4cab377,中行折算价欧元 6.7.png,中行折算价欧元 6.7.png,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,6ef464801439c30b564ab4adc7bdc90714b1c9062d6de7ca79de3cdc2ad684b2,中行折算价美 6.7.png,中行折算价美 6.7.png,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,a4d4d8c15f3994563b483b9ad3c4cd3c71e93e6311876c2d8b3ba076e8c6697f,免税同事确认门控模块办理免税事宜.png,免税同事确认门控模块办理免税事宜.png,,,False,跳过,沟通或业务确认材料，不属于需求定义的正式文件类型,,False
+24JZBTPFB157-401,c37ccdf5e9a42bf98e3bfaf9a7337ba469140a7fe9553415a98b773fa4539380,内贸合同 残余气体分析仪、压电陶瓷脉冲阀等设备采购.doc,内贸合同 残余气体分析仪、压电陶瓷脉冲阀等设备采购.doc,中标合同（内贸）,合同,False,归档,文件名规则匹配：中标合同（内贸）,中标合同（内贸）,False
+24JZBTPFB157-401,88ee52f2dfc6bb7a95c321f2e2daffe3713885c3d7042851a2750cca9a11db81,内贸合同-水印版.pdf,内贸合同-水印版.pdf,中标合同（内贸）,合同,False,归档,文件名规则匹配：中标合同（内贸）,中标合同（内贸）,False
+24JZBTPFB157-401,6892b46fbf2527dcecdfdc64d9ecf92f3747ffcefdbf13c7da8b40c963e02f31,发展确认内贸货物维修条款.png,发展确认内贸货物维修条款.png,,,False,跳过,沟通或业务确认材料，不属于需求定义的正式文件类型,,False
+24JZBTPFB157-401,72ef701cb58def55b3fd65ddebcdd9ef6e723d53056ecd8a2b348c079cac518c,外贸合同-水印版.pdf,外贸合同-水印版.pdf,外贸报关合同,合同,False,归档,文件名规则匹配：外贸报关合同,外贸报关合同,False
+24JZBTPFB157-401,72fb2235011a1d5b5795bffa4a013f6ed9cd0dd03028a5004022e8a6dd93dea3,承诺函-水印版.pdf,承诺函-水印版.pdf,承诺函/书,合同,False,归档,文件名规则匹配：承诺函/书,承诺函/书,False
+24JZBTPFB157-401,a80a59c8262ae27aaff6ce2e51b965d156e5d9a401f4524d078bfdd53afc96bc,承诺函.docx,承诺函.docx,承诺函/书,合同,False,归档,文件名规则匹配：承诺函/书,承诺函/书,False
+24JZBTPFB157-401,9869c9a8fd390dc50d80cadc4b8579b45b45ab029c75d69205a3eb6e1b2ca249,普利赛斯发票.doc,普利赛斯发票.doc,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,8caef6cef6644f2f67b5148365deed2532242f2ea3d464d1863b23ab81ea8e58,门控模块搭配主机21JZBTPB157-415的粒子探测器.rar,门控模块搭配主机21JZBTPB157-415的粒子探测器.rar,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,e05008d8ea094b0f59260a6c7cb5deb5b04cb7b72f48010de2977aea2e8bc1f3,内贸合同24-157-401.pdf,内贸合同24-157-401.pdf,中标合同（内贸）,合同,False,归档,文件名规则匹配：中标合同（内贸）,中标合同（内贸）,False
+24JZBTPFB157-401,08f51408bde933078c03113916c5d223fd9a7af3f8e8fb3b321a56e37f068547,发展确认垫付预付款残余气体分析仪等设备两方合同.png,发展确认垫付预付款残余气体分析仪等设备两方合同.png,,,False,跳过,文件名指向合同条款确认或沟通材料，不能据此认定为合同正文,,False
+24JZBTPFB157-401,22c4f3f5bb5d854cbe41344cb5900ff72efc1cd571b346601bdcddcd2a98ab55,发票.pdf,发票.pdf,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,b3840e244c4f54f3a473d6ef8354ab97724501cefdc126a67e2dd58dedc76a34,外贸合同24-157-401.pdf,外贸合同24-157-401.pdf,外贸报关合同,合同,False,归档,文件名规则匹配：外贸报关合同,外贸报关合同,False
+24JZBTPFB157-401,740e5952666e0ab719f559654cec8131c75940943b1642e70104fe640e02be9d,PI-24JZBTPFB157-401 两方发票 残余气体分析仪等.pdf,PI-24JZBTPFB157-401 两方发票 残余气体分析仪等.pdf,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,8e603479a1722f5da48880f6824bf5e584118ebd7ef9c0f3c33218bc00422782,减免税进口货物说明表 压电陶瓷脉冲阀.docx,减免税进口货物说明表 压电陶瓷脉冲阀.docx,减免税进口货物说明表,办证,False,归档,文件名规则匹配：减免税进口货物说明表,减免税进口货物说明表,False
+24JZBTPFB157-401,37ae839b7e49032fdd576e60c885af3f60c6f2d7de3c0ee81409cf79be022d9c,减免税进口货物说明表 数字脉冲延迟发生器.docx,减免税进口货物说明表 数字脉冲延迟发生器.docx,减免税进口货物说明表,办证,False,归档,文件名规则匹配：减免税进口货物说明表,减免税进口货物说明表,False
+24JZBTPFB157-401,0cb5c58bf801c574dd54ed888635883bb9afc363fbeafc1d609f195f00ccf8e1,减免税进口货物说明表 残余气体分析仪.docx,减免税进口货物说明表 残余气体分析仪.docx,减免税进口货物说明表,办证,False,归档,文件名规则匹配：减免税进口货物说明表,减免税进口货物说明表,False
+24JZBTPFB157-401,78378495ddf70c05f2217e4c5893f18ca8b8ed11feca2317979528af33a41784,减免税进口货物说明表 门控模块.docx,减免税进口货物说明表 门控模块.docx,减免税进口货物说明表,办证,False,归档,文件名规则匹配：减免税进口货物说明表,减免税进口货物说明表,False
+24JZBTPFB157-401,3858edc8315f6687f614db1925d90f1b0096e8f1c31aa1f7179cb3a9cb417689,减免税进口货物说明表 高压电源DPS3-2P5P10P.docx,减免税进口货物说明表 高压电源DPS3-2P5P10P.docx,减免税进口货物说明表,办证,False,归档,文件名规则匹配：减免税进口货物说明表,减免税进口货物说明表,False
+24JZBTPFB157-401,9bec96b888a5b5f9059a71c456f74b75683833a4de50cc1d7074ae60da190012,减免税进口货物说明表 高压电源PS350.docx,减免税进口货物说明表 高压电源PS350.docx,减免税进口货物说明表,办证,False,归档,文件名规则匹配：减免税进口货物说明表,减免税进口货物说明表,False
+24JZBTPFB157-401,37b2294ca1d0f70898bd4ef395b5b6545575e7a9a846ff1991aaef5cec3eb84c,CCC目录外产品情况声明.xls,CCC目录外产品情况声明.xls,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,60f9b69cdd1aa3297c5924b1c5b991207c0f8ba6369bfd5b2e6fff9fb1c644d7,FedEx-AWB-5Sep2024.pdf,FedEx-AWB-5Sep2024.pdf,运单/提单,清关送货,False,归档,英文文件名识别：AWB / Air waybill / Bill of lading,,True
+24JZBTPFB157-401,f1e4455e11d3495170f239198bceb77fcbdd3883650c8a9846980a77455dee28,FedEx-ProFormaInvoice-5Sep2024.pdf,FedEx-ProFormaInvoice-5Sep2024.pdf,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,65cacea0bfa524eec0a89e814334a0740046070453ff6f5f2b8f214f6f5d8cba,免表 脉冲阀.pdf,免表 脉冲阀.pdf,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,9ac8a32b560091f24df59e75bc566277ed25af25d2a1ee9ad7e0611cfc108a4c,免表底单 脉冲阀 3C.pdf,免表底单 脉冲阀 3C.pdf,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,998c1ee77d0bda9a410bac022c4b87cb10c47f1558b7c8b46dbb003858b59c15,普利赛斯发票.doc,普利赛斯发票.doc,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,e88f91402c326542285d7ef641d74c02c72e66f04a74e33aa51c84f231ecfef1,普利赛斯箱单.doc,普利赛斯箱单.doc,箱单,清关送货,False,归档,文件名规则匹配：箱单,箱单,False
+24JZBTPFB157-401,7bc8ce0fb6985aa6689bb917f091d7ec78956ad6f9514e5d61700dd110d0f560,发展确认SRS品牌设备先垫付70%尾款.png,发展确认SRS品牌设备先垫付70%尾款.png,,,False,跳过,沟通或业务确认材料，不属于需求定义的正式文件类型,,False
+24JZBTPFB157-401,2a70f0d70e8d05c852f1668a2db4f0118dbbee7bc1d0217a2773765a31b61310,发展确认三方剩余金额付完（包括欧元及美元）.png,发展确认三方剩余金额付完（包括欧元及美元）.png,,,False,跳过,沟通或业务确认材料，不属于需求定义的正式文件类型,,False
+24JZBTPFB157-401,50029833f6b96a56899e6c6629749116c9d90a4a106cf540ffe03ddb226249ba,水单USD21264.pdf,水单USD21264.pdf,付款凭证,收付款,True,归档,按凭证用途和收付款方向识别，合同关键词仅为引用,,True
+24JZBTPFB157-401,493bd6c36d0bad0b133aa173e0f8d2281aa5dc9e3d71db5316805345f3955f07,514120241414290725_报关单.pdf,514120241414290725_报关单.pdf,报关单,清关送货,False,归档,文件名规则匹配：报关单,报关单,False
+24JZBTPFB157-401,89426256206ade3462e6b79d7b714158c42af114c60acf39135f655ad5fa4373,PO-contract-2024.6.18 UPDATE Buyer's signed version.pdf,PO-contract-2024.6.18 UPDATE Buyer's signed version.pdf,采购合同,合同,False,归档,英文文件名识别为采购订单，请核对是否为正式订单,采购合同,False
+24JZBTPFB157-401,0ecc002d5034492d95a1388dc4756110efe823950dfbcf4bc13aee55439d2ebd,支付残余气体分析仪等两方预付款.png,支付残余气体分析仪等两方预付款.png,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,f219e6396d70af3f8b5743d2bc35db3210c112029fc90d5f85d825858e7edff1,CCC目录外产品情况声明 高压电源.xls,CCC目录外产品情况声明 高压电源.xls,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,69812d4cf318ff7af5cb067c923826fa40d9d4218e2fe2b4ff10a45f6f74b6c6,PL--C202400252 供货商.pdf,PL--C202400252 供货商.pdf,箱单,清关送货,False,归档,英文文件名识别：Packing list（箱单）,,True
+24JZBTPFB157-401,91c6b378211b26399fa44af240586d9e0db37c88b7ee720be0e80bad797c286c,免表 残余气体分析仪等.pdf,免表 残余气体分析仪等.pdf,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,6abad252fc5628501b474bec3b09867d4f49a108bfb6540835c0df194f7e763d,免表底单 残余气体分析仪等.pdf,免表底单 残余气体分析仪等.pdf,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,7cfeed71f14578be4db0dae81db2598ddb37f68504aef3631bc58e07a634b0dc,普利赛斯发票.doc,普利赛斯发票.doc,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,927289c692238f9d7df4794c9637f2692043b9bf0b4ecaea86077fddef49d496,普利赛斯箱单.doc,普利赛斯箱单.doc,箱单,清关送货,False,归档,文件名规则匹配：箱单,箱单,False
+24JZBTPFB157-401,34976e1a57adc5625efbe9a10fc4af3cbc410bc85bb800a11cbda1005189ed6c,确认申报净重及包装.png,确认申报净重及包装.png,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,665f5dd734f18ccf5a4fd99f19c5740f2aa94731b0026f62a05760eb5ed0d9d3,运单.pdf,运单.pdf,运单/提单,清关送货,False,归档,文件名规则匹配：运单/提单,运单/提单,False
+24JZBTPFB157-401,7ea25614c274f898e6b8b7447b8913ebc05ff5a2b775f2c97d830dc3a669b6a7,晋展170163224.pdf,晋展170163224.pdf,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,b7658a07c2ec89b374f62fc08af1dc5470f8fc52e7b4087df03ef26242d824a1,箱单.pdf,箱单.pdf,箱单,清关送货,False,归档,文件名规则匹配：箱单,箱单,False
+24JZBTPFB157-401,dce509e2be75d7509a360f4a897f33d6e42b22ec7c43aebd76b3ffd5d0de226c,PO-Shenzhen-Signed压电陶瓷脉冲阀 两方双签.pdf,PO-Shenzhen-Signed压电陶瓷脉冲阀 两方双签.pdf,采购合同,合同,False,归档,英文文件名识别为采购订单，请核对是否为正式订单,采购合同,False
+24JZBTPFB157-401,f3fed1538231eabf464423b7416cbc730c1d9773b8730c6c64e7f320f5ac9a0e,Signed-Invoice-2024-1155压电陶瓷脉冲阀.pdf,Signed-Invoice-2024-1155压电陶瓷脉冲阀.pdf,发票（进口）,清关送货,False,归档,英文文件名推定为进口发票，尚未核验正文和贸易性质,发票（进口）,False
+24JZBTPFB157-401,87c2c0686e25b76eb1d2a4e1a1b23f3afb30e9f71ae506021de4a2e815821316,两方支付凭证（参考19-157-428合同）.pdf,两方支付凭证（参考19-157-428合同）.pdf,付款凭证,收付款,True,归档,按凭证用途和收付款方向识别，合同关键词仅为引用,,True
+24JZBTPFB157-401,a0be2f6e86bc18fd0e5d383b5f5a92658e70c3ff442dfca2846e518b327fe0f7,发展确认支付压电陶瓷脉冲阀两方货款.png,发展确认支付压电陶瓷脉冲阀两方货款.png,,,False,跳过,沟通或业务确认材料，不属于需求定义的正式文件类型,,False
+24JZBTPFB157-401,d25d8d2bd4fd41f5f53a554788b74bbb8acbce42ef45b8bc7f6831446729e7e4,水单EUR40804.pdf,水单EUR40804.pdf,付款凭证,收付款,True,归档,按凭证用途和收付款方向识别，合同关键词仅为引用,,True
+24JZBTPFB157-401,a4d37695bdb03c2deebd766bd58bf08a785620698a1d3caaa7726b2712a85f77,免表 高压电源 门控模块.pdf,免表 高压电源 门控模块.pdf,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,f30ef72eacefd713a04a3b3ea4acd005ee4dc6f470596b0029bfe695a87c5e05,情况说明-24-157-401 货期延后.docx,情况说明-24-157-401 货期延后.docx,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,8e15c8b0e8a60b2c89a57a0e05c2dbefe801bfe0583f2091e6b71df8ff09a8bc,发展确认核减设备事宜.png,发展确认核减设备事宜.png,,,False,跳过,沟通或业务确认材料，不属于需求定义的正式文件类型,,False
+24JZBTPFB157-401,59301800fecbb401a1349ad315cb6d22b202aa320b9645c39e4cb5aceff1b124,项目核减已审核.rar,项目核减已审核.rar,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,a4c9d6f009c20e4942abf4a8fedf3428b8fd680f8decd38bffc11fe6b979fd78,dzfp_25952000000127454924_南方科技大学_20250625143151.pdf,dzfp_25952000000127454924_南方科技大学_20250625143151.pdf / 差额发票.pdf,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,301bd745857abee880d57cd0791ab17d40b27383b9dc00f3842ec3d8d6c2740c,内贸补充合同.pdf,内贸补充合同.pdf,中标合同（内贸）,合同,False,归档,文件名规则匹配：中标合同（内贸）,,True
+24JZBTPFB157-401,ac2803e3a73c741adcc18feafc5145584758c0e6a69b6153a575d20e66f00cf1,外贸补充合同.pdf,外贸补充合同.pdf,外贸报关合同,合同,False,归档,文件名规则匹配：外贸报关合同,,True
+24JZBTPFB157-401,e8115e118ccbe31df9a06750133aba61809e2675943a66cfe223a4f2b16f29be,差额计算.docx,差额计算.docx,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,79d54d11846051f18c25f9fcb66c5f63681c33155440a4011a0d332330597a88,总代理协议QF.pdf,总代理协议QF.pdf,协议,合同,False,归档,文件名规则匹配：协议,协议,False
+24JZBTPFB157-401,86efcecb16275231177353e92248321d9e12c3e7a12806aad768c23590663744,签收单 残余气体分析仪等.jpg,签收单 残余气体分析仪等.jpg,货物签收单,清关送货,False,归档,文件名规则匹配：货物签收单,货物签收单,False
+24JZBTPFB157-401,161de3ce172f33e0763a36ae63ad5b62ba617b5f62ae8d4914d65c98d15865de,签收单 脉冲阀.pdf,签收单 脉冲阀.pdf,货物签收单,清关送货,False,归档,文件名规则匹配：货物签收单,货物签收单,False
+24JZBTPFB157-401,893df8f91ec0b4a9bbb238f210dc293ade2cc2d041c4b1a8666e30718d642eec,送货单  压电陶瓷脉冲阀.pdf,送货单  压电陶瓷脉冲阀.pdf,发货单/送货单,清关送货,False,归档,文件名规则匹配：发货单/送货单,发货单/送货单,False
+24JZBTPFB157-401,30c55a86ecfbad70247747fb47674be6f9566da5df8b389bf76d12c3cece0a8c,送货单 残余气体分析仪等.pdf,送货单 残余气体分析仪等.pdf,发货单/送货单,清关送货,False,归档,文件名规则匹配：发货单/送货单,发货单/送货单,False
+24JZBTPFB157-401,2eefc03b5a164298d59bd22cbea78ecae928d24ac88f7ba84148c4be188b0580,水单USD59640 底单.pdf,水单USD59640 底单.pdf,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,7ea643146d96835d50da5a3d4b276265980f358a25d67a19c1392a7f749d788d,水单USD59640.pdf,水单USD59640.pdf,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,0fde5a6e6568d4f44ca19147730fd2ce664233a6b754647e995c589abae5874d,结算单24-157-401 0820.xlsx,结算单24-157-401 0820.xlsx,结算表,结算移交,True,归档,文件名规则匹配：结算表,,True
+24JZBTPFB157-401,dd41188a51c9a16bf1c8bcb031e3405e2bd4a5ba72b1c7776476d067683d265f,PRE退JZ.png,PRE退JZ.png,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,8d2e6bc4cb891034eb0ec329a935a5768709b377c7b25e1a575508591e17ac1a,PRE退JZ手续费.png,PRE退JZ手续费.png,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,b72b814859af6a0cecf67005954d214b2cc15b77b7f2decf8f3e50a9b55b0f86,两方合同（补充合同）残余气体分析仪等.pdf,两方合同（补充合同）残余气体分析仪等.pdf,采购合同,合同,False,归档,文件名规则匹配：采购合同,采购合同,False
+24JZBTPFB157-401,d46b2eb9f69e8e394bd0ac0401548c8e22ebdb7d703cca63680bee8f735c3352,中和140070068.pdf,中和140070068.pdf,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,9fbe75d66ded1d12facdcb862aa070cb1c38ca7933c15f05ec602a1894c659b4,发展确认结算表.png,发展确认结算表.png,,,False,跳过,沟通或业务确认材料，不属于需求定义的正式文件类型,结算表,True
+24JZBTPFB157-401,bd373c655f87f6cb554800c28bce547008c7d08a524e00a87291f647abf6f3d2,垫片 支付凭证.png,垫片 支付凭证.png,付款凭证,收付款,True,归档,按凭证用途和收付款方向识别，合同关键词仅为引用,,True
+24JZBTPFB157-401,928b814ed8e3785670695618c6c2ecb33d55816304a3b394deb7bb39dd95d973,垫片 支付汇率.jpg,垫片 支付汇率.jpg,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,48e64fc3a98fa263813cb35c7fb995ab061d3bde589315c06d90d1665d6818ea,垫片报价单779-2024-Spare gaskets-Tiangang Yang-April 13.2024.pdf,垫片报价单779-2024-Spare gaskets-Tiangang Yang-April 13.2024.pdf,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,e2be7ef3c4d011f757398e64e26a139d76da62b3a02dcdb30d1428b3b6d9cb80,支付两方合同SRS部分尾款凭证.png,支付两方合同SRS部分尾款凭证.png,付款凭证,收付款,True,归档,按凭证用途和收付款方向识别，合同关键词仅为引用,采购合同,True
+24JZBTPFB157-401,ccd1c0903380617fe92ae60faee2d2f090a4a1449edc27c3d01ec00b9661701e,支付压电脉冲陶瓷阀全款凭证.png,支付压电脉冲陶瓷阀全款凭证.png,付款凭证,收付款,True,归档,按凭证用途和收付款方向识别，合同关键词仅为引用,,True
+24JZBTPFB157-401,12646e9b9ab6109099a00bf0a28863c75fb647f6521a486be551c469915388ad,收汇截图（银行扣除USD20）.png,收汇截图（银行扣除USD20）.png,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,2be4ee43378bcbdb1a27bd735e8df8b9dfd5559ed19bd2c94cbad3570150c825,水单EUR40804 底单.pdf,水单EUR40804 底单.pdf,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,409a0aa7adf4f43a65ede797bb4f4191c331de63753da1d262ade67e61f3df13,水单USD21264 底单.pdf,水单USD21264 底单.pdf,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,4d0bf1f0f5f74d4bf8006070526932f388bf6b6ff280360478c998c33f66ba78,退PRE 两方预付款.jpg,退PRE 两方预付款.jpg,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False
+24JZBTPFB157-401,eec4239e11b53e5831037ebe9810a87f8fb08f2a27357391ce7c68bb28e6d148,验收报告.png,验收报告.png,,,False,跳过,不在已定义类型内，或文件名与字段缺少足够分类依据，自动跳过,,False

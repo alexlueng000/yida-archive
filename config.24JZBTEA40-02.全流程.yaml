@@ -1,0 +1,306 @@
+# 24JZBTEA40-02 全流程配置 —— 由 build_full_config.py 生成，不要手改。
+#
+# 覆盖 33 个附件上传点（应用内共 39 个）。
+# 关联键来自缓存证据，不是猜的，但分两类：
+#   · 标签「项目号」的，按项目号搜正常命中
+#   · 标签是「合同号/合同协议号」的，字段里存的是合同号，
+#     拿项目号去搜大概率 0 命中。留着是为了跑一次看实况。
+#
+# 跳过的 6 个：
+#   · 新增地址备案 —— 表里没有项目号/合同号这类字段，只有单位名称和地址
+#   · 总代理协议及重大项目合作协议 —— 缓存里这张表的字段摘要为空，需要重新 get-schema
+#   · 总合作协议（非常规） —— 缓存里这张表的字段摘要为空，需要重新 get-schema
+#   · 南科大重大平台项目合同审批 —— 缓存里这张表的字段摘要为空，需要重新 get-schema
+#   · 海关备案（前置）申请 —— 表里只有主题/流水号/流程状态，没有可做键的字段
+#   · 关务免表资料制作 —— 关联键是关联表单字段(associationFormField_ls75quse)，不是文本字段，searchFieldJson 的写法不同，先不塞进来
+
+yida:
+  base_url: https://www.aliwork.com
+  app_type: APP_R55Z1QDKMB0VILUQRNJA
+  auth_mode: cli
+  access_token_env: YIDA_ACCESS_TOKEN
+  cookie_env: YIDA_COOKIE
+  csrf_token_env: YIDA_CSRF_TOKEN
+  timeout: 60
+  page_size: 100
+
+scope:
+  # 按合同审批字段确认：true=是，false=否；null 时仅可预览，禁止正式保存
+  project_secret: null
+  project_no: 24JZBTEA40-02
+  purchaser: 未指定采购单位
+  forms:
+    # 关联键：项目信息编号（唯一带「项目」的文本字段）
+    - name: 项目备案
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LIZ5
+      kind: process
+      project_field: textField_0nab92f
+      field_labels:
+        attachmentField_l6a4ehkg: 附件
+    # 关联键：合同号（键是合同号）
+    - name: 放置单位外
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LKZ5
+      kind: process
+      project_field: textField_tnui0zr
+      field_labels:
+        attachmentField_l6a4ho4r: 附件
+    # 关联键：合同号（键是合同号）
+    - name: 科研设备流动
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LNZ5
+      kind: process
+      project_field: textField_dmwst8f
+      field_labels:
+        attachmentField_l6a4o6bg: 附件
+    # 关联键：项目号（来自「项目流程查询」页面源码）
+    - name: 合同审批
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LQZ5
+      kind: process
+      project_field: textField_ky9zhf07
+      field_labels:
+        attachmentField_lxson6vd: 合同附件
+        attachmentField_l7u2h6rf: 附件
+    # 关联键：合同号（键是合同号（另一个是关联字段））
+    - name: 补充合同
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LYX5
+      kind: process
+      project_field: textField_l0g7orif
+      field_labels:
+        attachmentField_kyjflwml: 主合同附件
+        attachmentField_kyjflwmm: 补充合同
+    # 关联键：合同号（键是合同号；该 id 在合同审批里叫「项目号」）
+    - name: 采购合同
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LGX5
+      kind: process
+      project_field: textField_ky9zhf07
+      field_labels:
+        attachmentField_ky8ksxp6: 附件
+    # 关联键：项目号（标签就是项目号）
+    - name: 合同签约跟踪
+      form_uuid: FORM-EF79471F38B34ED4B8F8ADE855648087TZO6
+      kind: process
+      project_field: textField_mcvqg7sn
+      field_labels:
+        attachmentField_mcvqg7su: 超期相关附件
+    # 关联键：项目号（来自「项目流程查询」页面源码）
+    - name: 减免税证明办理（变更）申请
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LLX5
+      kind: process
+      project_field: textField_le2fxp58
+      field_labels:
+        attachmentField_ky8cjirg: 附件
+    # 关联键：项目号（来自「项目流程查询」页面源码）
+    - name: 减免税/税号归类申请
+      form_uuid: FORM-NC966W81GG7CJ7Q69L6NNDVJT61M3C0H43OJL6
+      kind: process
+      project_field: textField_ky9zhf07
+      field_labels:
+        attachmentField_l7u2h6rf: 附件
+    # 关联键：合同协议号（键是合同协议号）
+    - name: 免表延期
+      form_uuid: FORM-19968A274EF64E748EAF8E8D061B2C4A3CIG
+      kind: process
+      project_field: textField_m24bw8rr
+      field_labels:
+        attachmentField_m24bw8ry: 附件
+    # 关联键：项目号（来自「项目流程查询」页面源码）
+    - name: 进口货物报关申请
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LJX5
+      kind: process
+      project_field: textField_ky8c6n97
+      field_labels:
+        attachmentField_ky8c6n9c: 附件
+    # 关联键：项目号（来自「项目流程查询」页面源码）
+    - name: 物流服务询价/委托
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LMX5
+      kind: process
+      project_field: textField_l2e48j6z
+      field_labels:
+        attachmentField_mreazamd: 附件*
+        attachmentField_ky8hjlzn: 附件
+    # 关联键：合同号（键是合同号）
+    - name: 月结单付款
+      form_uuid: FORM-0E42AC304B5C4C818588B69AB8262721MQ1L
+      kind: process
+      project_field: textField_mqt9q6xh
+      field_labels:
+        attachmentField_mrixewmk: 附件
+    # 关联键：项目号（来自「项目流程查询」页面源码）
+    - name: 信用证开立申请
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LUX5
+      kind: process
+      project_field: textField_ky8jn7st
+      field_labels:
+        attachmentField_ky8jn7t5: 附件
+    # 关联键：项目号（来自「项目流程查询」页面源码）
+    - name: 信用证变更/撤销申请
+      form_uuid: FORM-4809DBFAE9924AE6A4654919F5261F279PQ3
+      kind: process
+      project_field: textField_ky8jn7st
+      field_labels:
+        attachmentField_m1ip6tci: 附件
+    # 关联键：项目号（来自「项目流程查询」页面源码）
+    - name: 香港信用证交单申请
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LZX5
+      kind: process
+      project_field: textField_l2e4tbuz
+      field_labels:
+        attachmentField_ky8l2h0l: 附件
+    # 关联键：项目号（来自「项目流程查询」页面源码）
+    - name: 即远期信用证承兑/拒付
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9L0Y5
+      kind: process
+      project_field: textField_ky8cxek5
+      field_labels:
+        attachmentField_ky8cxeke: 附件
+    # 关联键：项目号（来自「项目流程查询」页面源码）
+    - name: 融资信用证到期还款
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LWX5
+      kind: process
+      project_field: textField_ky8d8hwg
+      field_labels:
+        attachmentField_ky8d8hwh: 附件
+    # 关联键：项目号（来自「项目流程查询」页面源码）
+    - name: 银行证实书申请
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LVX5
+      kind: process
+      project_field: textField_l2e4k3hu
+      field_labels:
+        attachmentField_ky8iz8ts: 附件
+    # 关联键：项目号（来自「项目流程查询」页面源码）
+    - name: 保函开立申请
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LQX5
+      kind: process
+      project_field: textField_l2e4ar33
+      field_labels:
+        attachmentField_kycuaoq1: 附件
+    # 关联键：项目号（来自「项目流程查询」页面源码）
+    - name: 货款支付
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LNX5
+      kind: process
+      project_field: textField_ky8afinr
+      field_labels:
+        attachmentField_lfj2zmnt: 上传发票
+        attachmentField_ky8afins: 附件
+    # 关联键：项目号（来自「项目流程查询」页面源码）
+    - name: 开立发票申请
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LPX5
+      kind: process
+      project_field: textField_ky8b3veg
+      field_labels:
+        attachmentField_mpyxohq2: 上传进项票
+        attachmentField_ky8b3vep: 附件
+        attachmentField_lx1exd3x: 发票上传
+    # 关联键：项目号（来自「项目流程查询」页面源码）
+    - name: 开立收据
+      form_uuid: FORM-FADD336D1D0E4870A8B8E2E84B8CE994GGAD
+      kind: process
+      project_field: textField_ky8b3veg
+      field_labels:
+        attachmentField_ky8b3vep: 附件
+    # 关联键：合同号（键是合同号；该 id 在开立发票申请里叫「项目号」）
+    - name: 开立收据申请
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LTX5
+      kind: process
+      project_field: textField_ky8b3veg
+      field_labels:
+        attachmentField_ky8b3vep: 附件
+    # 关联键：合同号（键是合同号（有两个同名字段，取 id 相同那个））
+    - name: 发票/收据签收
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LZY5
+      kind: process
+      project_field: textField_ky8b3veg
+      field_labels:
+        attachmentField_ky8b3vep: 附件
+        attachmentField_kzgbceca: 附件
+    # 关联键：项目号（来自「项目流程查询」页面源码）
+    - name: 退款
+      form_uuid: FORM-6F6E0EEC2D4E4B6C81F4527122C6CA423NIF
+      kind: process
+      project_field: textField_ky8afinr
+      field_labels:
+        attachmentField_lfj2zmnt: 上传发票
+        attachmentField_ky8afins: 附件
+    # 关联键：项目号（来自「项目流程查询」页面源码）
+    - name: 项目营运支出
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LSX5
+      kind: process
+      project_field: textField_l2e4dmir
+      field_labels:
+        attachmentField_lfj2zmnt: 上传发票
+        attachmentField_ky8cqev3: 附件
+    # 关联键：项目号（来自「项目流程查询」页面源码）
+    - name: 非营运支出
+      form_uuid: FORM-XN966G71GZGD89JL9I3G08B8JYVX38JW18GLL1
+      kind: process
+      project_field: textField_llg82eot
+      field_labels:
+        attachmentField_llg82eou: 附件
+    # 关联键：项目号（来自「项目流程查询」页面源码）
+    - name: 结算
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LRX5
+      kind: process
+      project_field: textField_kzfcngdr
+      field_labels:
+        attachmentField_mqitp7w9: 科研相关附件上传
+        attachmentField_ky8h0dpc: 附件
+        attachmentField_mc2q0nm4: 结算单提取
+    # 关联键：项目号（来自「项目流程查询」页面源码）
+    - name: 结算退款申请表
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9L1Y5
+      kind: process
+      project_field: textField_kzfcngdr
+      field_labels:
+        attachmentField_ky8h0dpc: 附件
+    # 关联键：合同号（键是合同号）
+    - name: 付款登记
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LWY5
+      kind: process
+      project_field: textField_l0tb7041
+      field_labels:
+        attachmentField_l0tcjllr: 附件
+    # 关联键：项目号（来自「项目流程查询」页面源码）
+    - name: 项目完结审批
+      form_uuid: FORM-C9E50E785EB849C583C7B956299560BBOWDW
+      kind: process
+      project_field: textField_loxz77va
+      field_labels:
+        attachmentField_loxz77vi: 附件
+    # 关联键：项目号（来自「项目流程查询」页面源码）
+    - name: 报告、报表和函件
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LIX5
+      kind: process
+      project_field: textField_l2e43d9w
+      field_labels:
+        attachmentField_ky8gl2xe: 附件
+
+classification:
+  folders:
+    - 合同
+    - 办证
+    - 清关送货
+    - 收付款
+    - 结算移交
+  field_hints: []
+  manual_keywords:
+    - 旧版
+    - 草稿
+    - 作废
+  encrypted_types:
+    - 收款凭证
+    - 付款凭证
+    - 退款凭证
+    - 结算表
+    - 发票（国内货物类）
+    - 发票（国内服务类）
+  unmatched_policy: manual
+
+naming:
+  pattern: '{seq}-{type}-{project}{ext}'
+  multi_pattern: '{seq}-{sub}-{type}-{project}{ext}'
+
+storage:
+  out_dir: './archive-24JZBTEA40-02-全流程'
+  structure: '{purchaser}/{project}/{root}/{folder}'
+  public_root: '公共'
+  encrypted_root: '加密'
+  work_dir: './.work'

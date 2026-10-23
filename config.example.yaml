@@ -1,0 +1,123 @@
+# 合同审批附件去重归类 —— 配置模板
+# 复制成 config.yaml 再改。程序里不硬编码任何业务参数。
+
+yida:
+  base_url: https://www.aliwork.com
+  app_type: APP_R55Z1QDKMB0VILUQRNJA
+  # auth_mode: token = 直连接口，凭证从环境变量读（能取数也能下载）
+  #            cli   = 走 openyida 命令，复用它的登录态（只能取数，不能下载）
+  auth_mode: token
+  # 凭证二选一，都配了优先用 token：
+  #   YIDA_COOKIE        浏览器 F12 里整条 cookie 头的值
+  #   YIDA_ACCESS_TOKEN  Bearer token
+  # 哪台机器该用哪个，看 F12 请求头里有没有 Authorization：
+  # 没有就是走 cookie，只配 token 一个文件也下不下来。
+  # csrf 不需要，可留空。
+  access_token_env: YIDA_ACCESS_TOKEN
+  cookie_env: YIDA_COOKIE
+  csrf_token_env: YIDA_CSRF_TOKEN
+  # 请求头 Referer。少了它接口返回 200 + 空响应，什么都不报。
+  # 默认用应用工作台地址，一般不用改。
+  # referer: https://www.aliwork.com/APP_XXXX/workbench
+  timeout: 60
+  page_size: 100
+
+scope:
+  # 按合同审批字段确认：true=是，false=否；null 时仅可预览，禁止正式保存
+  project_secret: null
+  project_no: B22026LD001
+  purchaser: 深圳理工
+  # 要归哪些流程。kind: process=流程表单, form=普通表单
+  # project_field 支持子表写法 "子表字段id.列字段id"
+  forms:
+    - name: 合同审批
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LQZ5
+      kind: process
+      project_field: textField_ky9zhf07
+      field_labels:
+        attachmentField_lxson6vd: 合同附件
+        attachmentField_l7u2h6rf: 附件
+    - name: 货款支付
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LNX5
+      kind: process
+      project_field: textField_ky8afinr
+      field_labels:
+        attachmentField_lfj2zmnt: 上传发票
+        attachmentField_ky8afins: 附件
+
+ai:
+  enabled: false  # 开启后优先确认规则，再识别正文；图片继续使用原有规则
+  credentials_file: ../主账号空间-apiKey-7509302.csv
+  model: qwen3.8-omni-flash
+  threshold: 0.9
+  # 技术失败时保留文件名建议并待复核；pending 则进入待归类。
+  # 模型返回 excluded/unknown/mixed 时不回退。
+  failure_policy: keep_suggested
+  timeout: 60
+  retries: 2
+  max_calls: 100
+  max_chars: 48000
+  max_units: 120
+
+classification:
+  folders:
+    - 合同
+    - 办证
+    - 清关送货
+    - 收付款
+    - 结算移交
+
+  # 字段线索：某些表单的某些字段，上传的一定是某类，直接确认，不看文件名。
+  # 比关键词判定优先级高。默认关掉，先只看关键词能分到什么程度；
+  # 确认过业务含义后再打开，能明显减少「待人工」。
+  field_hints: []
+  #  field_hints:
+  #    - form_name: 货款支付
+  #      field_label: 上传发票
+  #      folder: 结算移交
+  #      type: 发票（国内货物类）
+  #    - form_name: 合同审批
+  #      field_label: 合同附件
+  #      folder: 合同
+  #      type: 采购合同
+  # 字段名要写 field_labels 里映射出来的中文名；
+  # 不确定就先跑 --discover 看实际有哪些附件字段。
+
+  # 命中这些词的文件不自动归档，进待人工
+  manual_keywords:
+    - 旧版
+    - 草稿
+    - 作废
+
+  # 旧版配置保留以便回溯；新版不再按文件类型判断保密
+  encrypted_types:
+    - 收款凭证
+    - 付款凭证
+    - 退款凭证
+    - 结算表
+    - 发票（国内货物类）
+    - 发票（国内服务类）
+
+  # 没命中任何规则的文件：manual 保留原名进入待归类 / skip 不存储
+  unmatched_policy: manual
+
+  # rules 不写就用程序内置的 28 类规则表。
+  # 要改就整段写上，写了就完全以这里为准：
+  # rules:
+  #   - folder: 合同
+  #     type: 采购合同
+  #     keywords: [采购合同, 两方合同, 二方合同]
+
+naming:
+  # seq 为文件类型全局固定编号1～28，sub 是同类型多份时的子序号。
+  # 确认版本关系后，在类型后加 v2/v3，只输出最新版。
+  pattern: '{seq}-{type}-{project}{ext}'
+  multi_pattern: '{seq}-{sub}-{type}-{project}{ext}'
+
+storage:
+  out_dir: ./archive
+  # 落盘结构：{project}_文件分类/{root}/{folder}
+  structure: '{purchaser}/{project}/{root}/{folder}'
+  public_root: 公共
+  encrypted_root: 加密
+  work_dir: ./.work

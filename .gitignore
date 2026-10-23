@@ -1,0 +1,12 @@
+config.yaml
+archive/
+.work/
+__pycache__/
+*.pyc
+archive-*/
+venv/
+归档结果/
+*apiKey*.csv
+
+.cache/web-session/
+.cache/*

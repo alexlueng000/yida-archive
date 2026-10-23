@@ -1,0 +1,69 @@
+# 盘点挑出来的样本项目：附件多、两个流程都走过、单据全部已完成。
+# 由 `run.py --online --survey` 盘点 3489 个项目号后选出（2026-09-24）。
+# 用法：
+#   py run.py --config config.25JZBTPFB157-306.yaml --online --files
+# 要真下载再加 --write（需要 YIDA_COOKIE 或 YIDA_ACCESS_TOKEN）。
+
+yida:
+  base_url: https://www.aliwork.com
+  app_type: APP_R55Z1QDKMB0VILUQRNJA
+  auth_mode: cli
+  access_token_env: YIDA_ACCESS_TOKEN
+  cookie_env: YIDA_COOKIE
+  csrf_token_env: YIDA_CSRF_TOKEN
+  timeout: 60
+  page_size: 100
+
+scope:
+  # 按合同审批字段确认：true=是，false=否；null 时仅可预览，禁止正式保存
+  project_secret: null
+  project_no: 25JZBTPFB157-306
+  # 这个项目属于哪个采购单位还没确认，先留默认值。
+  purchaser: 未指定采购单位
+  forms:
+    - name: 合同审批
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LQZ5
+      kind: process
+      project_field: textField_ky9zhf07
+      field_labels:
+        attachmentField_lxson6vd: 合同附件
+        attachmentField_l7u2h6rf: 附件
+    - name: 货款支付
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LNX5
+      kind: process
+      project_field: textField_ky8afinr
+      field_labels:
+        attachmentField_lfj2zmnt: 上传发票
+        attachmentField_ky8afins: 附件
+
+classification:
+  folders:
+    - 合同
+    - 办证
+    - 清关送货
+    - 收付款
+    - 结算移交
+  field_hints: []
+  manual_keywords:
+    - 旧版
+    - 草稿
+    - 作废
+  encrypted_types:
+    - 收款凭证
+    - 付款凭证
+    - 退款凭证
+    - 结算表
+    - 发票（国内货物类）
+    - 发票（国内服务类）
+  unmatched_policy: manual
+
+naming:
+  pattern: '{seq}-{type}-{project}{ext}'
+  multi_pattern: '{seq}-{sub}-{type}-{project}{ext}'
+
+storage:
+  out_dir: ./archive-25JZBTPFB157-306
+  structure: '{purchaser}/{project}/{root}/{folder}'
+  public_root: 公共
+  encrypted_root: 加密
+  work_dir: ./.work

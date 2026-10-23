@@ -1,0 +1,68 @@
+# 只下货款支付的每一次上传。
+# 和 config.yaml 的区别只有两处：scope.forms 里去掉了合同审批，
+# storage.out_dir 换成了 ./archive-pay，免得和别的产物混在一起。
+
+yida:
+  base_url: https://www.aliwork.com
+  app_type: APP_R55Z1QDKMB0VILUQRNJA
+  # 登录凭证，二选一（都有时优先用 token）：
+  #   YIDA_COOKIE        浏览器 F12 里整条 cookie 头的值
+  #   YIDA_ACCESS_TOKEN  Bearer token
+  # 本机实测走的是 cookie：请求头里根本没有 Authorization。
+  # 一个环境变量就够，csrf 不需要（实测带着和不带结果一样）。
+  # 只列清单不下文件的话，改成 cli 可以复用 openyida 登录态。
+  auth_mode: token
+  access_token_env: YIDA_ACCESS_TOKEN
+  cookie_env: YIDA_COOKIE
+  csrf_token_env: YIDA_CSRF_TOKEN
+  # 请求头 Referer。这个头不能少，少了接口返回 200 + 空响应、
+  # 什么都不报。值本身无所谓，默认用应用工作台地址，一般不用改。
+  # referer: https://front.aliwork.com/APP_R55Z1QDKMB0VILUQRNJA/workbench
+  timeout: 60
+  page_size: 100
+
+scope:
+  # 按合同审批字段确认：true=是，false=否；null 时仅可预览，禁止正式保存
+  project_secret: null
+  project_no: B22026LD001
+  purchaser: 深圳理工
+  forms:
+    - name: 货款支付
+      form_uuid: FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LNX5
+      kind: process
+      project_field: textField_ky8afinr
+      field_labels:
+        attachmentField_lfj2zmnt: 上传发票
+        attachmentField_ky8afins: 附件
+
+classification:
+  folders:
+    - 合同
+    - 办证
+    - 清关送货
+    - 收付款
+    - 结算移交
+  field_hints: []
+  manual_keywords:
+    - 旧版
+    - 草稿
+    - 作废
+  encrypted_types:
+    - 收款凭证
+    - 付款凭证
+    - 退款凭证
+    - 结算表
+    - 发票（国内货物类）
+    - 发票（国内服务类）
+  unmatched_policy: manual
+
+naming:
+  pattern: '{seq}-{type}-{project}{ext}'
+  multi_pattern: '{seq}-{sub}-{type}-{project}{ext}'
+
+storage:
+  out_dir: ./archive-pay
+  structure: '{purchaser}/{project}/{root}/{folder}'
+  public_root: 公共
+  encrypted_root: 加密
+  work_dir: ./.work

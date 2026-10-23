@@ -1,0 +1,1860 @@
+{
+  "project_no": "25JZBTPFB157-306",
+  "purchaser": "未指定采购单位",
+  "instances": [
+    {
+      "form_name": "合同审批",
+      "form_uuid": "FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LQZ5",
+      "instance_id": "67da533c-eed8-472f-8622-6c403fa19558",
+      "title": "冯桃娟发起的25JZBTPFB157-306合同审批",
+      "submitted_at": 1774324214383,
+      "originator": "冯桃娟",
+      "status": "COMPLETED",
+      "attachments": [
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "美元汇率.png",
+          "size": 55515,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2TkQxOFpXWkFTTzY5Nk4yWjdRRzJPTUkyUk1ERjg0SE05OQ$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2TkQxOFpXWkFTTzY5Nk4yWjdRRzJPTUkyUk1ERjg0SE05OQ$$.png&instId=&type=download&originalFileName=%E7%BE%8E%E5%85%83%E6%B1%87%E7%8E%87.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "欧元汇率.png",
+          "size": 55933,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzMyRDY2Q0ExU0ZaWkJEMlg3TEIxRTRUWkk0TkoyUE1ERjg0SE1RMw$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzMyRDY2Q0ExU0ZaWkJEMlg3TEIxRTRUWkk0TkoyUE1ERjg0SE1RMw$$.png&instId=&type=download&originalFileName=%E6%AC%A7%E5%85%83%E6%B1%87%E7%8E%87.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "中标通知书.pdf",
+          "size": 2036936,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2TkMxVlZXWjdZR1BGRUE5REFTUUVPT0EzQU5ERjg0SE1DQw$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2TkMxVlZXWjdZR1BGRUE5REFTUUVPT0EzQU5ERjg0SE1DQw$$.pdf&instId=&type=download&originalFileName=%E4%B8%AD%E6%A0%87%E9%80%9A%E7%9F%A5%E4%B9%A6.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "ADL Product 2025（中）直流电源.pdf",
+          "size": 2741919,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZCOTY2T0QxTk5XWjA1WE5FUjAySDRGQVpEQjgzVzU4Rzg0SE1ERA$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZCOTY2T0QxTk5XWjA1WE5FUjAySDRGQVpEQjgzVzU4Rzg0SE1ERA$$.pdf&instId=&type=download&originalFileName=ADL%20Product%202025%EF%BC%88%E4%B8%AD%EF%BC%89%E7%9B%B4%E6%B5%81%E7%94%B5%E6%BA%90.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "MELEC up to date 2024高能脉冲发生器.pdf",
+          "size": 2122686,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0NaOTY2U0ExSEswMFEyQVhHMEJBQkNXT1k4Wk8zNTY4Rzg0SE1W.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0NaOTY2U0ExSEswMFEyQVhHMEJBQkNXT1k4Wk8zNTY4Rzg0SE1W.pdf&instId=&type=download&originalFileName=MELEC%C2%A0up%C2%A0to%C2%A0date%C2%A02024%E9%AB%98%E8%83%BD%E8%84%89%E5%86%B2%E5%8F%91%E7%94%9F%E5%99%A8.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "2025香港華佳企業银行.pdf",
+          "size": 217285,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2WUMxODIwMEZXSVFKTk1HRzlTMElSTTgzNFZPRzg0SE05MQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2WUMxODIwMEZXSVFKTk1HRzlTMElSTTgzNFZPRzg0SE05MQ$$.pdf&instId=&type=download&originalFileName=2025%E9%A6%99%E6%B8%AF%E8%8F%AF%E4%BD%B3%E4%BC%81%E6%A5%AD%E9%93%B6%E8%A1%8C.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "華佳商業登記證2025-盖章.pdf",
+          "size": 239422,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2MEQxUlFVWlBWRDRFRVZMMUJaUFE0UEwyR1ZPRzg0SE1aUQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2MEQxUlFVWlBWRDRFRVZMMUJaUFE0UEwyR1ZPRzg0SE1aUQ$$.pdf&instId=&type=download&originalFileName=%E8%8F%AF%E4%BD%B3%E5%95%86%E6%A5%AD%E7%99%BB%E8%A8%98%E8%AD%892025-%E7%9B%96%E7%AB%A0.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "射频电源_TruPlasma_RF_Series_1000_EN.pdf",
+          "size": 7080827,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2STcxSjhZWkpPRUY2UTgwTDQyTjM5WVoxWFZPRzg0SE1JNw$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2STcxSjhZWkpPRUY2UTgwTDQyTjM5WVoxWFZPRzg0SE1JNw$$.pdf&instId=&type=download&originalFileName=%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90_TruPlasma_RF_Series_1000_EN.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "射频电源-进口货物说明 - 副本.docx",
+          "size": 19095,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2SDcxUDIwMFYwTE5JSVAxRUFFOUJBVFQzMldPRzg0SE1HMQ$$.docx",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2SDcxUDIwMFYwTE5JSVAxRUFFOUJBVFQzMldPRzg0SE1HMQ$$.docx&instId=&type=download&originalFileName=%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90-%E8%BF%9B%E5%8F%A3%E8%B4%A7%E7%89%A9%E8%AF%B4%E6%98%8E%20-%20%E5%89%AF%E6%9C%AC.docx"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "射频电源铭牌.jpg",
+          "size": 879393,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0cxSDY2MkExQURZWjBFSUdBSlIxSUNIRkgxWlUzRldPRzg0SE1SNw$$.jpg",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0cxSDY2MkExQURZWjBFSUdBSlIxSUNIRkgxWlUzRldPRzg0SE1SNw$$.jpg&instId=&type=download&originalFileName=%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E9%93%AD%E7%89%8C.jpg"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "直流脉冲电源-进口货物说明.docx",
+          "size": 18638,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2R0IxR1pVWlFUWTY4MlBCUzRGMlg1QzMzTVdPRzg0SE1MSQ$$.docx",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2R0IxR1pVWlFUWTY4MlBCUzRGMlg1QzMzTVdPRzg0SE1MSQ$$.docx&instId=&type=download&originalFileName=%E7%9B%B4%E6%B5%81%E8%84%89%E5%86%B2%E7%94%B5%E6%BA%90-%E8%BF%9B%E5%8F%A3%E8%B4%A7%E7%89%A9%E8%AF%B4%E6%98%8E.docx"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "TRUMPF_TruPlasma_DC_Series_4000_G2-直流脉冲电源.pdf",
+          "size": 1292432,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2STcxWFhZWlVRQlpCQ1M2WTlYQjdKTE4zVlhZRzg0SE1TNA$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2STcxWFhZWlVRQlpCQ1M2WTlYQjdKTE4zVlhZRzg0SE1TNA$$.pdf&instId=&type=download&originalFileName=TRUMPF_TruPlasma_DC_Series_4000_G2-%E7%9B%B4%E6%B5%81%E8%84%89%E5%86%B2%E7%94%B5%E6%BA%90.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "美元合同确认记录.png",
+          "size": 33056,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2NEIxTERUWk5OT1k5TTUxWERCNzNES1YySTMySTg0SE0xQw$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2NEIxTERUWk5OT1k5TTUxWERCNzNES1YySTMySTg0SE0xQw$$.png&instId=&type=download&originalFileName=%E7%BE%8E%E5%85%83%E5%90%88%E5%90%8C%E7%A1%AE%E8%AE%A4%E8%AE%B0%E5%BD%95.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "支付方式.jpeg",
+          "size": 473335,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1dRRDY2NkExQllZWlJKRzI5OEFNUTZJNDJGTEszSjIySTg0SE1GNQ$$.jpeg",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1dRRDY2NkExQllZWlJKRzI5OEFNUTZJNDJGTEszSjIySTg0SE1GNQ$$.jpeg&instId=&type=download&originalFileName=%E6%94%AF%E4%BB%98%E6%96%B9%E5%BC%8F.jpeg"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "高能脉冲发生器合同条款确认.png",
+          "size": 25149,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX09QRTY2NzkxWURaWjRRMEc2Q1dHSzdLUjlMSjgzWElHSTg0SE1ENA$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX09QRTY2NzkxWURaWjRRMEc2Q1dHSzdLUjlMSjgzWElHSTg0SE1ENA$$.png&instId=&type=download&originalFileName=%E9%AB%98%E8%83%BD%E8%84%89%E5%86%B2%E5%8F%91%E7%94%9F%E5%99%A8%E5%90%88%E5%90%8C%E6%9D%A1%E6%AC%BE%E7%A1%AE%E8%AE%A4.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "价格记录.png",
+          "size": 33213,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1I3QzY2S0IxM1NaWldOQ0pCOFlLSTlaNExHVTEyTElHSTg0SE1YMg$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1I3QzY2S0IxM1NaWldOQ0pCOFlLSTlaNExHVTEyTElHSTg0SE1YMg$$.png&instId=&type=download&originalFileName=%E4%BB%B7%E6%A0%BC%E8%AE%B0%E5%BD%95.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "磁控溅射阴极条款确认.png",
+          "size": 89437,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0pPOTY2MEMxOVpaWlU3UVA5QUQ0Qjg3S0JCVkMzTlFMSTg0SE1aMQ$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0pPOTY2MEMxOVpaWlU3UVA5QUQ0Qjg3S0JCVkMzTlFMSTg0SE1aMQ$$.png&instId=&type=download&originalFileName=%E7%A3%81%E6%8E%A7%E6%BA%85%E5%B0%84%E9%98%B4%E6%9E%81%E6%9D%A1%E6%AC%BE%E7%A1%AE%E8%AE%A4.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "二方合同-人民币-射频匹配器.docx",
+          "size": 32349,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzdVNzY2VUMxVEFVWlpJU1pETEozRTUyRVVKNk8yTkRFWkw0SE1BRA$$.docx",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzdVNzY2VUMxVEFVWlpJU1pETEozRTUyRVVKNk8yTkRFWkw0SE1BRA$$.docx&instId=&type=download&originalFileName=%E4%BA%8C%E6%96%B9%E5%90%88%E5%90%8C-%E4%BA%BA%E6%B0%91%E5%B8%81-%E5%B0%84%E9%A2%91%E5%8C%B9%E9%85%8D%E5%99%A8.docx"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "两方合同-美元-射频电源、直流脉冲电源.doc",
+          "size": 106795,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzE5RTY2VjcxRTIxMFlDVE1KUDlTSzVVSlZNNlYzOEVFWkw0SE0x.doc",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzE5RTY2VjcxRTIxMFlDVE1KUDlTSzVVSlZNNlYzOEVFWkw0SE0x.doc&instId=&type=download&originalFileName=%E4%B8%A4%E6%96%B9%E5%90%88%E5%90%8C-%E7%BE%8E%E5%85%83-%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E3%80%81%E7%9B%B4%E6%B5%81%E8%84%89%E5%86%B2%E7%94%B5%E6%BA%90.doc"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "代理协议 .doc",
+          "size": 38400,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX01BOTY2SEExQjExME9VRjVKNVpDMzVPQUZCTDUzVVFMWkw0SE1J.doc",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX01BOTY2SEExQjExME9VRjVKNVpDMzVPQUZCTDUzVVFMWkw0SE1J.doc&instId=&type=download&originalFileName=%E4%BB%A3%E7%90%86%E5%8D%8F%E8%AE%AE%20.doc"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "高能脉冲发生器等二方合同1.pdf",
+          "size": 642408,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzVDOTY2UTYxSDI3MEtQS0FKSjdWSDVCSDJUM0oyTDhOUUlJSE0wNg$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzVDOTY2UTYxSDI3MEtQS0FKSjdWSDVCSDJUM0oyTDhOUUlJSE0wNg$$.pdf&instId=&type=download&originalFileName=%E9%AB%98%E8%83%BD%E8%84%89%E5%86%B2%E5%8F%91%E7%94%9F%E5%99%A8%E7%AD%89%E4%BA%8C%E6%96%B9%E5%90%88%E5%90%8C1.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "程鑫老师课题组磁控溅射阴极、直流和射频电源等采购-承诺函模板.pdf",
+          "size": 246615,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0RRODY2UUQxTjA5MEQwVDBHVjBUSTUxV0UwWFEzV1E1UklJSE1IQg$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0RRODY2UUQxTjA5MEQwVDBHVjBUSTUxV0UwWFEzV1E1UklJSE1IQg$$.pdf&instId=&type=download&originalFileName=%E7%A8%8B%E9%91%AB%E8%80%81%E5%B8%88%E8%AF%BE%E9%A2%98%E7%BB%84%E7%A3%81%E6%8E%A7%E6%BA%85%E5%B0%84%E9%98%B4%E6%9E%81%E3%80%81%E7%9B%B4%E6%B5%81%E5%92%8C%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E7%AD%89%E9%87%87%E8%B4%AD-%E6%89%BF%E8%AF%BA%E5%87%BD%E6%A8%A1%E6%9D%BF.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "程鑫老师课题组磁控溅射阴极、直流和射频电源等采购-内贸合同模板.pdf",
+          "size": 558313,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzYzNjY2NUMxVFdBMENRODhLUzJFMUFFV0RJN08zTlI1UklJSE1W.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzYzNjY2NUMxVFdBMENRODhLUzJFMUFFV0RJN08zTlI1UklJSE1W.pdf&instId=&type=download&originalFileName=%E7%A8%8B%E9%91%AB%E8%80%81%E5%B8%88%E8%AF%BE%E9%A2%98%E7%BB%84%E7%A3%81%E6%8E%A7%E6%BA%85%E5%B0%84%E9%98%B4%E6%9E%81%E3%80%81%E7%9B%B4%E6%B5%81%E5%92%8C%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E7%AD%89%E9%87%87%E8%B4%AD-%E5%86%85%E8%B4%B8%E5%90%88%E5%90%8C%E6%A8%A1%E6%9D%BF.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "程鑫老师课题组磁控溅射阴极、直流和射频电源等采购-外贸合同模板.pdf",
+          "size": 463401,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0pMQTY2T0QxOTVBMFpSTVNKVDNYSUFaOVRHRjQzTlI1UklJSE1YMg$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0pMQTY2T0QxOTVBMFpSTVNKVDNYSUFaOVRHRjQzTlI1UklJSE1YMg$$.pdf&instId=&type=download&originalFileName=%E7%A8%8B%E9%91%AB%E8%80%81%E5%B8%88%E8%AF%BE%E9%A2%98%E7%BB%84%E7%A3%81%E6%8E%A7%E6%BA%85%E5%B0%84%E9%98%B4%E6%9E%81%E3%80%81%E7%9B%B4%E6%B5%81%E5%92%8C%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E7%AD%89%E9%87%87%E8%B4%AD-%E5%A4%96%E8%B4%B8%E5%90%88%E5%90%8C%E6%A8%A1%E6%9D%BF.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "价格变动.png",
+          "size": 16085,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzFTQzY2VEExM0MwMVVERU1QQ0MwNTk4U1BNUDIzR09UVzBPSU0yQw$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzFTQzY2VEExM0MwMVVERU1QQ0MwNTk4U1BNUDIzR09UVzBPSU0yQw$$.png&instId=&type=download&originalFileName=%E4%BB%B7%E6%A0%BC%E5%8F%98%E5%8A%A8.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "测算表.xls",
+          "size": 31232,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzZaOTY2QkExWEEwMU04VTdHMjdKNzZHNVM0VloxTEEwWDBPSU1EOQ$$.xls",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzZaOTY2QkExWEEwMU04VTdHMjdKNzZHNVM0VloxTEEwWDBPSU1EOQ$$.xls&instId=&type=download&originalFileName=%E6%B5%8B%E7%AE%97%E8%A1%A8.xls"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "各税点测算版表样2019.4.8（以此份为主）.xlsx",
+          "size": 91165,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1k2RDY2MDcxQ0c0MUpLM1ZMUjFQT0NFRFFGRzQyTkEwWDBPSU1G.xlsx",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1k2RDY2MDcxQ0c0MUpLM1ZMUjFQT0NFRFFGRzQyTkEwWDBPSU1G.xlsx&instId=&type=download&originalFileName=%E5%90%84%E7%A8%8E%E7%82%B9%E6%B5%8B%E7%AE%97%E7%89%88%E8%A1%A8%E6%A0%B72019.4.8%EF%BC%88%E4%BB%A5%E6%AD%A4%E4%BB%BD%E4%B8%BA%E4%B8%BB%EF%BC%89.xlsx"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "磁控溅射阴极二方合同12.2.docx",
+          "size": 33095,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1JaRTY2ODcxQkU0MVoxNE9MRjE1TTZLQjRBNjEyVEVIVzZPSU1DMg$$.docx",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1JaRTY2ODcxQkU0MVoxNE9MRjE1TTZLQjRBNjEyVEVIVzZPSU1DMg$$.docx&instId=&type=download&originalFileName=%E7%A3%81%E6%8E%A7%E6%BA%85%E5%B0%84%E9%98%B4%E6%9E%81%E4%BA%8C%E6%96%B9%E5%90%88%E5%90%8C12.2.docx"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "阴极升降机构.rar",
+          "size": 716677,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1lGQTY2SzkxRjkyNEY1WFBMSkNYWDhGQVVNRVgyV0JUVzY0Tk1CTA$$.rar",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1lGQTY2SzkxRjkyNEY1WFBMSkNYWDhGQVVNRVgyV0JUVzY0Tk1CTA$$.rar&instId=&type=download&originalFileName=%E9%98%B4%E6%9E%81%E5%8D%87%E9%99%8D%E6%9C%BA%E6%9E%84.rar"
+        }
+      ]
+    },
+    {
+      "form_name": "合同审批",
+      "form_uuid": "FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LQZ5",
+      "instance_id": "c4f31eb7-9474-4e04-b778-f8f490c85e28",
+      "title": "冯桃娟发起的25JZBTPFB157-306合同审批",
+      "submitted_at": 1764812823285,
+      "originator": "冯桃娟",
+      "status": "COMPLETED",
+      "attachments": [
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "美元汇率.png",
+          "size": 55515,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2TkQxOFpXWkFTTzY5Nk4yWjdRRzJPTUkyUk1ERjg0SE05OQ$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2TkQxOFpXWkFTTzY5Nk4yWjdRRzJPTUkyUk1ERjg0SE05OQ$$.png&instId=&type=download&originalFileName=%E7%BE%8E%E5%85%83%E6%B1%87%E7%8E%87.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "欧元汇率.png",
+          "size": 55933,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzMyRDY2Q0ExU0ZaWkJEMlg3TEIxRTRUWkk0TkoyUE1ERjg0SE1RMw$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzMyRDY2Q0ExU0ZaWkJEMlg3TEIxRTRUWkk0TkoyUE1ERjg0SE1RMw$$.png&instId=&type=download&originalFileName=%E6%AC%A7%E5%85%83%E6%B1%87%E7%8E%87.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "中标通知书.pdf",
+          "size": 2036936,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2TkMxVlZXWjdZR1BGRUE5REFTUUVPT0EzQU5ERjg0SE1DQw$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2TkMxVlZXWjdZR1BGRUE5REFTUUVPT0EzQU5ERjg0SE1DQw$$.pdf&instId=&type=download&originalFileName=%E4%B8%AD%E6%A0%87%E9%80%9A%E7%9F%A5%E4%B9%A6.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "ADL Product 2025（中）直流电源.pdf",
+          "size": 2741919,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZCOTY2T0QxTk5XWjA1WE5FUjAySDRGQVpEQjgzVzU4Rzg0SE1ERA$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZCOTY2T0QxTk5XWjA1WE5FUjAySDRGQVpEQjgzVzU4Rzg0SE1ERA$$.pdf&instId=&type=download&originalFileName=ADL%20Product%202025%EF%BC%88%E4%B8%AD%EF%BC%89%E7%9B%B4%E6%B5%81%E7%94%B5%E6%BA%90.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "MELEC up to date 2024高能脉冲发生器.pdf",
+          "size": 2122686,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0NaOTY2U0ExSEswMFEyQVhHMEJBQkNXT1k4Wk8zNTY4Rzg0SE1W.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0NaOTY2U0ExSEswMFEyQVhHMEJBQkNXT1k4Wk8zNTY4Rzg0SE1W.pdf&instId=&type=download&originalFileName=MELEC%C2%A0up%C2%A0to%C2%A0date%C2%A02024%E9%AB%98%E8%83%BD%E8%84%89%E5%86%B2%E5%8F%91%E7%94%9F%E5%99%A8.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "2025香港華佳企業银行.pdf",
+          "size": 217285,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2WUMxODIwMEZXSVFKTk1HRzlTMElSTTgzNFZPRzg0SE05MQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2WUMxODIwMEZXSVFKTk1HRzlTMElSTTgzNFZPRzg0SE05MQ$$.pdf&instId=&type=download&originalFileName=2025%E9%A6%99%E6%B8%AF%E8%8F%AF%E4%BD%B3%E4%BC%81%E6%A5%AD%E9%93%B6%E8%A1%8C.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "華佳商業登記證2025-盖章.pdf",
+          "size": 239422,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2MEQxUlFVWlBWRDRFRVZMMUJaUFE0UEwyR1ZPRzg0SE1aUQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2MEQxUlFVWlBWRDRFRVZMMUJaUFE0UEwyR1ZPRzg0SE1aUQ$$.pdf&instId=&type=download&originalFileName=%E8%8F%AF%E4%BD%B3%E5%95%86%E6%A5%AD%E7%99%BB%E8%A8%98%E8%AD%892025-%E7%9B%96%E7%AB%A0.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "射频电源_TruPlasma_RF_Series_1000_EN.pdf",
+          "size": 7080827,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2STcxSjhZWkpPRUY2UTgwTDQyTjM5WVoxWFZPRzg0SE1JNw$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2STcxSjhZWkpPRUY2UTgwTDQyTjM5WVoxWFZPRzg0SE1JNw$$.pdf&instId=&type=download&originalFileName=%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90_TruPlasma_RF_Series_1000_EN.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "射频电源-进口货物说明 - 副本.docx",
+          "size": 19095,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2SDcxUDIwMFYwTE5JSVAxRUFFOUJBVFQzMldPRzg0SE1HMQ$$.docx",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2SDcxUDIwMFYwTE5JSVAxRUFFOUJBVFQzMldPRzg0SE1HMQ$$.docx&instId=&type=download&originalFileName=%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90-%E8%BF%9B%E5%8F%A3%E8%B4%A7%E7%89%A9%E8%AF%B4%E6%98%8E%20-%20%E5%89%AF%E6%9C%AC.docx"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "射频电源铭牌.jpg",
+          "size": 879393,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0cxSDY2MkExQURZWjBFSUdBSlIxSUNIRkgxWlUzRldPRzg0SE1SNw$$.jpg",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0cxSDY2MkExQURZWjBFSUdBSlIxSUNIRkgxWlUzRldPRzg0SE1SNw$$.jpg&instId=&type=download&originalFileName=%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E9%93%AD%E7%89%8C.jpg"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "直流脉冲电源-进口货物说明.docx",
+          "size": 18638,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2R0IxR1pVWlFUWTY4MlBCUzRGMlg1QzMzTVdPRzg0SE1MSQ$$.docx",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2R0IxR1pVWlFUWTY4MlBCUzRGMlg1QzMzTVdPRzg0SE1MSQ$$.docx&instId=&type=download&originalFileName=%E7%9B%B4%E6%B5%81%E8%84%89%E5%86%B2%E7%94%B5%E6%BA%90-%E8%BF%9B%E5%8F%A3%E8%B4%A7%E7%89%A9%E8%AF%B4%E6%98%8E.docx"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "TRUMPF_TruPlasma_DC_Series_4000_G2-直流脉冲电源.pdf",
+          "size": 1292432,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2STcxWFhZWlVRQlpCQ1M2WTlYQjdKTE4zVlhZRzg0SE1TNA$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2STcxWFhZWlVRQlpCQ1M2WTlYQjdKTE4zVlhZRzg0SE1TNA$$.pdf&instId=&type=download&originalFileName=TRUMPF_TruPlasma_DC_Series_4000_G2-%E7%9B%B4%E6%B5%81%E8%84%89%E5%86%B2%E7%94%B5%E6%BA%90.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "美元合同确认记录.png",
+          "size": 33056,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2NEIxTERUWk5OT1k5TTUxWERCNzNES1YySTMySTg0SE0xQw$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2NEIxTERUWk5OT1k5TTUxWERCNzNES1YySTMySTg0SE0xQw$$.png&instId=&type=download&originalFileName=%E7%BE%8E%E5%85%83%E5%90%88%E5%90%8C%E7%A1%AE%E8%AE%A4%E8%AE%B0%E5%BD%95.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "支付方式.jpeg",
+          "size": 473335,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1dRRDY2NkExQllZWlJKRzI5OEFNUTZJNDJGTEszSjIySTg0SE1GNQ$$.jpeg",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1dRRDY2NkExQllZWlJKRzI5OEFNUTZJNDJGTEszSjIySTg0SE1GNQ$$.jpeg&instId=&type=download&originalFileName=%E6%94%AF%E4%BB%98%E6%96%B9%E5%BC%8F.jpeg"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "高能脉冲发生器合同条款确认.png",
+          "size": 25149,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX09QRTY2NzkxWURaWjRRMEc2Q1dHSzdLUjlMSjgzWElHSTg0SE1ENA$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX09QRTY2NzkxWURaWjRRMEc2Q1dHSzdLUjlMSjgzWElHSTg0SE1ENA$$.png&instId=&type=download&originalFileName=%E9%AB%98%E8%83%BD%E8%84%89%E5%86%B2%E5%8F%91%E7%94%9F%E5%99%A8%E5%90%88%E5%90%8C%E6%9D%A1%E6%AC%BE%E7%A1%AE%E8%AE%A4.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "价格记录.png",
+          "size": 33213,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1I3QzY2S0IxM1NaWldOQ0pCOFlLSTlaNExHVTEyTElHSTg0SE1YMg$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1I3QzY2S0IxM1NaWldOQ0pCOFlLSTlaNExHVTEyTElHSTg0SE1YMg$$.png&instId=&type=download&originalFileName=%E4%BB%B7%E6%A0%BC%E8%AE%B0%E5%BD%95.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "磁控溅射阴极条款确认.png",
+          "size": 89437,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0pPOTY2MEMxOVpaWlU3UVA5QUQ0Qjg3S0JCVkMzTlFMSTg0SE1aMQ$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0pPOTY2MEMxOVpaWlU3UVA5QUQ0Qjg3S0JCVkMzTlFMSTg0SE1aMQ$$.png&instId=&type=download&originalFileName=%E7%A3%81%E6%8E%A7%E6%BA%85%E5%B0%84%E9%98%B4%E6%9E%81%E6%9D%A1%E6%AC%BE%E7%A1%AE%E8%AE%A4.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "二方合同-人民币-射频匹配器.docx",
+          "size": 32349,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzdVNzY2VUMxVEFVWlpJU1pETEozRTUyRVVKNk8yTkRFWkw0SE1BRA$$.docx",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzdVNzY2VUMxVEFVWlpJU1pETEozRTUyRVVKNk8yTkRFWkw0SE1BRA$$.docx&instId=&type=download&originalFileName=%E4%BA%8C%E6%96%B9%E5%90%88%E5%90%8C-%E4%BA%BA%E6%B0%91%E5%B8%81-%E5%B0%84%E9%A2%91%E5%8C%B9%E9%85%8D%E5%99%A8.docx"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "两方合同-美元-射频电源、直流脉冲电源.doc",
+          "size": 106795,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzE5RTY2VjcxRTIxMFlDVE1KUDlTSzVVSlZNNlYzOEVFWkw0SE0x.doc",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzE5RTY2VjcxRTIxMFlDVE1KUDlTSzVVSlZNNlYzOEVFWkw0SE0x.doc&instId=&type=download&originalFileName=%E4%B8%A4%E6%96%B9%E5%90%88%E5%90%8C-%E7%BE%8E%E5%85%83-%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E3%80%81%E7%9B%B4%E6%B5%81%E8%84%89%E5%86%B2%E7%94%B5%E6%BA%90.doc"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "代理协议 .doc",
+          "size": 38400,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX01BOTY2SEExQjExME9VRjVKNVpDMzVPQUZCTDUzVVFMWkw0SE1J.doc",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX01BOTY2SEExQjExME9VRjVKNVpDMzVPQUZCTDUzVVFMWkw0SE1J.doc&instId=&type=download&originalFileName=%E4%BB%A3%E7%90%86%E5%8D%8F%E8%AE%AE%20.doc"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "高能脉冲发生器等二方合同1.pdf",
+          "size": 642408,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzVDOTY2UTYxSDI3MEtQS0FKSjdWSDVCSDJUM0oyTDhOUUlJSE0wNg$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzVDOTY2UTYxSDI3MEtQS0FKSjdWSDVCSDJUM0oyTDhOUUlJSE0wNg$$.pdf&instId=&type=download&originalFileName=%E9%AB%98%E8%83%BD%E8%84%89%E5%86%B2%E5%8F%91%E7%94%9F%E5%99%A8%E7%AD%89%E4%BA%8C%E6%96%B9%E5%90%88%E5%90%8C1.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "程鑫老师课题组磁控溅射阴极、直流和射频电源等采购-承诺函模板.pdf",
+          "size": 246615,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0RRODY2UUQxTjA5MEQwVDBHVjBUSTUxV0UwWFEzV1E1UklJSE1IQg$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0RRODY2UUQxTjA5MEQwVDBHVjBUSTUxV0UwWFEzV1E1UklJSE1IQg$$.pdf&instId=&type=download&originalFileName=%E7%A8%8B%E9%91%AB%E8%80%81%E5%B8%88%E8%AF%BE%E9%A2%98%E7%BB%84%E7%A3%81%E6%8E%A7%E6%BA%85%E5%B0%84%E9%98%B4%E6%9E%81%E3%80%81%E7%9B%B4%E6%B5%81%E5%92%8C%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E7%AD%89%E9%87%87%E8%B4%AD-%E6%89%BF%E8%AF%BA%E5%87%BD%E6%A8%A1%E6%9D%BF.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "程鑫老师课题组磁控溅射阴极、直流和射频电源等采购-内贸合同模板.pdf",
+          "size": 558313,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzYzNjY2NUMxVFdBMENRODhLUzJFMUFFV0RJN08zTlI1UklJSE1W.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzYzNjY2NUMxVFdBMENRODhLUzJFMUFFV0RJN08zTlI1UklJSE1W.pdf&instId=&type=download&originalFileName=%E7%A8%8B%E9%91%AB%E8%80%81%E5%B8%88%E8%AF%BE%E9%A2%98%E7%BB%84%E7%A3%81%E6%8E%A7%E6%BA%85%E5%B0%84%E9%98%B4%E6%9E%81%E3%80%81%E7%9B%B4%E6%B5%81%E5%92%8C%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E7%AD%89%E9%87%87%E8%B4%AD-%E5%86%85%E8%B4%B8%E5%90%88%E5%90%8C%E6%A8%A1%E6%9D%BF.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "程鑫老师课题组磁控溅射阴极、直流和射频电源等采购-外贸合同模板.pdf",
+          "size": 463401,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0pMQTY2T0QxOTVBMFpSTVNKVDNYSUFaOVRHRjQzTlI1UklJSE1YMg$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0pMQTY2T0QxOTVBMFpSTVNKVDNYSUFaOVRHRjQzTlI1UklJSE1YMg$$.pdf&instId=&type=download&originalFileName=%E7%A8%8B%E9%91%AB%E8%80%81%E5%B8%88%E8%AF%BE%E9%A2%98%E7%BB%84%E7%A3%81%E6%8E%A7%E6%BA%85%E5%B0%84%E9%98%B4%E6%9E%81%E3%80%81%E7%9B%B4%E6%B5%81%E5%92%8C%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E7%AD%89%E9%87%87%E8%B4%AD-%E5%A4%96%E8%B4%B8%E5%90%88%E5%90%8C%E6%A8%A1%E6%9D%BF.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "形式发票-美元.doc",
+          "size": 26112,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzY5NjY2MUIxM1k1MEhBRlRINk5XTjdJSlJSNzEySTRFUklJSE1aSQ$$.doc",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzY5NjY2MUIxM1k1MEhBRlRINk5XTjdJSlJSNzEySTRFUklJSE1aSQ$$.doc&instId=&type=download&originalFileName=%E5%BD%A2%E5%BC%8F%E5%8F%91%E7%A5%A8-%E7%BE%8E%E5%85%83.doc"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "形式发票-欧元.doc",
+          "size": 26624,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1c4RTY2OUQxN1pBMFU3QkhNMjNOVkNCQ05aNUYzVzhENVJJSE03MQ$$.doc",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1c4RTY2OUQxN1pBMFU3QkhNMjNOVkNCQ05aNUYzVzhENVJJSE03MQ$$.doc&instId=&type=download&originalFileName=%E5%BD%A2%E5%BC%8F%E5%8F%91%E7%A5%A8-%E6%AC%A7%E5%85%83.doc"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "价格变动.png",
+          "size": 16085,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzFTQzY2VEExM0MwMVVERU1QQ0MwNTk4U1BNUDIzR09UVzBPSU0yQw$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzFTQzY2VEExM0MwMVVERU1QQ0MwNTk4U1BNUDIzR09UVzBPSU0yQw$$.png&instId=&type=download&originalFileName=%E4%BB%B7%E6%A0%BC%E5%8F%98%E5%8A%A8.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "测算表.xls",
+          "size": 31232,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzZaOTY2QkExWEEwMU04VTdHMjdKNzZHNVM0VloxTEEwWDBPSU1EOQ$$.xls",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzZaOTY2QkExWEEwMU04VTdHMjdKNzZHNVM0VloxTEEwWDBPSU1EOQ$$.xls&instId=&type=download&originalFileName=%E6%B5%8B%E7%AE%97%E8%A1%A8.xls"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "各税点测算版表样2019.4.8（以此份为主）.xlsx",
+          "size": 91165,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1k2RDY2MDcxQ0c0MUpLM1ZMUjFQT0NFRFFGRzQyTkEwWDBPSU1G.xlsx",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1k2RDY2MDcxQ0c0MUpLM1ZMUjFQT0NFRFFGRzQyTkEwWDBPSU1G.xlsx&instId=&type=download&originalFileName=%E5%90%84%E7%A8%8E%E7%82%B9%E6%B5%8B%E7%AE%97%E7%89%88%E8%A1%A8%E6%A0%B72019.4.8%EF%BC%88%E4%BB%A5%E6%AD%A4%E4%BB%BD%E4%B8%BA%E4%B8%BB%EF%BC%89.xlsx"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "磁控溅射阴极二方合同12.2.docx",
+          "size": 33095,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1JaRTY2ODcxQkU0MVoxNE9MRjE1TTZLQjRBNjEyVEVIVzZPSU1DMg$$.docx",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1JaRTY2ODcxQkU0MVoxNE9MRjE1TTZLQjRBNjEyVEVIVzZPSU1DMg$$.docx&instId=&type=download&originalFileName=%E7%A3%81%E6%8E%A7%E6%BA%85%E5%B0%84%E9%98%B4%E6%9E%81%E4%BA%8C%E6%96%B9%E5%90%88%E5%90%8C12.2.docx"
+        }
+      ]
+    },
+    {
+      "form_name": "合同审批",
+      "form_uuid": "FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LQZ5",
+      "instance_id": "8db4c157-1505-4a74-98b3-c377613bf485",
+      "title": "冯桃娟发起的25JZBTPFB157-306合同审批",
+      "submitted_at": 1764646447587,
+      "originator": "冯桃娟",
+      "status": "COMPLETED",
+      "attachments": [
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "美元汇率.png",
+          "size": 55515,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2TkQxOFpXWkFTTzY5Nk4yWjdRRzJPTUkyUk1ERjg0SE05OQ$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2TkQxOFpXWkFTTzY5Nk4yWjdRRzJPTUkyUk1ERjg0SE05OQ$$.png&instId=&type=download&originalFileName=%E7%BE%8E%E5%85%83%E6%B1%87%E7%8E%87.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "欧元汇率.png",
+          "size": 55933,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzMyRDY2Q0ExU0ZaWkJEMlg3TEIxRTRUWkk0TkoyUE1ERjg0SE1RMw$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzMyRDY2Q0ExU0ZaWkJEMlg3TEIxRTRUWkk0TkoyUE1ERjg0SE1RMw$$.png&instId=&type=download&originalFileName=%E6%AC%A7%E5%85%83%E6%B1%87%E7%8E%87.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "中标通知书.pdf",
+          "size": 2036936,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2TkMxVlZXWjdZR1BGRUE5REFTUUVPT0EzQU5ERjg0SE1DQw$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2TkMxVlZXWjdZR1BGRUE5REFTUUVPT0EzQU5ERjg0SE1DQw$$.pdf&instId=&type=download&originalFileName=%E4%B8%AD%E6%A0%87%E9%80%9A%E7%9F%A5%E4%B9%A6.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "ADL Product 2025（中）直流电源.pdf",
+          "size": 2741919,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZCOTY2T0QxTk5XWjA1WE5FUjAySDRGQVpEQjgzVzU4Rzg0SE1ERA$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZCOTY2T0QxTk5XWjA1WE5FUjAySDRGQVpEQjgzVzU4Rzg0SE1ERA$$.pdf&instId=&type=download&originalFileName=ADL%20Product%202025%EF%BC%88%E4%B8%AD%EF%BC%89%E7%9B%B4%E6%B5%81%E7%94%B5%E6%BA%90.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "MELEC up to date 2024高能脉冲发生器.pdf",
+          "size": 2122686,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0NaOTY2U0ExSEswMFEyQVhHMEJBQkNXT1k4Wk8zNTY4Rzg0SE1W.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0NaOTY2U0ExSEswMFEyQVhHMEJBQkNXT1k4Wk8zNTY4Rzg0SE1W.pdf&instId=&type=download&originalFileName=MELEC%C2%A0up%C2%A0to%C2%A0date%C2%A02024%E9%AB%98%E8%83%BD%E8%84%89%E5%86%B2%E5%8F%91%E7%94%9F%E5%99%A8.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "2025香港華佳企業银行.pdf",
+          "size": 217285,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2WUMxODIwMEZXSVFKTk1HRzlTMElSTTgzNFZPRzg0SE05MQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2WUMxODIwMEZXSVFKTk1HRzlTMElSTTgzNFZPRzg0SE05MQ$$.pdf&instId=&type=download&originalFileName=2025%E9%A6%99%E6%B8%AF%E8%8F%AF%E4%BD%B3%E4%BC%81%E6%A5%AD%E9%93%B6%E8%A1%8C.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "華佳商業登記證2025-盖章.pdf",
+          "size": 239422,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2MEQxUlFVWlBWRDRFRVZMMUJaUFE0UEwyR1ZPRzg0SE1aUQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2MEQxUlFVWlBWRDRFRVZMMUJaUFE0UEwyR1ZPRzg0SE1aUQ$$.pdf&instId=&type=download&originalFileName=%E8%8F%AF%E4%BD%B3%E5%95%86%E6%A5%AD%E7%99%BB%E8%A8%98%E8%AD%892025-%E7%9B%96%E7%AB%A0.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "射频电源_TruPlasma_RF_Series_1000_EN.pdf",
+          "size": 7080827,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2STcxSjhZWkpPRUY2UTgwTDQyTjM5WVoxWFZPRzg0SE1JNw$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2STcxSjhZWkpPRUY2UTgwTDQyTjM5WVoxWFZPRzg0SE1JNw$$.pdf&instId=&type=download&originalFileName=%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90_TruPlasma_RF_Series_1000_EN.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "射频电源-进口货物说明 - 副本.docx",
+          "size": 19095,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2SDcxUDIwMFYwTE5JSVAxRUFFOUJBVFQzMldPRzg0SE1HMQ$$.docx",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2SDcxUDIwMFYwTE5JSVAxRUFFOUJBVFQzMldPRzg0SE1HMQ$$.docx&instId=&type=download&originalFileName=%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90-%E8%BF%9B%E5%8F%A3%E8%B4%A7%E7%89%A9%E8%AF%B4%E6%98%8E%20-%20%E5%89%AF%E6%9C%AC.docx"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "射频电源铭牌.jpg",
+          "size": 879393,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0cxSDY2MkExQURZWjBFSUdBSlIxSUNIRkgxWlUzRldPRzg0SE1SNw$$.jpg",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0cxSDY2MkExQURZWjBFSUdBSlIxSUNIRkgxWlUzRldPRzg0SE1SNw$$.jpg&instId=&type=download&originalFileName=%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E9%93%AD%E7%89%8C.jpg"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "直流脉冲电源-进口货物说明.docx",
+          "size": 18638,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2R0IxR1pVWlFUWTY4MlBCUzRGMlg1QzMzTVdPRzg0SE1MSQ$$.docx",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2R0IxR1pVWlFUWTY4MlBCUzRGMlg1QzMzTVdPRzg0SE1MSQ$$.docx&instId=&type=download&originalFileName=%E7%9B%B4%E6%B5%81%E8%84%89%E5%86%B2%E7%94%B5%E6%BA%90-%E8%BF%9B%E5%8F%A3%E8%B4%A7%E7%89%A9%E8%AF%B4%E6%98%8E.docx"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "TRUMPF_TruPlasma_DC_Series_4000_G2-直流脉冲电源.pdf",
+          "size": 1292432,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2STcxWFhZWlVRQlpCQ1M2WTlYQjdKTE4zVlhZRzg0SE1TNA$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2STcxWFhZWlVRQlpCQ1M2WTlYQjdKTE4zVlhZRzg0SE1TNA$$.pdf&instId=&type=download&originalFileName=TRUMPF_TruPlasma_DC_Series_4000_G2-%E7%9B%B4%E6%B5%81%E8%84%89%E5%86%B2%E7%94%B5%E6%BA%90.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "美元合同确认记录.png",
+          "size": 33056,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2NEIxTERUWk5OT1k5TTUxWERCNzNES1YySTMySTg0SE0xQw$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2NEIxTERUWk5OT1k5TTUxWERCNzNES1YySTMySTg0SE0xQw$$.png&instId=&type=download&originalFileName=%E7%BE%8E%E5%85%83%E5%90%88%E5%90%8C%E7%A1%AE%E8%AE%A4%E8%AE%B0%E5%BD%95.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "支付方式.jpeg",
+          "size": 473335,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1dRRDY2NkExQllZWlJKRzI5OEFNUTZJNDJGTEszSjIySTg0SE1GNQ$$.jpeg",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1dRRDY2NkExQllZWlJKRzI5OEFNUTZJNDJGTEszSjIySTg0SE1GNQ$$.jpeg&instId=&type=download&originalFileName=%E6%94%AF%E4%BB%98%E6%96%B9%E5%BC%8F.jpeg"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "高能脉冲发生器合同条款确认.png",
+          "size": 25149,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX09QRTY2NzkxWURaWjRRMEc2Q1dHSzdLUjlMSjgzWElHSTg0SE1ENA$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX09QRTY2NzkxWURaWjRRMEc2Q1dHSzdLUjlMSjgzWElHSTg0SE1ENA$$.png&instId=&type=download&originalFileName=%E9%AB%98%E8%83%BD%E8%84%89%E5%86%B2%E5%8F%91%E7%94%9F%E5%99%A8%E5%90%88%E5%90%8C%E6%9D%A1%E6%AC%BE%E7%A1%AE%E8%AE%A4.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "价格记录.png",
+          "size": 33213,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1I3QzY2S0IxM1NaWldOQ0pCOFlLSTlaNExHVTEyTElHSTg0SE1YMg$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1I3QzY2S0IxM1NaWldOQ0pCOFlLSTlaNExHVTEyTElHSTg0SE1YMg$$.png&instId=&type=download&originalFileName=%E4%BB%B7%E6%A0%BC%E8%AE%B0%E5%BD%95.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "磁控溅射阴极条款确认.png",
+          "size": 89437,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0pPOTY2MEMxOVpaWlU3UVA5QUQ0Qjg3S0JCVkMzTlFMSTg0SE1aMQ$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0pPOTY2MEMxOVpaWlU3UVA5QUQ0Qjg3S0JCVkMzTlFMSTg0SE1aMQ$$.png&instId=&type=download&originalFileName=%E7%A3%81%E6%8E%A7%E6%BA%85%E5%B0%84%E9%98%B4%E6%9E%81%E6%9D%A1%E6%AC%BE%E7%A1%AE%E8%AE%A4.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "二方合同-人民币-射频匹配器.docx",
+          "size": 32349,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzdVNzY2VUMxVEFVWlpJU1pETEozRTUyRVVKNk8yTkRFWkw0SE1BRA$$.docx",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzdVNzY2VUMxVEFVWlpJU1pETEozRTUyRVVKNk8yTkRFWkw0SE1BRA$$.docx&instId=&type=download&originalFileName=%E4%BA%8C%E6%96%B9%E5%90%88%E5%90%8C-%E4%BA%BA%E6%B0%91%E5%B8%81-%E5%B0%84%E9%A2%91%E5%8C%B9%E9%85%8D%E5%99%A8.docx"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "两方合同-美元-射频电源、直流脉冲电源.doc",
+          "size": 106795,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzE5RTY2VjcxRTIxMFlDVE1KUDlTSzVVSlZNNlYzOEVFWkw0SE0x.doc",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzE5RTY2VjcxRTIxMFlDVE1KUDlTSzVVSlZNNlYzOEVFWkw0SE0x.doc&instId=&type=download&originalFileName=%E4%B8%A4%E6%96%B9%E5%90%88%E5%90%8C-%E7%BE%8E%E5%85%83-%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E3%80%81%E7%9B%B4%E6%B5%81%E8%84%89%E5%86%B2%E7%94%B5%E6%BA%90.doc"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "代理协议 .doc",
+          "size": 38400,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX01BOTY2SEExQjExME9VRjVKNVpDMzVPQUZCTDUzVVFMWkw0SE1J.doc",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX01BOTY2SEExQjExME9VRjVKNVpDMzVPQUZCTDUzVVFMWkw0SE1J.doc&instId=&type=download&originalFileName=%E4%BB%A3%E7%90%86%E5%8D%8F%E8%AE%AE%20.doc"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "高能脉冲发生器等二方合同1.pdf",
+          "size": 642408,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzVDOTY2UTYxSDI3MEtQS0FKSjdWSDVCSDJUM0oyTDhOUUlJSE0wNg$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzVDOTY2UTYxSDI3MEtQS0FKSjdWSDVCSDJUM0oyTDhOUUlJSE0wNg$$.pdf&instId=&type=download&originalFileName=%E9%AB%98%E8%83%BD%E8%84%89%E5%86%B2%E5%8F%91%E7%94%9F%E5%99%A8%E7%AD%89%E4%BA%8C%E6%96%B9%E5%90%88%E5%90%8C1.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "程鑫老师课题组磁控溅射阴极、直流和射频电源等采购-承诺函模板.pdf",
+          "size": 246615,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0RRODY2UUQxTjA5MEQwVDBHVjBUSTUxV0UwWFEzV1E1UklJSE1IQg$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0RRODY2UUQxTjA5MEQwVDBHVjBUSTUxV0UwWFEzV1E1UklJSE1IQg$$.pdf&instId=&type=download&originalFileName=%E7%A8%8B%E9%91%AB%E8%80%81%E5%B8%88%E8%AF%BE%E9%A2%98%E7%BB%84%E7%A3%81%E6%8E%A7%E6%BA%85%E5%B0%84%E9%98%B4%E6%9E%81%E3%80%81%E7%9B%B4%E6%B5%81%E5%92%8C%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E7%AD%89%E9%87%87%E8%B4%AD-%E6%89%BF%E8%AF%BA%E5%87%BD%E6%A8%A1%E6%9D%BF.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "程鑫老师课题组磁控溅射阴极、直流和射频电源等采购-内贸合同模板.pdf",
+          "size": 558313,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzYzNjY2NUMxVFdBMENRODhLUzJFMUFFV0RJN08zTlI1UklJSE1W.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzYzNjY2NUMxVFdBMENRODhLUzJFMUFFV0RJN08zTlI1UklJSE1W.pdf&instId=&type=download&originalFileName=%E7%A8%8B%E9%91%AB%E8%80%81%E5%B8%88%E8%AF%BE%E9%A2%98%E7%BB%84%E7%A3%81%E6%8E%A7%E6%BA%85%E5%B0%84%E9%98%B4%E6%9E%81%E3%80%81%E7%9B%B4%E6%B5%81%E5%92%8C%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E7%AD%89%E9%87%87%E8%B4%AD-%E5%86%85%E8%B4%B8%E5%90%88%E5%90%8C%E6%A8%A1%E6%9D%BF.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "程鑫老师课题组磁控溅射阴极、直流和射频电源等采购-外贸合同模板.pdf",
+          "size": 463401,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0pMQTY2T0QxOTVBMFpSTVNKVDNYSUFaOVRHRjQzTlI1UklJSE1YMg$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0pMQTY2T0QxOTVBMFpSTVNKVDNYSUFaOVRHRjQzTlI1UklJSE1YMg$$.pdf&instId=&type=download&originalFileName=%E7%A8%8B%E9%91%AB%E8%80%81%E5%B8%88%E8%AF%BE%E9%A2%98%E7%BB%84%E7%A3%81%E6%8E%A7%E6%BA%85%E5%B0%84%E9%98%B4%E6%9E%81%E3%80%81%E7%9B%B4%E6%B5%81%E5%92%8C%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E7%AD%89%E9%87%87%E8%B4%AD-%E5%A4%96%E8%B4%B8%E5%90%88%E5%90%8C%E6%A8%A1%E6%9D%BF.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "形式发票-美元.doc",
+          "size": 26112,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzY5NjY2MUIxM1k1MEhBRlRINk5XTjdJSlJSNzEySTRFUklJSE1aSQ$$.doc",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzY5NjY2MUIxM1k1MEhBRlRINk5XTjdJSlJSNzEySTRFUklJSE1aSQ$$.doc&instId=&type=download&originalFileName=%E5%BD%A2%E5%BC%8F%E5%8F%91%E7%A5%A8-%E7%BE%8E%E5%85%83.doc"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "形式发票-欧元.doc",
+          "size": 26624,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1c4RTY2OUQxN1pBMFU3QkhNMjNOVkNCQ05aNUYzVzhENVJJSE03MQ$$.doc",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1c4RTY2OUQxN1pBMFU3QkhNMjNOVkNCQ05aNUYzVzhENVJJSE03MQ$$.doc&instId=&type=download&originalFileName=%E5%BD%A2%E5%BC%8F%E5%8F%91%E7%A5%A8-%E6%AC%A7%E5%85%83.doc"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "价格变动.png",
+          "size": 16085,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzFTQzY2VEExM0MwMVVERU1QQ0MwNTk4U1BNUDIzR09UVzBPSU0yQw$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzFTQzY2VEExM0MwMVVERU1QQ0MwNTk4U1BNUDIzR09UVzBPSU0yQw$$.png&instId=&type=download&originalFileName=%E4%BB%B7%E6%A0%BC%E5%8F%98%E5%8A%A8.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "测算表.xls",
+          "size": 31232,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzZaOTY2QkExWEEwMU04VTdHMjdKNzZHNVM0VloxTEEwWDBPSU1EOQ$$.xls",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzZaOTY2QkExWEEwMU04VTdHMjdKNzZHNVM0VloxTEEwWDBPSU1EOQ$$.xls&instId=&type=download&originalFileName=%E6%B5%8B%E7%AE%97%E8%A1%A8.xls"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "各税点测算版表样2019.4.8（以此份为主）.xlsx",
+          "size": 91165,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1k2RDY2MDcxQ0c0MUpLM1ZMUjFQT0NFRFFGRzQyTkEwWDBPSU1G.xlsx",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1k2RDY2MDcxQ0c0MUpLM1ZMUjFQT0NFRFFGRzQyTkEwWDBPSU1G.xlsx&instId=&type=download&originalFileName=%E5%90%84%E7%A8%8E%E7%82%B9%E6%B5%8B%E7%AE%97%E7%89%88%E8%A1%A8%E6%A0%B72019.4.8%EF%BC%88%E4%BB%A5%E6%AD%A4%E4%BB%BD%E4%B8%BA%E4%B8%BB%EF%BC%89.xlsx"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "磁控溅射阴极二方合同12.2.docx",
+          "size": 33095,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1JaRTY2ODcxQkU0MVoxNE9MRjE1TTZLQjRBNjEyVEVIVzZPSU1DMg$$.docx",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1JaRTY2ODcxQkU0MVoxNE9MRjE1TTZLQjRBNjEyVEVIVzZPSU1DMg$$.docx&instId=&type=download&originalFileName=%E7%A3%81%E6%8E%A7%E6%BA%85%E5%B0%84%E9%98%B4%E6%9E%81%E4%BA%8C%E6%96%B9%E5%90%88%E5%90%8C12.2.docx"
+        }
+      ]
+    },
+    {
+      "form_name": "合同审批",
+      "form_uuid": "FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LQZ5",
+      "instance_id": "12546d19-0b38-430c-abb5-ec8932a2fa03",
+      "title": "冯桃娟发起的25JZBTPFB157-306合同审批",
+      "submitted_at": 1761273438081,
+      "originator": "冯桃娟",
+      "status": "COMPLETED",
+      "attachments": [
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "测算表.xls",
+          "size": 31232,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1BaQTY2OEMxUkRaWjNCS0hGN0tYNzVVTlZIUEIyTkxERjg0SE1BNA$$.xls",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1BaQTY2OEMxUkRaWjNCS0hGN0tYNzVVTlZIUEIyTkxERjg0SE1BNA$$.xls&instId=&type=download&originalFileName=%E6%B5%8B%E7%AE%97%E8%A1%A8.xls"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "各税点测算版表样2019.4.8（以此份为主）.xlsx",
+          "size": 91324,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzA3QjY2T0QxS0pXWjU3TVVCSEFTQUFSODROTTIzWUxERjg0SE1PRQ$$.xlsx",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzA3QjY2T0QxS0pXWjU3TVVCSEFTQUFSODROTTIzWUxERjg0SE1PRQ$$.xlsx&instId=&type=download&originalFileName=%E5%90%84%E7%A8%8E%E7%82%B9%E6%B5%8B%E7%AE%97%E7%89%88%E8%A1%A8%E6%A0%B72019.4.8%EF%BC%88%E4%BB%A5%E6%AD%A4%E4%BB%BD%E4%B8%BA%E4%B8%BB%EF%BC%89.xlsx"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "美元汇率.png",
+          "size": 55515,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2TkQxOFpXWkFTTzY5Nk4yWjdRRzJPTUkyUk1ERjg0SE05OQ$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2TkQxOFpXWkFTTzY5Nk4yWjdRRzJPTUkyUk1ERjg0SE05OQ$$.png&instId=&type=download&originalFileName=%E7%BE%8E%E5%85%83%E6%B1%87%E7%8E%87.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "欧元汇率.png",
+          "size": 55933,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzMyRDY2Q0ExU0ZaWkJEMlg3TEIxRTRUWkk0TkoyUE1ERjg0SE1RMw$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzMyRDY2Q0ExU0ZaWkJEMlg3TEIxRTRUWkk0TkoyUE1ERjg0SE1RMw$$.png&instId=&type=download&originalFileName=%E6%AC%A7%E5%85%83%E6%B1%87%E7%8E%87.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "中标通知书.pdf",
+          "size": 2036936,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2TkMxVlZXWjdZR1BGRUE5REFTUUVPT0EzQU5ERjg0SE1DQw$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2TkMxVlZXWjdZR1BGRUE5REFTUUVPT0EzQU5ERjg0SE1DQw$$.pdf&instId=&type=download&originalFileName=%E4%B8%AD%E6%A0%87%E9%80%9A%E7%9F%A5%E4%B9%A6.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "ADL Product 2025（中）直流电源.pdf",
+          "size": 2741919,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZCOTY2T0QxTk5XWjA1WE5FUjAySDRGQVpEQjgzVzU4Rzg0SE1ERA$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZCOTY2T0QxTk5XWjA1WE5FUjAySDRGQVpEQjgzVzU4Rzg0SE1ERA$$.pdf&instId=&type=download&originalFileName=ADL%20Product%202025%EF%BC%88%E4%B8%AD%EF%BC%89%E7%9B%B4%E6%B5%81%E7%94%B5%E6%BA%90.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "MELEC up to date 2024高能脉冲发生器.pdf",
+          "size": 2122686,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0NaOTY2U0ExSEswMFEyQVhHMEJBQkNXT1k4Wk8zNTY4Rzg0SE1W.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0NaOTY2U0ExSEswMFEyQVhHMEJBQkNXT1k4Wk8zNTY4Rzg0SE1W.pdf&instId=&type=download&originalFileName=MELEC%C2%A0up%C2%A0to%C2%A0date%C2%A02024%E9%AB%98%E8%83%BD%E8%84%89%E5%86%B2%E5%8F%91%E7%94%9F%E5%99%A8.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "2025香港華佳企業银行.pdf",
+          "size": 217285,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2WUMxODIwMEZXSVFKTk1HRzlTMElSTTgzNFZPRzg0SE05MQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2WUMxODIwMEZXSVFKTk1HRzlTMElSTTgzNFZPRzg0SE05MQ$$.pdf&instId=&type=download&originalFileName=2025%E9%A6%99%E6%B8%AF%E8%8F%AF%E4%BD%B3%E4%BC%81%E6%A5%AD%E9%93%B6%E8%A1%8C.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "華佳商業登記證2025-盖章.pdf",
+          "size": 239422,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2MEQxUlFVWlBWRDRFRVZMMUJaUFE0UEwyR1ZPRzg0SE1aUQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2MEQxUlFVWlBWRDRFRVZMMUJaUFE0UEwyR1ZPRzg0SE1aUQ$$.pdf&instId=&type=download&originalFileName=%E8%8F%AF%E4%BD%B3%E5%95%86%E6%A5%AD%E7%99%BB%E8%A8%98%E8%AD%892025-%E7%9B%96%E7%AB%A0.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "射频电源_TruPlasma_RF_Series_1000_EN.pdf",
+          "size": 7080827,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2STcxSjhZWkpPRUY2UTgwTDQyTjM5WVoxWFZPRzg0SE1JNw$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2STcxSjhZWkpPRUY2UTgwTDQyTjM5WVoxWFZPRzg0SE1JNw$$.pdf&instId=&type=download&originalFileName=%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90_TruPlasma_RF_Series_1000_EN.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "射频电源-进口货物说明 - 副本.docx",
+          "size": 19095,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2SDcxUDIwMFYwTE5JSVAxRUFFOUJBVFQzMldPRzg0SE1HMQ$$.docx",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2SDcxUDIwMFYwTE5JSVAxRUFFOUJBVFQzMldPRzg0SE1HMQ$$.docx&instId=&type=download&originalFileName=%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90-%E8%BF%9B%E5%8F%A3%E8%B4%A7%E7%89%A9%E8%AF%B4%E6%98%8E%20-%20%E5%89%AF%E6%9C%AC.docx"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "射频电源铭牌.jpg",
+          "size": 879393,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0cxSDY2MkExQURZWjBFSUdBSlIxSUNIRkgxWlUzRldPRzg0SE1SNw$$.jpg",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0cxSDY2MkExQURZWjBFSUdBSlIxSUNIRkgxWlUzRldPRzg0SE1SNw$$.jpg&instId=&type=download&originalFileName=%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E9%93%AD%E7%89%8C.jpg"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "直流脉冲电源-进口货物说明.docx",
+          "size": 18638,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2R0IxR1pVWlFUWTY4MlBCUzRGMlg1QzMzTVdPRzg0SE1MSQ$$.docx",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2R0IxR1pVWlFUWTY4MlBCUzRGMlg1QzMzTVdPRzg0SE1MSQ$$.docx&instId=&type=download&originalFileName=%E7%9B%B4%E6%B5%81%E8%84%89%E5%86%B2%E7%94%B5%E6%BA%90-%E8%BF%9B%E5%8F%A3%E8%B4%A7%E7%89%A9%E8%AF%B4%E6%98%8E.docx"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "TRUMPF_TruPlasma_DC_Series_4000_G2-直流脉冲电源.pdf",
+          "size": 1292432,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2STcxWFhZWlVRQlpCQ1M2WTlYQjdKTE4zVlhZRzg0SE1TNA$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2STcxWFhZWlVRQlpCQ1M2WTlYQjdKTE4zVlhZRzg0SE1TNA$$.pdf&instId=&type=download&originalFileName=TRUMPF_TruPlasma_DC_Series_4000_G2-%E7%9B%B4%E6%B5%81%E8%84%89%E5%86%B2%E7%94%B5%E6%BA%90.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "美元合同确认记录.png",
+          "size": 33056,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2NEIxTERUWk5OT1k5TTUxWERCNzNES1YySTMySTg0SE0xQw$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2NEIxTERUWk5OT1k5TTUxWERCNzNES1YySTMySTg0SE0xQw$$.png&instId=&type=download&originalFileName=%E7%BE%8E%E5%85%83%E5%90%88%E5%90%8C%E7%A1%AE%E8%AE%A4%E8%AE%B0%E5%BD%95.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "支付方式.jpeg",
+          "size": 473335,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1dRRDY2NkExQllZWlJKRzI5OEFNUTZJNDJGTEszSjIySTg0SE1GNQ$$.jpeg",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1dRRDY2NkExQllZWlJKRzI5OEFNUTZJNDJGTEszSjIySTg0SE1GNQ$$.jpeg&instId=&type=download&originalFileName=%E6%94%AF%E4%BB%98%E6%96%B9%E5%BC%8F.jpeg"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "高能脉冲发生器合同条款确认.png",
+          "size": 25149,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX09QRTY2NzkxWURaWjRRMEc2Q1dHSzdLUjlMSjgzWElHSTg0SE1ENA$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX09QRTY2NzkxWURaWjRRMEc2Q1dHSzdLUjlMSjgzWElHSTg0SE1ENA$$.png&instId=&type=download&originalFileName=%E9%AB%98%E8%83%BD%E8%84%89%E5%86%B2%E5%8F%91%E7%94%9F%E5%99%A8%E5%90%88%E5%90%8C%E6%9D%A1%E6%AC%BE%E7%A1%AE%E8%AE%A4.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "价格记录.png",
+          "size": 33213,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1I3QzY2S0IxM1NaWldOQ0pCOFlLSTlaNExHVTEyTElHSTg0SE1YMg$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1I3QzY2S0IxM1NaWldOQ0pCOFlLSTlaNExHVTEyTElHSTg0SE1YMg$$.png&instId=&type=download&originalFileName=%E4%BB%B7%E6%A0%BC%E8%AE%B0%E5%BD%95.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "磁控溅射阴极条款确认.png",
+          "size": 89437,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0pPOTY2MEMxOVpaWlU3UVA5QUQ0Qjg3S0JCVkMzTlFMSTg0SE1aMQ$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0pPOTY2MEMxOVpaWlU3UVA5QUQ0Qjg3S0JCVkMzTlFMSTg0SE1aMQ$$.png&instId=&type=download&originalFileName=%E7%A3%81%E6%8E%A7%E6%BA%85%E5%B0%84%E9%98%B4%E6%9E%81%E6%9D%A1%E6%AC%BE%E7%A1%AE%E8%AE%A4.png"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "磁控溅射阴极二方合同10.20.docx",
+          "size": 33085,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzQxSDY2WDcxRVpaWkUyQ1dDM09YVDlEQVhESDkyUjVXWUw0SE1TMw$$.docx",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzQxSDY2WDcxRVpaWkUyQ1dDM09YVDlEQVhESDkyUjVXWUw0SE1TMw$$.docx&instId=&type=download&originalFileName=%E7%A3%81%E6%8E%A7%E6%BA%85%E5%B0%84%E9%98%B4%E6%9E%81%E4%BA%8C%E6%96%B9%E5%90%88%E5%90%8C10.20.docx"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "二方合同-人民币-射频匹配器.docx",
+          "size": 32349,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzdVNzY2VUMxVEFVWlpJU1pETEozRTUyRVVKNk8yTkRFWkw0SE1BRA$$.docx",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzdVNzY2VUMxVEFVWlpJU1pETEozRTUyRVVKNk8yTkRFWkw0SE1BRA$$.docx&instId=&type=download&originalFileName=%E4%BA%8C%E6%96%B9%E5%90%88%E5%90%8C-%E4%BA%BA%E6%B0%91%E5%B8%81-%E5%B0%84%E9%A2%91%E5%8C%B9%E9%85%8D%E5%99%A8.docx"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "两方合同-美元-射频电源、直流脉冲电源.doc",
+          "size": 106795,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzE5RTY2VjcxRTIxMFlDVE1KUDlTSzVVSlZNNlYzOEVFWkw0SE0x.doc",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzE5RTY2VjcxRTIxMFlDVE1KUDlTSzVVSlZNNlYzOEVFWkw0SE0x.doc&instId=&type=download&originalFileName=%E4%B8%A4%E6%96%B9%E5%90%88%E5%90%8C-%E7%BE%8E%E5%85%83-%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E3%80%81%E7%9B%B4%E6%B5%81%E8%84%89%E5%86%B2%E7%94%B5%E6%BA%90.doc"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "代理协议 .doc",
+          "size": 38400,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX01BOTY2SEExQjExME9VRjVKNVpDMzVPQUZCTDUzVVFMWkw0SE1J.doc",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX01BOTY2SEExQjExME9VRjVKNVpDMzVPQUZCTDUzVVFMWkw0SE1J.doc&instId=&type=download&originalFileName=%E4%BB%A3%E7%90%86%E5%8D%8F%E8%AE%AE%20.doc"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "高能脉冲发生器等二方合同1.pdf",
+          "size": 642408,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzVDOTY2UTYxSDI3MEtQS0FKSjdWSDVCSDJUM0oyTDhOUUlJSE0wNg$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzVDOTY2UTYxSDI3MEtQS0FKSjdWSDVCSDJUM0oyTDhOUUlJSE0wNg$$.pdf&instId=&type=download&originalFileName=%E9%AB%98%E8%83%BD%E8%84%89%E5%86%B2%E5%8F%91%E7%94%9F%E5%99%A8%E7%AD%89%E4%BA%8C%E6%96%B9%E5%90%88%E5%90%8C1.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "程鑫老师课题组磁控溅射阴极、直流和射频电源等采购-承诺函模板.pdf",
+          "size": 246615,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0RRODY2UUQxTjA5MEQwVDBHVjBUSTUxV0UwWFEzV1E1UklJSE1IQg$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0RRODY2UUQxTjA5MEQwVDBHVjBUSTUxV0UwWFEzV1E1UklJSE1IQg$$.pdf&instId=&type=download&originalFileName=%E7%A8%8B%E9%91%AB%E8%80%81%E5%B8%88%E8%AF%BE%E9%A2%98%E7%BB%84%E7%A3%81%E6%8E%A7%E6%BA%85%E5%B0%84%E9%98%B4%E6%9E%81%E3%80%81%E7%9B%B4%E6%B5%81%E5%92%8C%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E7%AD%89%E9%87%87%E8%B4%AD-%E6%89%BF%E8%AF%BA%E5%87%BD%E6%A8%A1%E6%9D%BF.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "程鑫老师课题组磁控溅射阴极、直流和射频电源等采购-内贸合同模板.pdf",
+          "size": 558313,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzYzNjY2NUMxVFdBMENRODhLUzJFMUFFV0RJN08zTlI1UklJSE1W.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzYzNjY2NUMxVFdBMENRODhLUzJFMUFFV0RJN08zTlI1UklJSE1W.pdf&instId=&type=download&originalFileName=%E7%A8%8B%E9%91%AB%E8%80%81%E5%B8%88%E8%AF%BE%E9%A2%98%E7%BB%84%E7%A3%81%E6%8E%A7%E6%BA%85%E5%B0%84%E9%98%B4%E6%9E%81%E3%80%81%E7%9B%B4%E6%B5%81%E5%92%8C%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E7%AD%89%E9%87%87%E8%B4%AD-%E5%86%85%E8%B4%B8%E5%90%88%E5%90%8C%E6%A8%A1%E6%9D%BF.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "程鑫老师课题组磁控溅射阴极、直流和射频电源等采购-外贸合同模板.pdf",
+          "size": 463401,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0pMQTY2T0QxOTVBMFpSTVNKVDNYSUFaOVRHRjQzTlI1UklJSE1YMg$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0pMQTY2T0QxOTVBMFpSTVNKVDNYSUFaOVRHRjQzTlI1UklJSE1YMg$$.pdf&instId=&type=download&originalFileName=%E7%A8%8B%E9%91%AB%E8%80%81%E5%B8%88%E8%AF%BE%E9%A2%98%E7%BB%84%E7%A3%81%E6%8E%A7%E6%BA%85%E5%B0%84%E9%98%B4%E6%9E%81%E3%80%81%E7%9B%B4%E6%B5%81%E5%92%8C%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E7%AD%89%E9%87%87%E8%B4%AD-%E5%A4%96%E8%B4%B8%E5%90%88%E5%90%8C%E6%A8%A1%E6%9D%BF.pdf"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "形式发票-美元.doc",
+          "size": 26112,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzY5NjY2MUIxM1k1MEhBRlRINk5XTjdJSlJSNzEySTRFUklJSE1aSQ$$.doc",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzY5NjY2MUIxM1k1MEhBRlRINk5XTjdJSlJSNzEySTRFUklJSE1aSQ$$.doc&instId=&type=download&originalFileName=%E5%BD%A2%E5%BC%8F%E5%8F%91%E7%A5%A8-%E7%BE%8E%E5%85%83.doc"
+        },
+        {
+          "field_id": "attachmentField_l7u2h6rf",
+          "field_label": "附件",
+          "name": "形式发票-欧元.doc",
+          "size": 26624,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1c4RTY2OUQxN1pBMFU3QkhNMjNOVkNCQ05aNUYzVzhENVJJSE03MQ$$.doc",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1c4RTY2OUQxN1pBMFU3QkhNMjNOVkNCQ05aNUYzVzhENVJJSE03MQ$$.doc&instId=&type=download&originalFileName=%E5%BD%A2%E5%BC%8F%E5%8F%91%E7%A5%A8-%E6%AC%A7%E5%85%83.doc"
+        },
+        {
+          "field_id": "attachmentField_lxson6vd",
+          "field_label": "合同附件",
+          "name": "外贸合同.doc",
+          "size": 87072,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1I3QzY2S0IxV1BXWkM5UkhBQkYyQTQ4TTJMTDEzM0FJNDg0SE04Rw$$.doc",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1I3QzY2S0IxV1BXWkM5UkhBQkYyQTQ4TTJMTDEzM0FJNDg0SE04Rw$$.doc&instId=&type=download&originalFileName=%E5%A4%96%E8%B4%B8%E5%90%88%E5%90%8C.doc"
+        }
+      ]
+    },
+    {
+      "form_name": "货款支付",
+      "form_uuid": "FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LNX5",
+      "instance_id": "2252144f-baf6-4cfb-a131-bb95c4a9ad80",
+      "title": "冯桃娟发起的JY南科大JY202510-001货款支付",
+      "submitted_at": 1784612433114,
+      "originator": "冯桃娟",
+      "status": "COMPLETED",
+      "attachments": [
+        {
+          "field_id": "attachmentField_lfj2zmnt",
+          "field_label": "上传发票",
+          "name": "磁控溅射阴极进项票（1套）.pdf",
+          "size": 110169,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0w4NjY2UDYxWlNKN0lGWE1QTDc2VzZZMFFXWk8yTUw5NDhVUk1ISw$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0w4NjY2UDYxWlNKN0lGWE1QTDc2VzZZMFFXWk8yTUw5NDhVUk1ISw$$.pdf&instId=&type=download&originalFileName=%E7%A3%81%E6%8E%A7%E6%BA%85%E5%B0%84%E9%98%B4%E6%9E%81%E8%BF%9B%E9%A1%B9%E7%A5%A8%EF%BC%881%E5%A5%97%EF%BC%89.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "磁控溅射阴极二方合同12.2.pdf",
+          "size": 4015827,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzZLQzY2TkIxQURLN1pSQk9NMjlCUkMzSVgwWjUzQlpBNThVUk1RRw$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzZLQzY2TkIxQURLN1pSQk9NMjlCUkMzSVgwWjUzQlpBNThVUk1RRw$$.pdf&instId=&type=download&originalFileName=%E7%A3%81%E6%8E%A7%E6%BA%85%E5%B0%84%E9%98%B4%E6%9E%81%E4%BA%8C%E6%96%B9%E5%90%88%E5%90%8C12.2.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "预付款支付记录.png",
+          "size": 30037,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzZURzY2TTgxSkZON1VTTU9PVFRRSDUxTEwwWjcyUFpBNThVUk0yMg$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzZURzY2TTgxSkZON1VTTU9PVFRRSDUxTEwwWjcyUFpBNThVUk0yMg$$.png&instId=&type=download&originalFileName=%E9%A2%84%E4%BB%98%E6%AC%BE%E6%94%AF%E4%BB%98%E8%AE%B0%E5%BD%95.png"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "内贸合同盖章.pdf",
+          "size": 4352355,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tQRTY2OTkxMlRKN1o3R0lNUzIwUjczNzNNV0YzQzFHNThVUk1ITQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tQRTY2OTkxMlRKN1o3R0lNUzIwUjczNzNNV0YzQzFHNThVUk1ITQ$$.pdf&instId=&type=download&originalFileName=%E5%86%85%E8%B4%B8%E5%90%88%E5%90%8C%E7%9B%96%E7%AB%A0.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "外贸合同盖章.pdf",
+          "size": 3934176,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1hDRDY2REIxUkhONzhGTzVKWTFDMjZQMUVGMjEyMzFHNThVUk1Z.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1hDRDY2REIxUkhONzhGTzVKWTFDMjZQMUVGMjEyMzFHNThVUk1Z.pdf&instId=&type=download&originalFileName=%E5%A4%96%E8%B4%B8%E5%90%88%E5%90%8C%E7%9B%96%E7%AB%A0.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "测算表.xls",
+          "size": 31232,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzA1RzY2UEQxUURNN1M2RVpITVJJVEM5RkUyUE0zWFFNNThVUk1LNA$$.xls",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzA1RzY2UEQxUURNN1M2RVpITVJJVEM5RkUyUE0zWFFNNThVUk1LNA$$.xls&instId=&type=download&originalFileName=%E6%B5%8B%E7%AE%97%E8%A1%A8.xls"
+        }
+      ]
+    },
+    {
+      "form_name": "货款支付",
+      "form_uuid": "FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LNX5",
+      "instance_id": "0875e462-72e2-4881-855a-69692e582911",
+      "title": "冯桃娟发起的Leaderfirm南科大25JZBTPFB157-306货款支付",
+      "submitted_at": 1779335350912,
+      "originator": "冯桃娟",
+      "status": "COMPLETED",
+      "attachments": [
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "二方发票.pdf",
+          "size": 222040,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0FPRDY2UzkxN01XNU9VRTdHWFNKQUMzUjE2OFIyQ1NFQVlFUE1MMQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0FPRDY2UzkxN01XNU9VRTdHWFNKQUMzUjE2OFIyQ1NFQVlFUE1MMQ$$.pdf&instId=&type=download&originalFileName=%E4%BA%8C%E6%96%B9%E5%8F%91%E7%A5%A8.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "两方合同-美元-射频电源、直流脉冲电源.pdf",
+          "size": 4538738,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzc2RTY2QTkxTk1XNUlBWE5OUFE5QkRQSlFETDgyVFNFQVlFUE1YMQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzc2RTY2QTkxTk1XNUlBWE5OUFE5QkRQSlFETDgyVFNFQVlFUE1YMQ$$.pdf&instId=&type=download&originalFileName=%E4%B8%A4%E6%96%B9%E5%90%88%E5%90%8C-%E7%BE%8E%E5%85%83-%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E3%80%81%E7%9B%B4%E6%B5%81%E8%84%89%E5%86%B2%E7%94%B5%E6%BA%90.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "直流脉冲电源支付记录.png",
+          "size": 31241,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1NVRTY2SzcxSkNXNUhPUlBPRVJMUDYyVFZFTFEzV1NFQVlFUE1aNg$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1NVRTY2SzcxSkNXNUhPUlBPRVJMUDYyVFZFTFEzV1NFQVlFUE1aNg$$.png&instId=&type=download&originalFileName=%E7%9B%B4%E6%B5%81%E8%84%89%E5%86%B2%E7%94%B5%E6%BA%90%E6%94%AF%E4%BB%98%E8%AE%B0%E5%BD%95.png"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "30%水单射频电源、直流脉冲电源.png",
+          "size": 104801,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX043QzY2RzkxT01XNTRQMERNNEwwQUQzWFo4OUQyWEZKQVlFUE1ZMQ$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX043QzY2RzkxT01XNTRQMERNNEwwQUQzWFo4OUQyWEZKQVlFUE1ZMQ$$.png&instId=&type=download&originalFileName=30%25%E6%B0%B4%E5%8D%95%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E3%80%81%E7%9B%B4%E6%B5%81%E8%84%89%E5%86%B2%E7%94%B5%E6%BA%90.png"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "70%水单射频电源（进口货）.png",
+          "size": 106521,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzRVRjY2NzcxT0JXNTQ3OVZMTzBDOEM2UEpTNjQyQkdKQVlFUE1HNQ$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzRVRjY2NzcxT0JXNTQ3OVZMTzBDOEM2UEpTNjQyQkdKQVlFUE1HNQ$$.png&instId=&type=download&originalFileName=70%25%E6%B0%B4%E5%8D%95%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%EF%BC%88%E8%BF%9B%E5%8F%A3%E8%B4%A7%EF%BC%89.png"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "测算表.xls",
+          "size": 31232,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0JOOTY2QUExU01XNU45OTlOODRCTjZGQVIwOEkzS1NRQVlFUE1YMQ$$.xls",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0JOOTY2QUExU01XNU45OTlOODRCTjZGQVIwOEkzS1NRQVlFUE1YMQ$$.xls&instId=&type=download&originalFileName=%E6%B5%8B%E7%AE%97%E8%A1%A8.xls"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "外贸合同盖章.pdf",
+          "size": 3934176,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1dKQzY2S0QxQUxXNVRUV1hOOUlETTdBVTU4VVYyMTFVQVlFUE02Mg$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1dKQzY2S0QxQUxXNVRUV1hOOUlETTdBVTU4VVYyMTFVQVlFUE02Mg$$.pdf&instId=&type=download&originalFileName=%E5%A4%96%E8%B4%B8%E5%90%88%E5%90%8C%E7%9B%96%E7%AB%A0.pdf"
+        }
+      ]
+    },
+    {
+      "form_name": "货款支付",
+      "form_uuid": "FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LNX5",
+      "instance_id": "f882aa05-019b-4f1e-9fdf-2540e8a01e65",
+      "title": "冯桃娟发起的JZ南科大25JZBTPFB157-306货款支付",
+      "submitted_at": 1779335066978,
+      "originator": "冯桃娟",
+      "status": "COMPLETED",
+      "attachments": [
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "测算表.xls",
+          "size": 31232,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1dTODY2SzgxREFXNUdUMzVNRFZYMjVFM0xKMFcySkdQNFlFUE1UNg$$.xls",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1dTODY2SzgxREFXNUdUMzVNRFZYMjVFM0xKMFcySkdQNFlFUE1UNg$$.xls&instId=&type=download&originalFileName=%E6%B5%8B%E7%AE%97%E8%A1%A8.xls"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "三方水单-美元.pdf",
+          "size": 1021586,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0JNNjY2VkMxWk1XNTNYTlFNNjVYTzVHVTdLRTEzUkdQNFlFUE1NMQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0JNNjY2VkMxWk1XNTNYTlFNNjVYTzVHVTdLRTEzUkdQNFlFUE1NMQ$$.pdf&instId=&type=download&originalFileName=%E4%B8%89%E6%96%B9%E6%B0%B4%E5%8D%95-%E7%BE%8E%E5%85%83.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "三方水单-美元1.pdf",
+          "size": 1149111,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzBPRTY2UUQxU0pXNURJUUFQMTAxSkJXOEpJTEQyWkdQNFlFUE1ZMw$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzBPRTY2UUQxU0pXNURJUUFQMTAxSkJXOEpJTEQyWkdQNFlFUE1ZMw$$.pdf&instId=&type=download&originalFileName=%E4%B8%89%E6%96%B9%E6%B0%B4%E5%8D%95-%E7%BE%8E%E5%85%831.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "形式发票-美元.pdf",
+          "size": 355756,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJFNjY2WDkxM1VWNTFXVERLWEE4ODlLOFA1UlAyM0hQNFlFUE0xQQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJFNjY2WDkxM1VWNTFXVERLWEE4ODlLOFA1UlAyM0hQNFlFUE0xQQ$$.pdf&instId=&type=download&originalFileName=%E5%BD%A2%E5%BC%8F%E5%8F%91%E7%A5%A8-%E7%BE%8E%E5%85%83.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "外贸合同盖章.pdf",
+          "size": 3934176,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzUxQjY2S0QxTE1XNU1MM0NKV1lZUTdWVVdVVFEzN0VUNFlFUE1RMQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzUxQjY2S0QxTE1XNU1MM0NKV1lZUTdWVVdVVFEzN0VUNFlFUE1RMQ$$.pdf&instId=&type=download&originalFileName=%E5%A4%96%E8%B4%B8%E5%90%88%E5%90%8C%E7%9B%96%E7%AB%A0.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "两方合同-美元-射频电源、直流脉冲电源.pdf",
+          "size": 4538738,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzROQzY2OUQxUFNWNVVBMUlMMVFDRzZWQUlTSFoxUVc5NVlFUE1WQQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzROQzY2OUQxUFNWNVVBMUlMMVFDRzZWQUlTSFoxUVc5NVlFUE1WQQ$$.pdf&instId=&type=download&originalFileName=%E4%B8%A4%E6%96%B9%E5%90%88%E5%90%8C-%E7%BE%8E%E5%85%83-%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E3%80%81%E7%9B%B4%E6%B5%81%E8%84%89%E5%86%B2%E7%94%B5%E6%BA%90.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "直流脉冲电源支付记录.png",
+          "size": 31241,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzRVRjY2VzkxSFVWNTMwMUVLT0pGQ0I2OVU3NVUzUlc5NVlFUE1XOQ$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzRVRjY2VzkxSFVWNTMwMUVLT0pGQ0I2OVU3NVUzUlc5NVlFUE1XOQ$$.png&instId=&type=download&originalFileName=%E7%9B%B4%E6%B5%81%E8%84%89%E5%86%B2%E7%94%B5%E6%BA%90%E6%94%AF%E4%BB%98%E8%AE%B0%E5%BD%95.png"
+        }
+      ]
+    },
+    {
+      "form_name": "货款支付",
+      "form_uuid": "FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LNX5",
+      "instance_id": "56edb760-72a1-4a01-85e0-85ca87531e40",
+      "title": "冯桃娟发起的JY南科大JY202510-003货款支付",
+      "submitted_at": 1775811881062,
+      "originator": "冯桃娟",
+      "status": "COMPLETED",
+      "attachments": [
+        {
+          "field_id": "attachmentField_lfj2zmnt",
+          "field_label": "上传发票",
+          "name": "70%进项票.pdf",
+          "size": 158390,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1I3QzY2UjkxNFFSNEI0VldOSE43UjlDSVczRDMyMjhYSE9TTk1JMQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1I3QzY2UjkxNFFSNEI0VldOSE43UjlDSVczRDMyMjhYSE9TTk1JMQ$$.pdf&instId=&type=download&originalFileName=70%25%E8%BF%9B%E9%A1%B9%E7%A5%A8.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "70%进项票.pdf",
+          "size": 158390,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1I3QzY2S0IxUk5SNFpKQTBJRUJPRkRaRE85WksyUVlMSU9TTk1YMQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1I3QzY2S0IxUk5SNFpKQTBJRUJPRkRaRE85WksyUVlMSU9TTk1YMQ$$.pdf&instId=&type=download&originalFileName=70%25%E8%BF%9B%E9%A1%B9%E7%A5%A8.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "设备合同_南科大升降机构.pdf",
+          "size": 3585423,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzZLQzY2TkIxMlBSNDlISkVNUzM3VzZRNTJPT0MyQ1pMSU9TTk1BMQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzZLQzY2TkIxMlBSNDlISkVNUzM3VzZRNTJPT0MyQ1pMSU9TTk1BMQ$$.pdf&instId=&type=download&originalFileName=%E8%AE%BE%E5%A4%87%E5%90%88%E5%90%8C_%E5%8D%97%E7%A7%91%E5%A4%A7%E5%8D%87%E9%99%8D%E6%9C%BA%E6%9E%84.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "预付款记录.png",
+          "size": 26781,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0JJRzY2NkMxQVBSNDQ0TEFHSzBIOUIxTVRUOTAyOVpMSU9TTk1EMQ$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0JJRzY2NkMxQVBSNDQ0TEFHSzBIOUIxTVRUOTAyOVpMSU9TTk1EMQ$$.png&instId=&type=download&originalFileName=%E9%A2%84%E4%BB%98%E6%AC%BE%E8%AE%B0%E5%BD%95.png"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "测算表.xls",
+          "size": 31232,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0hBNjY2MjkxQ1dRNEkyRkROU0FQQ0NXMjBVVFAzTFFTSU9TTk0xNg$$.xls",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0hBNjY2MjkxQ1dRNEkyRkROU0FQQ0NXMjBVVFAzTFFTSU9TTk0xNg$$.xls&instId=&type=download&originalFileName=%E6%B5%8B%E7%AE%97%E8%A1%A8.xls"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "外贸合同盖章.pdf",
+          "size": 3934176,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0pPOTY2MEMxWFFSNEJNVDBHRVk2NjhXU1BLQ0syWjhYSU9TTk05MQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0pPOTY2MEMxWFFSNEJNVDBHRVk2NjhXU1BLQ0syWjhYSU9TTk05MQ$$.pdf&instId=&type=download&originalFileName=%E5%A4%96%E8%B4%B8%E5%90%88%E5%90%8C%E7%9B%96%E7%AB%A0.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "内贸合同盖章.pdf",
+          "size": 4352355,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MDE0NzIzNTY2Njg5NDE3OV9LUEU2NkM4MThQUjQzTUNNSkdNRTc1RThaMzVaMjA0SFpQU05NQTE$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MDE0NzIzNTY2Njg5NDE3OV9LUEU2NkM4MThQUjQzTUNNSkdNRTc1RThaMzVaMjA0SFpQU05NQTE$.pdf&instId=&type=download&originalFileName=%E5%86%85%E8%B4%B8%E5%90%88%E5%90%8C%E7%9B%96%E7%AB%A0.pdf"
+        }
+      ]
+    },
+    {
+      "form_name": "货款支付",
+      "form_uuid": "FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LNX5",
+      "instance_id": "363e51d2-5d77-4621-8445-92ff17b19ce9",
+      "title": "冯桃娟发起的JY南科大JY202510-002货款支付",
+      "submitted_at": 1773302336635,
+      "originator": "冯桃娟",
+      "status": "COMPLETED",
+      "attachments": [
+        {
+          "field_id": "attachmentField_lfj2zmnt",
+          "field_label": "上传发票",
+          "name": "射频匹配器70%进项票.pdf",
+          "size": 155707,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0NPQTY2SEQxWkVZM1YwRkxHR0JEWjk5V1Y3QjIyTUJRQzZOTU00.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0NPQTY2SEQxWkVZM1YwRkxHR0JEWjk5V1Y3QjIyTUJRQzZOTU00.pdf&instId=&type=download&originalFileName=%E5%B0%84%E9%A2%91%E5%8C%B9%E9%85%8D%E5%99%A870%25%E8%BF%9B%E9%A1%B9%E7%A5%A8.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "30%水单射频匹配器..png",
+          "size": 141063,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0dOOTY2MzcxODVSM1pIRlJQWVkySTg3QURVUVUzMDFFRTZOTU0xVA$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0dOOTY2MzcxODVSM1pIRlJQWVkySTg3QURVUVUzMDFFRTZOTU0xVA$$.png&instId=&type=download&originalFileName=30%25%E6%B0%B4%E5%8D%95%E5%B0%84%E9%A2%91%E5%8C%B9%E9%85%8D%E5%99%A8..png"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "二方合同-人民币-射频匹配器.pdf",
+          "size": 3491803,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tYOTY2TzcxQkVSM0dVS01OU0hQODdXWFhVTVkyNjFFRTZOTU1QRg$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tYOTY2TzcxQkVSM0dVS01OU0hQODdXWFhVTVkyNjFFRTZOTU1QRg$$.pdf&instId=&type=download&originalFileName=%E4%BA%8C%E6%96%B9%E5%90%88%E5%90%8C-%E4%BA%BA%E6%B0%91%E5%B8%81-%E5%B0%84%E9%A2%91%E5%8C%B9%E9%85%8D%E5%99%A8.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "国产货发货款记录.png",
+          "size": 30719,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0JSRDY2QjgxODhZMzk3N0hLMTNUMUJJVkM3SjEyNjFFRTZOTU1F.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0JSRDY2QjgxODhZMzk3N0hLMTNUMUJJVkM3SjEyNjFFRTZOTU1F.png&instId=&type=download&originalFileName=%E5%9B%BD%E4%BA%A7%E8%B4%A7%E5%8F%91%E8%B4%A7%E6%AC%BE%E8%AE%B0%E5%BD%95.png"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "测算表.xls",
+          "size": 31232,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0taOTY2REExWkZSM1g3SDNNVllMOERLTkhUOEUySDgyRjZOTU1BSg$$.xls",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0taOTY2REExWkZSM1g3SDNNVllMOERLTkhUOEUySDgyRjZOTU1BSg$$.xls&instId=&type=download&originalFileName=%E6%B5%8B%E7%AE%97%E8%A1%A8.xls"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "内贸合同盖章.pdf",
+          "size": 4352355,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1UwSDY2MEMxTEZWM0hZVkhJS1VENDRBVjBRM0EzRE41RjZOTU0zOQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1UwSDY2MEMxTEZWM0hZVkhJS1VENDRBVjBRM0EzRE41RjZOTU0zOQ$$.pdf&instId=&type=download&originalFileName=%E5%86%85%E8%B4%B8%E5%90%88%E5%90%8C%E7%9B%96%E7%AB%A0.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "外贸合同盖章.pdf",
+          "size": 3934176,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX05TRzY2SkIxSUZSM05DQTJIQ1daNTYwODVWQlUyRU41RjZOTU1RTA$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX05TRzY2SkIxSUZSM05DQTJIQ1daNTYwODVWQlUyRU41RjZOTU1RTA$$.pdf&instId=&type=download&originalFileName=%E5%A4%96%E8%B4%B8%E5%90%88%E5%90%8C%E7%9B%96%E7%AB%A0.pdf"
+        }
+      ]
+    },
+    {
+      "form_name": "货款支付",
+      "form_uuid": "FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LNX5",
+      "instance_id": "b0063018-6716-4046-ab29-f550ac5442b2",
+      "title": "冯桃娟发起的Leaderfirm南科大25JZBTPFB157-306货款支付",
+      "submitted_at": 1768284626654,
+      "originator": "冯桃娟",
+      "status": "COMPLETED",
+      "attachments": [
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "30%水单.png",
+          "size": 134141,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0dPODY2M0QxOEZBMlUzVUlINzNaUzdVNFFHNFgyRjlOWjZDS01IMg$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0dPODY2M0QxOEZBMlUzVUlINzNaUzdVNFFHNFgyRjlOWjZDS01IMg$$.png&instId=&type=download&originalFileName=30%25%E6%B0%B4%E5%8D%95.png"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "二方发票.pdf",
+          "size": 754914,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1k4QzY2WTYxVTdCMk9INkhORUhXTzVVQlExU1oyTTlOWjZDS01PMQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1k4QzY2WTYxVTdCMk9INkhORUhXTzVVQlExU1oyTTlOWjZDS01PMQ$$.pdf&instId=&type=download&originalFileName=%E4%BA%8C%E6%96%B9%E5%8F%91%E7%A5%A8.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "高能脉冲发生器报关单.pdf",
+          "size": 408822,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX00zQjY2R0ExMU42MlY5RkRLMlM0Nzc2ODBQS1IzVDlOWjZDS01QRw$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX00zQjY2R0ExMU42MlY5RkRLMlM0Nzc2ODBQS1IzVDlOWjZDS01QRw$$.pdf&instId=&type=download&originalFileName=%E9%AB%98%E8%83%BD%E8%84%89%E5%86%B2%E5%8F%91%E7%94%9F%E5%99%A8%E6%8A%A5%E5%85%B3%E5%8D%95.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "高能脉冲发生器等二方合同盖章.pdf",
+          "size": 1632696,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0w4NjY2UDYxRENCMkk4TkROUVlENjVRSjIyTk8yWTlOWjZDS00y.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0w4NjY2UDYxRENCMkk4TkROUVlENjVRSjIyTk8yWTlOWjZDS00y.pdf&instId=&type=download&originalFileName=%E9%AB%98%E8%83%BD%E8%84%89%E5%86%B2%E5%8F%91%E7%94%9F%E5%99%A8%E7%AD%89%E4%BA%8C%E6%96%B9%E5%90%88%E5%90%8C%E7%9B%96%E7%AB%A0.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "直流电源报关单.pdf",
+          "size": 407257,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tQRTY2OTkxVUM3MjE0RjlNWkFTREJYVFY3RUszNU9SWjZDS01JOA$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tQRTY2OTkxVUM3MjE0RjlNWkFTREJYVFY3RUszNU9SWjZDS01JOA$$.pdf&instId=&type=download&originalFileName=%E7%9B%B4%E6%B5%81%E7%94%B5%E6%BA%90%E6%8A%A5%E5%85%B3%E5%8D%95.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "尾款支付记录.png",
+          "size": 58360,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0cxQTY2RkMxTTRBMlNSQkhJNzFRMDVHQ081M0gyV0pWWjZDS01QNg$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0cxQTY2RkMxTTRBMlNSQkhJNzFRMDVHQ081M0gyV0pWWjZDS01QNg$$.png&instId=&type=download&originalFileName=%E5%B0%BE%E6%AC%BE%E6%94%AF%E4%BB%98%E8%AE%B0%E5%BD%95.png"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "测算表.xls",
+          "size": 31232,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzBWNzY2UEExVzE3MktKMVRIQ1hGRTk4U0VaT0syOUtZWjZDS01NOA$$.xls",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzBWNzY2UEExVzE3MktKMVRIQ1hGRTk4U0VaT0syOUtZWjZDS01NOA$$.xls&instId=&type=download&originalFileName=%E6%B5%8B%E7%AE%97%E8%A1%A8.xls"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "外贸合同盖章.pdf",
+          "size": 3934176,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0w4NjY2UDYxNzRCMkxPSTFHVUQzVTdLNlhETkYzWTAyMDdDS00xMw$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0w4NjY2UDYxNzRCMkxPSTFHVUQzVTdLNlhETkYzWTAyMDdDS00xMw$$.pdf&instId=&type=download&originalFileName=%E5%A4%96%E8%B4%B8%E5%90%88%E5%90%8C%E7%9B%96%E7%AB%A0.pdf"
+        }
+      ]
+    },
+    {
+      "form_name": "货款支付",
+      "form_uuid": "FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LNX5",
+      "instance_id": "ba694157-917b-4b4d-9eb0-c7969046af3b",
+      "title": "冯桃娟发起的JZ南科大25JZBTPFB157-306货款支付",
+      "submitted_at": 1768284317749,
+      "originator": "冯桃娟",
+      "status": "COMPLETED",
+      "attachments": [
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "外贸合同盖章.pdf",
+          "size": 3934176,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0cxQTY2RkMxTjRBMjVUVFZNWVVLNUFEU0dEUVgyWjk3UzZDS01NNQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0cxQTY2RkMxTjRBMjVUVFZNWVVLNUFEU0dEUVgyWjk3UzZDS01NNQ$$.pdf&instId=&type=download&originalFileName=%E5%A4%96%E8%B4%B8%E5%90%88%E5%90%8C%E7%9B%96%E7%AB%A0.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "测算表.xls",
+          "size": 31232,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0dNQzY2NzgxRjNCMk5MMFFJWDFWQkRQVUFQRTIyRjdDUzZDS01CMw$$.xls",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0dNQzY2NzgxRjNCMk5MMFFJWDFWQkRQVUFQRTIyRjdDUzZDS01CMw$$.xls&instId=&type=download&originalFileName=%E6%B5%8B%E7%AE%97%E8%A1%A8.xls"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "形式发票-欧元.pdf",
+          "size": 355307,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0pIQzY2UTgxSURBMlVCVEJOSUdWT0JCSkpENUUzWkJGUzZDS000NQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0pIQzY2UTgxSURBMlVCVEJOSUdWT0JCSkpENUUzWkJGUzZDS000NQ$$.pdf&instId=&type=download&originalFileName=%E5%BD%A2%E5%BC%8F%E5%8F%91%E7%A5%A8-%E6%AC%A7%E5%85%83.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "三方水单-欧元.pdf",
+          "size": 943717,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1NTQTY2TUExSkNCMk5MNUFIUEJFWEJaVzk1TTkzWjZKUzZDS00y.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1NTQTY2TUExSkNCMk5MNUFIUEJFWEJaVzk1TTkzWjZKUzZDS00y.pdf&instId=&type=download&originalFileName=%E4%B8%89%E6%96%B9%E6%B0%B4%E5%8D%95-%E6%AC%A7%E5%85%83.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "高能脉冲发生器等二方合同盖章.pdf",
+          "size": 1632696,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX09QRTY2NzkxWUpBMk9EV09MNkFHUTQ3TkhFSzcyT1NSUzZDS01CNg$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX09QRTY2NzkxWUpBMk9EV09MNkFHUTQ3TkhFSzcyT1NSUzZDS01CNg$$.pdf&instId=&type=download&originalFileName=%E9%AB%98%E8%83%BD%E8%84%89%E5%86%B2%E5%8F%91%E7%94%9F%E5%99%A8%E7%AD%89%E4%BA%8C%E6%96%B9%E5%90%88%E5%90%8C%E7%9B%96%E7%AB%A0.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "尾款支付记录.png",
+          "size": 58360,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1I3QzY2S0IxRzVCMkFWRlhGSkFRUzYyWjZJNFYzS1NSUzZDS01FMg$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1I3QzY2S0IxRzVCMkFWRlhGSkFRUzYyWjZJNFYzS1NSUzZDS01FMg$$.png&instId=&type=download&originalFileName=%E5%B0%BE%E6%AC%BE%E6%94%AF%E4%BB%98%E8%AE%B0%E5%BD%95.png"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "高能脉冲发生器报关单.pdf",
+          "size": 408822,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1c2RDY2QTgxTENCMkRINDBMQVFQSkI0QkhGOUEzN0I4NDhDS003.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1c2RDY2QTgxTENCMkRINDBMQVFQSkI0QkhGOUEzN0I4NDhDS003.pdf&instId=&type=download&originalFileName=%E9%AB%98%E8%83%BD%E8%84%89%E5%86%B2%E5%8F%91%E7%94%9F%E5%99%A8%E6%8A%A5%E5%85%B3%E5%8D%95.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "直流电源报关单.pdf",
+          "size": 407257,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzZaOTY2QjcxSkRBMlY3UVRISjhMTzZVMU5XQkYzQkxDNDhDS01TNQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzZaOTY2QjcxSkRBMlY3UVRISjhMTzZVMU5XQkYzQkxDNDhDS01TNQ$$.pdf&instId=&type=download&originalFileName=%E7%9B%B4%E6%B5%81%E7%94%B5%E6%BA%90%E6%8A%A5%E5%85%B3%E5%8D%95.pdf"
+        }
+      ]
+    },
+    {
+      "form_name": "货款支付",
+      "form_uuid": "FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LNX5",
+      "instance_id": "881185c7-bbe3-441e-8588-6de5b683b80a",
+      "title": "冯桃娟发起的Leaderfirm南科大25JZBTPFB157-306货款支付",
+      "submitted_at": 1765183233056,
+      "originator": "冯桃娟",
+      "status": "COMPLETED",
+      "attachments": [
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "30%水单射频电源、直流脉冲电源.png",
+          "size": 104801,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0oySDY2UDYxRUY2MVZVVTdIVzlGR0NTVVZOVkUzVjRROFdXSU1MOQ$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0oySDY2UDYxRUY2MVZVVTdIVzlGR0NTVVZOVkUzVjRROFdXSU1MOQ$$.png&instId=&type=download&originalFileName=30%25%E6%B0%B4%E5%8D%95%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E3%80%81%E7%9B%B4%E6%B5%81%E8%84%89%E5%86%B2%E7%94%B5%E6%BA%90.png"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "射频电源支付记录.png",
+          "size": 125719,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzFJNzY2T0ExTk42MUtYQ0ZKNVRITDRGMkxUT0YzODVROFdXSU05Qw$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzFJNzY2T0ExTk42MUtYQ0ZKNVRITDRGMkxUT0YzODVROFdXSU05Qw$$.png&instId=&type=download&originalFileName=%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E6%94%AF%E4%BB%98%E8%AE%B0%E5%BD%95.png"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "二方发票.pdf",
+          "size": 222040,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2WUMxTUo2MU9IT1VOMU4zMzVVQVRCVVgzRERXOFdXSU1CQQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2WUMxTUo2MU9IT1VOMU4zMzVVQVRCVVgzRERXOFdXSU1CQQ$$.pdf&instId=&type=download&originalFileName=%E4%BA%8C%E6%96%B9%E5%8F%91%E7%A5%A8.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "两方合同-美元-射频电源、直流脉冲电源.pdf",
+          "size": 4538738,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2MEQxTVg1MTFHOVhGT0szQjZYWklVNk4zTUVXOFdXSU0wRw$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0ZIQzY2MEQxTVg1MTFHOVhGT0szQjZYWklVNk4zTUVXOFdXSU0wRw$$.pdf&instId=&type=download&originalFileName=%E4%B8%A4%E6%96%B9%E5%90%88%E5%90%8C-%E7%BE%8E%E5%85%83-%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E3%80%81%E7%9B%B4%E6%B5%81%E8%84%89%E5%86%B2%E7%94%B5%E6%BA%90.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "外贸合同盖章.pdf",
+          "size": 3934176,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzU0NjY2T0QxT0w1MVpGQk1IVzlGUThJVVhKMlIyVVoyOVdXSU1FSg$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzU0NjY2T0QxT0w1MVpGQk1IVzlGUThJVVhKMlIyVVoyOVdXSU1FSg$$.pdf&instId=&type=download&originalFileName=%E5%A4%96%E8%B4%B8%E5%90%88%E5%90%8C%E7%9B%96%E7%AB%A0.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "测算表.xls",
+          "size": 31232,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzEzNjY2NUMxME5BMTRVUDVJTEJPNDc0TURQVUMyRlFMSVdXSU1OMw$$.xls",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzEzNjY2NUMxME5BMTRVUDVJTEJPNDc0TURQVUMyRlFMSVdXSU1OMw$$.xls&instId=&type=download&originalFileName=%E6%B5%8B%E7%AE%97%E8%A1%A8.xls"
+        }
+      ]
+    },
+    {
+      "form_name": "货款支付",
+      "form_uuid": "FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LNX5",
+      "instance_id": "fa04e6c4-544c-490e-aa8e-9026fde2a38c",
+      "title": "冯桃娟发起的JZ南科大25JZBTPFB157-306货款支付",
+      "submitted_at": 1765182572579,
+      "originator": "冯桃娟",
+      "status": "COMPLETED",
+      "attachments": [
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "外贸合同盖章.pdf",
+          "size": 3934176,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tONzY2OUIxMlA2MU5XSE1OSFM4RTVRQ0JLVlAzTTVDMldXSU1GNw$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tONzY2OUIxMlA2MU5XSE1OSFM4RTVRQ0JLVlAzTTVDMldXSU1GNw$$.pdf&instId=&type=download&originalFileName=%E5%A4%96%E8%B4%B8%E5%90%88%E5%90%8C%E7%9B%96%E7%AB%A0.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "三方水单-美元.pdf",
+          "size": 1021586,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzQ5NjY2TzcxWk1BMTA5V1FLWUo5NUI4STdKS0UyNFVHMldXSU1YMg$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzQ5NjY2TzcxWk1BMTA5V1FLWUo5NUI4STdKS0UyNFVHMldXSU1YMg$$.pdf&instId=&type=download&originalFileName=%E4%B8%89%E6%96%B9%E6%B0%B4%E5%8D%95-%E7%BE%8E%E5%85%83.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "形式发票-美元.pdf",
+          "size": 355756,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1dRRDY2NkExQlA2MVI0Mk9KV1lXSzRCRVhEQ0UyNTFLMldXSU1UNw$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1dRRDY2NkExQlA2MVI0Mk9KV1lXSzRCRVhEQ0UyNTFLMldXSU1UNw$$.pdf&instId=&type=download&originalFileName=%E5%BD%A2%E5%BC%8F%E5%8F%91%E7%A5%A8-%E7%BE%8E%E5%85%83.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "测算表.xls",
+          "size": 31232,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1c2RDY2QTgxQlA2MTgxNVRIODVBTzUxUTNaWlYyR1ZRMldXSU1RQQ$$.xls",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1c2RDY2QTgxQlA2MTgxNVRIODVBTzUxUTNaWlYyR1ZRMldXSU1RQQ$$.xls&instId=&type=download&originalFileName=%E6%B5%8B%E7%AE%97%E8%A1%A8.xls"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "二方合同-人民币-射频匹配器.pdf",
+          "size": 3491803,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzNSRDY2RjcxQk82MU1QQ1JKVzlaNDlaN1pFVFUzWEZWMldXSU1ROQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzNSRDY2RjcxQk82MU1QQ1JKVzlaNDlaN1pFVFUzWEZWMldXSU1ROQ$$.pdf&instId=&type=download&originalFileName=%E4%BA%8C%E6%96%B9%E5%90%88%E5%90%8C-%E4%BA%BA%E6%B0%91%E5%B8%81-%E5%B0%84%E9%A2%91%E5%8C%B9%E9%85%8D%E5%99%A8.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "射频电源支付记录.png",
+          "size": 125719,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2NEIxT001MUMzOUlPQ1EyWDZITkFEVDEyQVI4QVhXSU1LSQ$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tIQzY2NEIxT001MUMzOUlPQ1EyWDZITkFEVDEyQVI4QVhXSU1LSQ$$.png&instId=&type=download&originalFileName=%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E6%94%AF%E4%BB%98%E8%AE%B0%E5%BD%95.png"
+        }
+      ]
+    },
+    {
+      "form_name": "货款支付",
+      "form_uuid": "FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LNX5",
+      "instance_id": "4c0e004d-de42-4864-8183-8674d362db9f",
+      "title": "冯桃娟发起的JZ南科大25JZBTPFB157-306货款支付",
+      "submitted_at": 1764235613414,
+      "originator": "冯桃娟",
+      "status": "COMPLETED",
+      "attachments": [
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "外贸合同盖章.pdf",
+          "size": 3934176,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0IwQTY2REIxQ0VZMEpTWUlQVjFUODdVMFpKRlMyUFlaQThISU0yQQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0IwQTY2REIxQ0VZMEpTWUlQVjFUODdVMFpKRlMyUFlaQThISU0yQQ$$.pdf&instId=&type=download&originalFileName=%E5%A4%96%E8%B4%B8%E5%90%88%E5%90%8C%E7%9B%96%E7%AB%A0.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "测算表.xls",
+          "size": 31232,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzRVRjY2VzkxQ0VZMFdCT0VLRkU5UDY5UzRJSUUzTkg5QjhISU1WQQ$$.xls",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzRVRjY2VzkxQ0VZMFdCT0VLRkU5UDY5UzRJSUUzTkg5QjhISU1WQQ$$.xls&instId=&type=download&originalFileName=%E6%B5%8B%E7%AE%97%E8%A1%A8.xls"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "形式发票-欧元.pdf",
+          "size": 355307,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0RRODY2UUQxUk5aMDBOODlMUlU1SzVWVVVFODMyRUg5QjhISU0z.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0RRODY2UUQxUk5aMDBOODlMUlU1SzVWVVVFODMyRUg5QjhISU0z.pdf&instId=&type=download&originalFileName=%E5%BD%A2%E5%BC%8F%E5%8F%91%E7%A5%A8-%E6%AC%A7%E5%85%83.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "高能脉冲发生器等二方合同盖章.pdf",
+          "size": 1632696,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0pMQTY2T0QxOU5aMFJOSFNOT1VaSDRIOFpVM0czS1hFQjhISU1D.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0pMQTY2T0QxOU5aMFJOSFNOT1VaSDRIOFpVM0czS1hFQjhISU1D.pdf&instId=&type=download&originalFileName=%E9%AB%98%E8%83%BD%E8%84%89%E5%86%B2%E5%8F%91%E7%94%9F%E5%99%A8%E7%AD%89%E4%BA%8C%E6%96%B9%E5%90%88%E5%90%8C%E7%9B%96%E7%AB%A0.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "支付记录.png",
+          "size": 48226,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0oySDY2UDYxSE1aMEY3R0tJR0ZXNDdXSUtTQjUyTVhKQjhISU1D.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0oySDY2UDYxSE1aMEY3R0tJR0ZXNDdXSUtTQjUyTVhKQjhISU1D.png&instId=&type=download&originalFileName=%E6%94%AF%E4%BB%98%E8%AE%B0%E5%BD%95.png"
+        }
+      ]
+    },
+    {
+      "form_name": "货款支付",
+      "form_uuid": "FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LNX5",
+      "instance_id": "eb865b0b-1b9a-4bea-a981-fe577ec49417",
+      "title": "冯桃娟发起的Leaderfirm南科大25JZBTPFB157-306货款支付",
+      "submitted_at": 1764235437487,
+      "originator": "冯桃娟",
+      "status": "COMPLETED",
+      "attachments": [
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "二方发票.pdf",
+          "size": 754914,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tQRTY2QzgxMUZZMDg2WUZLSTFQVjQyMEVJOEkyS0xXNjhISU02Nw$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tQRTY2QzgxMUZZMDg2WUZLSTFQVjQyMEVJOEkyS0xXNjhISU02Nw$$.pdf&instId=&type=download&originalFileName=%E4%BA%8C%E6%96%B9%E5%8F%91%E7%A5%A8.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "高能脉冲发生器等二方合同盖章.pdf",
+          "size": 1632696,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0dIQzY2WjYxOExaMDIxRUNIVFNIQjlBS082MEozSUxXNjhISU1L.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0dIQzY2WjYxOExaMDIxRUNIVFNIQjlBS082MEozSUxXNjhISU1L.pdf&instId=&type=download&originalFileName=%E9%AB%98%E8%83%BD%E8%84%89%E5%86%B2%E5%8F%91%E7%94%9F%E5%99%A8%E7%AD%89%E4%BA%8C%E6%96%B9%E5%90%88%E5%90%8C%E7%9B%96%E7%AB%A0.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "支付记录.png",
+          "size": 48226,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzRSRDY2QUQxV1JUMFY5T0lOVUQ3SDhCVVZUWTUzS0xXNjhISU05VA$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzRSRDY2QUQxV1JUMFY5T0lOVUQ3SDhCVVZUWTUzS0xXNjhISU05VA$$.png&instId=&type=download&originalFileName=%E6%94%AF%E4%BB%98%E8%AE%B0%E5%BD%95.png"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "测算表.xls",
+          "size": 31232,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzVPRDY2TzkxNU5aME9LNTNPQU40VkFBTDNQVjMzQU04NzhISU00.xls",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzVPRDY2TzkxNU5aME9LNTNPQU40VkFBTDNQVjMzQU04NzhISU00.xls&instId=&type=download&originalFileName=%E6%B5%8B%E7%AE%97%E8%A1%A8.xls"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "外贸合同盖章.pdf",
+          "size": 3934176,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1c2RDY2MzcxQ05aMEJIVDVKQks0RzQyS1JBNlgyRFJCNzhISU02.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1c2RDY2MzcxQ05aMEJIVDVKQks0RzQyS1JBNlgyRFJCNzhISU02.pdf&instId=&type=download&originalFileName=%E5%A4%96%E8%B4%B8%E5%90%88%E5%90%8C%E7%9B%96%E7%AB%A0.pdf"
+        }
+      ]
+    },
+    {
+      "form_name": "货款支付",
+      "form_uuid": "FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LNX5",
+      "instance_id": "f17ed902-066c-46e9-8278-b24f37d18cd2",
+      "title": "冯桃娟发起的JZ南科大25JZBTPFB157-306货款支付",
+      "submitted_at": 1763104162096,
+      "originator": "冯桃娟",
+      "status": "COMPLETED",
+      "attachments": [
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "测算表.xls",
+          "size": 31232,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2SDcxTktMMDRFVlRGMkRDQzZFSjVVSkEyMjdHT0lZSE0yMg$$.xls",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2SDcxTktMMDRFVlRGMkRDQzZFSjVVSkEyMjdHT0lZSE0yMg$$.xls&instId=&type=download&originalFileName=%E6%B5%8B%E7%AE%97%E8%A1%A8.xls"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "形式发票-美元.pdf",
+          "size": 355756,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0cxSDY2MkExT0tMMFJPMU1NRUc1NDdHSUJPWjUyOTdHT0lZSE1HNg$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0cxSDY2MkExT0tMMFJPMU1NRUc1NDdHSUJPWjUyOTdHT0lZSE1HNg$$.pdf&instId=&type=download&originalFileName=%E5%BD%A2%E5%BC%8F%E5%8F%91%E7%A5%A8-%E7%BE%8E%E5%85%83.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "外贸合同盖章.pdf",
+          "size": 3934176,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzNSRDY2RjcxVUVMMExTWEpKOTZVQ0E0QUFTS1MzMVFKT0lZSE1MNw$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzNSRDY2RjcxVUVMMExTWEpKOTZVQ0E0QUFTS1MzMVFKT0lZSE1MNw$$.pdf&instId=&type=download&originalFileName=%E5%A4%96%E8%B4%B8%E5%90%88%E5%90%8C%E7%9B%96%E7%AB%A0.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "两方合同-美元-射频电源、直流脉冲电源.pdf",
+          "size": 4538738,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1dRRDY2NkExOEtMMDNVMUhHRDdRMkI0VUpOUDEzRkdST0lZSE1DNg$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1dRRDY2NkExOEtMMDNVMUhHRDdRMkI0VUpOUDEzRkdST0lZSE1DNg$$.pdf&instId=&type=download&originalFileName=%E4%B8%A4%E6%96%B9%E5%90%88%E5%90%8C-%E7%BE%8E%E5%85%83-%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E3%80%81%E7%9B%B4%E6%B5%81%E8%84%89%E5%86%B2%E7%94%B5%E6%BA%90.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "支付货款记录.png",
+          "size": 54965,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX084NjY2NUMxN0tMMEFKSzFHN1o0Mzg2NkMxSUozMUZWT0lZSE1WNg$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX084NjY2NUMxN0tMMEFKSzFHN1o0Mzg2NkMxSUozMUZWT0lZSE1WNg$$.png&instId=&type=download&originalFileName=%E6%94%AF%E4%BB%98%E8%B4%A7%E6%AC%BE%E8%AE%B0%E5%BD%95.png"
+        }
+      ]
+    },
+    {
+      "form_name": "货款支付",
+      "form_uuid": "FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LNX5",
+      "instance_id": "26a671ac-8292-4b28-8658-a3bc9ecba47c",
+      "title": "冯桃娟发起的Leaderfirm南科大25JZBTPFB157-306货款支付",
+      "submitted_at": 1763104011926,
+      "originator": "冯桃娟",
+      "status": "COMPLETED",
+      "attachments": [
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "外贸合同盖章.pdf",
+          "size": 3934176,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tQRTY2VUExU0tMMElHS0ZPWkZVUDVLUjhCNEQzRzhZS0lZSE1JOA$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tQRTY2VUExU0tMMElHS0ZPWkZVUDVLUjhCNEQzRzhZS0lZSE1JOA$$.pdf&instId=&type=download&originalFileName=%E5%A4%96%E8%B4%B8%E5%90%88%E5%90%8C%E7%9B%96%E7%AB%A0.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "两方合同-美元-射频电源、直流脉冲电源.pdf",
+          "size": 4538738,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzQ5NjY2TzcxSUNNME1YTzJQM01FOERDNFUwSzMyVVMzTElZSE1VMQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzQ5NjY2TzcxSUNNME1YTzJQM01FOERDNFUwSzMyVVMzTElZSE1VMQ$$.pdf&instId=&type=download&originalFileName=%E4%B8%A4%E6%96%B9%E5%90%88%E5%90%8C-%E7%BE%8E%E5%85%83-%E5%B0%84%E9%A2%91%E7%94%B5%E6%BA%90%E3%80%81%E7%9B%B4%E6%B5%81%E8%84%89%E5%86%B2%E7%94%B5%E6%BA%90.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "支付货款记录.png",
+          "size": 54965,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX084NjY2NUMxSjRNMEVWRzROQkxRWjhMU1dWT1QzRTc3TElZSE01Mw$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX084NjY2NUMxSjRNMEVWRzROQkxRWjhMU1dWT1QzRTc3TElZSE01Mw$$.png&instId=&type=download&originalFileName=%E6%94%AF%E4%BB%98%E8%B4%A7%E6%AC%BE%E8%AE%B0%E5%BD%95.png"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "二方发票.pdf",
+          "size": 222040,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0lIQzY2SDgxQ0tMMExJVjhMQVhPU0JBME5XN0QzV0o5TElZSE1WNg$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0lIQzY2SDgxQ0tMMExJVjhMQVhPU0JBME5XN0QzV0o5TElZSE1WNg$$.pdf&instId=&type=download&originalFileName=%E4%BA%8C%E6%96%B9%E5%8F%91%E7%A5%A8.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "测算表.xls",
+          "size": 31232,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0kxRTY2WTcxTktMMEZNVzdKTFlYTTRLQ1pCVFAyNlNMTElZSE1MNg$$.xls",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0kxRTY2WTcxTktMMEZNVzdKTFlYTTRLQ1pCVFAyNlNMTElZSE1MNg$$.xls&instId=&type=download&originalFileName=%E6%B5%8B%E7%AE%97%E8%A1%A8.xls"
+        }
+      ]
+    },
+    {
+      "form_name": "货款支付",
+      "form_uuid": "FORM-HT866U91JVN4V3LWAWXX5AYC8UG63K2N7EM9LNX5",
+      "instance_id": "552ac0c8-8270-47fd-a112-f32c46964e7e",
+      "title": "冯桃娟发起的JY南科大JY202510-002货款支付",
+      "submitted_at": 1763103793284,
+      "originator": "冯桃娟",
+      "status": "COMPLETED",
+      "attachments": [
+        {
+          "field_id": "attachmentField_lfj2zmnt",
+          "field_label": "上传发票",
+          "name": "射频匹配器30%进项票.pdf",
+          "size": 155561,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2STcxQ0pMMFJHSVVGT1g3VkEwRVhaVUcyR0hMRElZSE1ZNQ$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzJSRDY2STcxQ0pMMFJHSVVGT1g3VkEwRVhaVUcyR0hMRElZSE1ZNQ$$.pdf&instId=&type=download&originalFileName=%E5%B0%84%E9%A2%91%E5%8C%B9%E9%85%8D%E5%99%A830%25%E8%BF%9B%E9%A1%B9%E7%A5%A8.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "二方合同-人民币-射频匹配器.pdf",
+          "size": 3491803,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0w4NjY2UDYxREpMMFMzQlRLTDBWSzZPM1VKNVQyMDlPRUlZSE1KNg$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0w4NjY2UDYxREpMMFMzQlRLTDBWSzZPM1VKNVQyMDlPRUlZSE1KNg$$.pdf&instId=&type=download&originalFileName=%E4%BA%8C%E6%96%B9%E5%90%88%E5%90%8C-%E4%BA%BA%E6%B0%91%E5%B8%81-%E5%B0%84%E9%A2%91%E5%8C%B9%E9%85%8D%E5%99%A8.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "支付货款记录.png",
+          "size": 54965,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzZaOTY2QjcxOEpMMDdENjZPMzRYWEE3OVAxMEkzWThPRUlZSE1NNg$$.png",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzXzZaOTY2QjcxOEpMMDdENjZPMzRYWEE3OVAxMEkzWThPRUlZSE1NNg$$.png&instId=&type=download&originalFileName=%E6%94%AF%E4%BB%98%E8%B4%A7%E6%AC%BE%E8%AE%B0%E5%BD%95.png"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "测算表.xls",
+          "size": 31232,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tQRTY2VUExVEtMMDkzUTVMWjQyNUFHN1NUMTIzSzVORklZSE1GNg$$.xls",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX0tQRTY2VUExVEtMMDkzUTVMWjQyNUFHN1NUMTIzSzVORklZSE1GNg$$.xls&instId=&type=download&originalFileName=%E6%B5%8B%E7%AE%97%E8%A1%A8.xls"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "内贸合同盖章.pdf",
+          "size": 4352355,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1ZYRTY2MkIxOUpMMFdBOUlISTRSSTVYQzBaUzMzMlpRRklZSE05Ng$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1ZYRTY2MkIxOUpMMFdBOUlISTRSSTVYQzBaUzMzMlpRRklZSE05Ng$$.pdf&instId=&type=download&originalFileName=%E5%86%85%E8%B4%B8%E5%90%88%E5%90%8C%E7%9B%96%E7%AB%A0.pdf"
+        },
+        {
+          "field_id": "attachmentField_ky8afins",
+          "field_label": "附件",
+          "name": "外贸合同盖章.pdf",
+          "size": 3934176,
+          "file_uuid": "APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1I3QzY2UjkxVEVMMFVOVjZKM1BTQzhJRVFGOUMyM1pRRklZSE1YNg$$.pdf",
+          "url": "https://front.aliwork.com/ossFileHandle?appType=APP_R55Z1QDKMB0VILUQRNJA&fileName=APP_R55Z1QDKMB0VILUQRNJA_MTY1NDU0MjgzMjIwOTQ1OTYzX1I3QzY2UjkxVEVMMFVOVjZKM1BTQzhJRVFGOUMyM1pRRklZSE1YNg$$.pdf&instId=&type=download&originalFileName=%E5%A4%96%E8%B4%B8%E5%90%88%E5%90%8C%E7%9B%96%E7%AB%A0.pdf"
+        }
+      ]
+    }
+  ]
+}
