@@ -125,9 +125,16 @@ def include_history(files, cfg):
             rule = next((r for r in cfg.rules if r['type'] == unit['type']), None)
             if rule:
                 f.folder, f.confidence = rule['folder'], 'confirmed'
+        review = (cfg.raw.get('file_reviews') or {}).get(f.ident, {})
+        if 'type' in review:
+            rule = next((r for r in cfg.rules if r['type'] == review['type']), None)
+            f.folder = rule['folder'] if rule else ''
+            f.type_name = rule['type'] if rule else ''
+            f.confidence = 'confirmed' if rule else 'manual'
+            f.review_note = '人工指定分类' if rule else '人工标记不归类'
         f.cache_path = str(path)
         f._from_archive = True
-        if f.folder and not any(r['type'] == f.type_name for r in cfg.rules):
+        if f.folder and f.type_name and not any(r['type'] == f.type_name for r in cfg.rules):
             f.folder = f.type_name = ''
             f.confidence = 'manual'
             f.review_note = '历史类型不在当前采购单位定义内，进入待归类'

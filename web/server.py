@@ -157,17 +157,36 @@ def _config(overrides=None):
     raw['storage']['structure'] = '{purchaser}/{project}/{folder}'
     raw['storage']['pending_folder'] = '未归类'
     raw['file_reviews'] = STATE['file_reviews']
+    raw['preserve_distinct_revisions'] = any(
+        f.get('cached_digest') for b in STATE['batches'] for f in b['files'])
     cfg = Config(raw)
     numbering.restore_reviews(cfg)
     return cfg
 
 
-def _prepare(cfg):
+def _source_cache(files):
+    digests = {f['cached_digest'] for b in STATE['batches'] for f in b['files']
+               if f.get('cached_digest')}
+    for f in files:
+        if f.content_hash not in digests:
+            continue
+        digest = f.content_hash
+        if len(digest) != 64 or any(c not in '0123456789abcdef' for c in digest):
+            raise ValueError('原目录附件缓存索引无效')
+        path = SESSION_DIR / 'source-files' / digest
+        if not path.is_file() or path.is_symlink():
+            raise ValueError('原目录附件缓存不存在，请重新归类')
+        f.cache_path = str(path)
+
+
+def _prepare(cfg, log=None):
     files, _ = dedupe.group(_instances())
     files = dedupe.refine(files)
+    _source_cache(files)
     classify.classify(files, cfg)
-    ai_classify.apply(files, cfg, _bytes_of)
+    ai_classify.apply(files, cfg, _bytes_of, log=log)
     files = numbering.include_history(files, cfg)
+    _source_cache(files)
     classify.mark_secret(files, cfg)
     naming.assign(files, cfg, cfg.project_no)
     return files, dedupe.findings_for(files)
@@ -302,14 +321,15 @@ def export_zip():
     return buf.getvalue(), None
 
 
-def save_result():
+def save_result(progress=None):
     """先完整生成，再替换该项目的结果；失败时保留原目录。"""
     os.makedirs(OUTPUT_ROOT, exist_ok=True)
     root = os.path.realpath(OUTPUT_ROOT)
     cfg = _config()
     cfg.validate_save()
+    files, findings = _prepare(cfg, log=progress)
     project_root = numbering.project_dir(cfg).resolve()
-    for _, destination in archive.plan(_prepare(cfg)[0], cfg):
+    for _, destination in archive.plan(files, cfg):
         if project_root not in Path(destination).resolve().parents:
             raise ValueError('网页保存的目录结构必须位于采购单位/项目号目录内')
     project = os.path.join(naming.sanitize(cfg.purchaser), naming.sanitize(cfg.project_no))
@@ -318,7 +338,7 @@ def save_result():
         raise ValueError('项目输出目录不能是链接或位于归档结果之外')
     os.makedirs(os.path.dirname(target), exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='.saving-', dir=root) as stage:
-        result = _save_to(stage)
+        result = _save_to(stage, prepared=(cfg, files, findings))
         if result.get('error'):
             return result
         result['path'] = target
@@ -353,10 +373,13 @@ def save_result():
         return result
 
 
-def _save_to(output):
+def _save_to(output, prepared=None):
     """在暂存目录生成和 ZIP 一致的完整归档方案。"""
-    cfg = _config()
-    files, findings = _prepare(cfg)
+    if prepared is None:
+        cfg = _config()
+        files, findings = _prepare(cfg)
+    else:
+        cfg, files, findings = prepared
     if not files:
         return {'error': '还没有上传文件'}
     previous = numbering.project_dir(cfg)
@@ -385,7 +408,7 @@ def _save_to(output):
                 fh.write(data)
     # 历史附件已随旧目录保留，本轮不校验、重写或提交其编号记录。
     current_files = [f for f in files if not getattr(f, '_from_archive', False)
-                     or Path(f.cache_path).parent != Path(OUTPUT_ROOT) / naming.target_dir(f, cfg)]
+                     or Path(f.cache_path) != Path(OUTPUT_ROOT) / naming.target_dir(f, cfg) / f.new_name]
     for f in current_files:
         f.url = next((o.file_uuid for o in f.obs if o.file_uuid in STATE['blobs']), '')
         if f.url:
@@ -480,6 +503,7 @@ class Handler(BaseHTTPRequestHandler):
         if not os.path.exists(full):
             return self._json({'error': '文件不存在'}, 404)
         ctype = ('text/html; charset=utf-8' if full.endswith('.html')
+                 else 'text/javascript; charset=utf-8' if full.endswith('.js')
                  else 'text/plain; charset=utf-8')
         with open(full, 'rb') as fh:
             data = fh.read()
@@ -493,6 +517,12 @@ class Handler(BaseHTTPRequestHandler):
 
     # ---- 路由 ----
     def do_GET(self):
+        if self.path.split('?')[0] == '/api/source/classify-status':
+            from web import source_classify
+            return source_classify.dispatch(self)
+        if self.path.split('?')[0] in ('/api/sources', '/api/source/tree', '/api/source/file'):
+            from web import source_browser
+            return source_browser.dispatch(self)
         if self.path.startswith('/api/projects') or self.path.startswith('/api/project/'):
             from web import projects
             with _lock:
@@ -504,6 +534,9 @@ class Handler(BaseHTTPRequestHandler):
         return self._file(self.path.split('?')[0])
 
     def do_POST(self):
+        if self.path.split('?')[0] == '/api/source/classify':
+            from web import source_classify
+            return source_classify.dispatch(self, self._body())
         with _lock:
             return self._dispatch_post()
 

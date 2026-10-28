@@ -69,6 +69,64 @@ class ProjectAppTests(unittest.TestCase):
         self.assertEqual(listing[0]['count'], 2)
         self.assertEqual(listing[0]['pending'], 1)
 
+    def test_change_purchaser_preserves_files_and_retry(self):
+        ident = self.create('P1', '旧单位')
+        before = self.upload(ident, [('采购合同.pdf', 'contract'), ('资料.txt', 'other')])
+        changed = self.request('/api/project/purchaser?id=' + ident, {'purchaser': '新单位'})
+        new_id = changed['project']['id']
+        self.assertEqual(changed['project']['purchaser'], '新单位')
+        self.assertEqual(len(changed['files']), 2)
+        f = changed['files'][0]
+        self.assertTrue(self.request('/api/project/file?id=' + new_id + '&path=' + urllib.parse.quote(f['path']), binary=True))
+        self.assertEqual(len(self.request('/api/project/save?id=' + new_id, {})['files']), 2)
+        self.assertEqual(len(self.request('/api/projects')['projects']), 1)
+        self.create('P1', '冲突单位')
+        with self.assertRaises(urllib.error.HTTPError):
+            self.request('/api/project/purchaser?id=' + new_id, {'purchaser': '冲突单位'})
+        self.assertEqual(len(self.request('/api/project/detail?id=' + new_id)['files']), 2)
+
+    def test_unreadable_contract_uses_stage_without_inventing_type(self):
+        ident = self.create()
+        with patch.dict(web.SERVER_CONFIG, {'ai': {'enabled': True}}):
+            result = self.upload(ident, [('三方合同-盖章.pdf', 'not a readable pdf'),
+                                         ('补充合同-内贸盖章.pdf', 'not a pdf either'),
+                                         ('三方发票.pdf', 'unreadable invoice'),
+                                         ('合同条款沟通记录.pdf', 'correspondence')])
+            files = {f['origin']: f for f in result['files']}
+            self.assertEqual(files['三方合同-盖章.pdf']['folder'], '合同')
+            self.assertTrue(files['三方合同-盖章.pdf']['needs_review'])
+            self.assertEqual(files['三方合同-盖章.pdf']['name'], '三方合同-盖章.pdf')
+            self.assertEqual(files['补充合同-内贸盖章.pdf']['folder'], '合同')
+            self.assertEqual(files['三方发票.pdf']['folder'], '未归类')
+            self.assertEqual(files['合同条款沟通记录.pdf']['folder'], '未归类')
+            result = self.request('/api/project/save?id=' + ident, {})
+            self.assertEqual(len(result['files']), 4)
+            self.assertEqual(next(f for f in result['files'] if f['origin'] == '三方合同-盖章.pdf')['folder'], '合同')
+
+    def test_manual_classification_persists_and_moves_existing_file(self):
+        ident = self.create()
+        result = self.upload(ident, [('三方合同.pdf', 'contract data')])
+        file = result['files'][0]
+        self.assertTrue(file['needs_review'])
+        reviewed = self.request('/api/project/review?id=' + ident, {'id': file['id'], 'type': '中标合同（内贸）'})
+        self.assertEqual(len(reviewed['files']), 1)
+        updated = reviewed['files'][0]
+        self.assertEqual(updated['type'], '中标合同（内贸）')
+        self.assertFalse(updated['needs_review'])
+        self.assertEqual(self.request('/api/project/file?id=' + ident + '&path=' + urllib.parse.quote(updated['path']), binary=True), b'contract data')
+        again = self.request('/api/project/save?id=' + ident, {})
+        self.assertEqual(len(again['files']), 1)
+        self.assertEqual(again['files'][0]['type'], '中标合同（内贸）')
+        with self.assertRaises(urllib.error.HTTPError):
+            self.request('/api/project/review?id=' + ident, {'id': file['id'], 'type': '不存在'})
+        from web import projects
+        session_path = projects.catalogue_path().parent / ident / 'session.json'
+        session_path.unlink()
+        changed = self.request('/api/project/review?id=' + ident, {'id': file['id'], 'type': '采购合同'})
+        self.assertEqual(len(changed['files']), 1)
+        self.assertEqual(changed['files'][0]['type'], '采购合同')
+        self.assertEqual(self.request('/api/project/save?id=' + ident, {})['files'][0]['type'], '采购合同')
+
     def test_project_isolation_and_restart(self):
         a, b = self.create('A'), self.create('B')
         self.upload(a, [('采购合同.pdf', 'AAA')])

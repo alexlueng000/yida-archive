@@ -4,6 +4,7 @@ import io
 import json
 import mimetypes
 import os
+import shutil
 import time
 import uuid
 import zipfile
@@ -110,9 +111,11 @@ def inventory(item):
         folder = rel.parts[-2]
         if folder == '待归类':
             folder = '未归类'
-        files.append(dict(path=rel.as_posix(), name=path.name,
+        files.append(dict(path=rel.as_posix(), id=raw.get('ident', ''), name=path.name,
                           origin=raw.get('name', path.name), folder=folder,
-                          type=unit.get('type', ''), size=path.stat().st_size,
+                          reason=raw.get('review_note') or (raw.get('ai_result') or {}).get('reason')
+                          or '历史归档未记录归类理由',
+                          type=unit.get('type', ''), needs_review=not bool(unit.get('type')), size=path.stat().st_size,
                           modified=int(path.stat().st_mtime * 1000),
                           uploads=len(raw.get('obs', [])) or 1))
     return files
@@ -122,7 +125,8 @@ def detail(item):
     files = inventory(item)
     uploads = sum(len(b['files']) for b in web.STATE['batches'])
     return dict(project=item, files=files, uploads=uploads,
-                pending=sum(f['folder'] == '未归类' for f in files),
+                pending=sum(f['needs_review'] for f in files),
+                types=[dict(type=r['type'], folder=r['folder']) for r in web._config().rules],
                 path=str(root_for(item)), batches=len(web.STATE['batches']))
 
 
@@ -134,6 +138,75 @@ def send_bytes(handler, data, filename, content_type):
     handler.send_header('X-Content-Type-Options', 'nosniff')
     handler.end_headers()
     handler.wfile.write(data)
+
+
+def change_purchaser(items, item, purchaser):
+    purchaser = str(purchaser or '').strip()
+    if not purchaser or len(purchaser) > 120 or naming.sanitize(purchaser) != purchaser:
+        raise ValueError('请输入有效的采购单位名称')
+    if purchaser == item['purchaser']:
+        return item
+    if any(i['purchaser'].casefold() == purchaser.casefold() and
+           i['project_no'].casefold() == item['project_no'].casefold() for i in items.values()):
+        raise ValueError('该采购单位下已存在此项目号')
+    from web import source_classify
+    if source_classify._active:
+        raise ValueError('正在进行目录归类，请完成后再修改采购单位')
+    old_id = item['id']
+    new_id = key_for(purchaser, item['project_no'])
+    updated = dict(item, id=new_id, purchaser=purchaser, legacy_imported=True)
+    old_base, new_base = root_for(item), root_for(updated)
+    old_session = catalogue_path().parent / old_id
+    new_session = catalogue_path().parent / new_id
+    if new_base.exists() or new_session.exists() or new_id in items:
+        raise ValueError('目标目录或项目记录已存在，无法自动迁移')
+    backup = catalogue_path().parent / ('migration-' + uuid.uuid4().hex)
+    backup.mkdir(parents=True)
+    moved_old = False
+    try:
+        if old_base.exists():
+            if any(p.is_symlink() for p in old_base.rglob('*')):
+                raise ValueError('归档目录包含链接，无法自动迁移')
+            new_base.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copytree(old_base, new_base)
+            for filename in (numbering.FILENAME, '归档规范.json'):
+                path = new_base / filename
+                if path.exists():
+                    data = json.loads(path.read_text(encoding='utf-8'))
+                    data['purchaser'] = purchaser
+                    if filename == numbering.FILENAME:
+                        old_prefix = old_base.relative_to(Path(web.OUTPUT_ROOT).resolve()).as_posix() + '/'
+                        new_prefix = new_base.relative_to(Path(web.OUTPUT_ROOT).resolve()).as_posix() + '/'
+                        for unit in data.get('units', {}).values():
+                            path_value = unit.get('path', '')
+                            if path_value:
+                                if not path_value.startswith(old_prefix):
+                                    raise ValueError('编号记录包含非当前项目路径')
+                                unit['path'] = new_prefix + path_value[len(old_prefix):]
+                    path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
+        if old_session.exists():
+            shutil.copytree(old_session, backup / 'session')
+            shutil.copytree(old_session, new_session)
+            path = new_session / 'session.json'
+            if path.exists():
+                data = json.loads(path.read_text(encoding='utf-8'))
+                data['purchaser'] = purchaser
+                path.write_text(json.dumps(data, ensure_ascii=False), encoding='utf-8')
+        if old_base.exists():
+            shutil.move(str(old_base), str(backup / 'archive'))
+            moved_old = True
+        new_items = dict(items)
+        del new_items[old_id]
+        new_items[new_id] = updated
+        save_catalogue(new_items)
+    except Exception:
+        if moved_old:
+            shutil.move(str(backup / 'archive'), str(old_base))
+        if new_base.exists(): shutil.rmtree(new_base)
+        if new_session.exists(): shutil.rmtree(new_session)
+        raise
+    # Original session and archive remain in the migration backup for recovery.
+    return updated
 
 
 def dispatch(handler, body=None):
@@ -174,13 +247,17 @@ def dispatch(handler, body=None):
             for item in items.values():
                 files = inventory(item)
                 rows.append(dict(item, count=len(files), size=sum(f['size'] for f in files),
-                                 pending=sum(f['folder'] == '未归类' for f in files),
+                                 pending=sum(f['needs_review'] for f in files),
                                  updated=max([f['modified'] for f in files] + [item['created']])))
             return respond(dict(ok=True, projects=sorted(rows, key=lambda i: -i['updated'])))
         ident = query.get('id', [None])[0]
         if ident not in items:
             return respond(dict(error='项目不存在，请返回首页重新选择'), 404)
         item = items[ident]
+        if url.path == '/api/project/purchaser' and handler.command == 'POST':
+            updated = change_purchaser(items, item, body.get('purchaser'))
+            with session(updated):
+                return respond(dict(ok=True, **detail(updated)))
         if url.path == '/api/project/file' and handler.command == 'GET':
             rel = query.get('path', [''])[0]
             if rel not in {f['path'] for f in inventory(item)}:
@@ -196,6 +273,23 @@ def dispatch(handler, body=None):
             return send_bytes(handler, buf.getvalue(), item['project_no'] + '.zip', 'application/zip')
         with session(item):
             if url.path == '/api/project/detail' and handler.command == 'GET':
+                return respond(dict(ok=True, **detail(item)))
+            if url.path == '/api/project/review' and handler.command == 'POST':
+                fid, kind = body.get('id'), body.get('type')
+                if not fid or fid not in {f['id'] for f in inventory(item)}:
+                    raise ValueError('文件不存在或缺少分类记录')
+                if kind not in {r['type'] for r in web._config().rules}:
+                    raise ValueError('请选择当前项目允许的文件类型')
+                previous = dict(web.STATE['file_reviews'])
+                web.STATE['file_reviews'][fid] = dict(previous.get(fid, {}), type=kind)
+                try:
+                    result = web.save_result()
+                    if not result.get('ok'):
+                        raise ValueError('分类保存失败，原文件保持不变')
+                    web.save_session()
+                except Exception:
+                    web.STATE['file_reviews'] = previous
+                    raise
                 return respond(dict(ok=True, **detail(item)))
             if url.path == '/api/project/upload' and handler.command == 'POST':
                 if not body.get('files'):

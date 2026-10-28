@@ -78,7 +78,8 @@ def _receipt_types(f):
         elif ('信用证' in name or re.search(
                 r'(?<![a-z])(?:l[./]?c|t[./]?t)(?![a-z])', name, re.I)):
             found.add('付款凭证')
-        elif '水单' in name and o.form_name == '货款支付':
+        elif '水单' in name and (o.form_name == '货款支付' or re.match(
+                r'^\d+-\d{8}-\d{4}-货款支付-\d+件-', o.form_name)):
             found.add('付款凭证')
     return found
 
@@ -229,6 +230,24 @@ def classify(files, cfg):
             }[f.type_name]
             continue
 
+        # 水单属于收付款资料，但没有方向时不猜测收款或付款。
+        names = [unicodedata.normalize('NFKC', o.name) for o in f.obs]
+        if (not tied and not english and any('水单' in name for name in names)
+                and not any('发票' in name or '合同' in name for name in names)
+                and any(r['folder'] == '收付款' for r in rules)):
+            f.folder = '收付款'
+            f.review_note = '文件名包含水单，仅确定收付款阶段，收付款方向待确认'
+            continue
+
+        # 合同关键词可以确定阶段，但不足以确定五种具体合同类型。
+        # 保留原名和人工确认状态，不虚构固定编号。
+        names = [unicodedata.normalize('NFKC', o.name) for o in f.obs]
+        if (not tied and not english and any('合同' in name for name in names)
+                and not any('发票' in name for name in names)
+                and any(r['folder'] == '合同' for r in rules)):
+            f.folder = '合同'
+            f.review_note = '文件名包含合同，仅确定合同阶段，具体类型待确认'
+            continue
         f.confidence = MANUAL
         if tied:
             f.review_note = '多个类型匹配强度相同，需要人工选择'

@@ -181,6 +181,7 @@ def apply(files, cfg, content_loader, log=None):
         if f.ext.lower() in document_text.IMAGES:
             f.ai_result = {'status': 'image_skipped'}
             continue
+        prior_folder, prior_note = f.folder, f.review_note
         prior_type, prior_confidence = f.type_name, f.confidence
         if prior_type and prior_confidence == classify.CONFIRMED:
             f.ai_result = {'status': 'rule_classified'}
@@ -242,11 +243,17 @@ def apply(files, cfg, content_loader, log=None):
             f.ai_result = {'status': 'failed'}
             f.review_note = str(exc)
             _restore_suggestion(f, cfg, options, prior_type, prior_confidence)
+            if prior_folder and not prior_type and prior_confidence == classify.MANUAL:
+                f.folder = prior_folder
+                f.review_note += '；' + prior_note
         except Exception:
             # SDK/文件异常不泄漏URL、密钥或响应原文，也不阻塞整批。
             f.ai_result = {'status': 'failed'}
             f.review_note = 'AI识别失败，未自动归档'
             _restore_suggestion(f, cfg, options, prior_type, prior_confidence)
+            if prior_folder and not prior_type and prior_confidence == classify.MANUAL:
+                f.folder = prior_folder
+                f.review_note += '；' + prior_note
         if log:
             log('正文分类 %d/%d：%s（%s）' % (n, len(files), f.name, f.ai_result.get('status', '')))
     return files

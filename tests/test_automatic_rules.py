@@ -59,10 +59,23 @@ class TestAutomaticRules(unittest.TestCase):
 
     def test_water_receipt_requires_payment_context(self):
         files = classify_names('水单USD21264.pdf')
-        self.assertFalse(files[0].folder)
+        self.assertEqual(files[0].folder, '收付款')
+        self.assertEqual(files[0].confidence, 'manual')
+        self.assertFalse(files[0].type_name)
         files[0].obs[0].form_name = '货款支付'
         classify.classify(files, Config())
         self.assertEqual(files[0].type_name, '付款凭证')
+
+    def test_downloaded_payment_folder_identifies_water_receipt(self):
+        for name in ('两方水单-70%.png', '三方水单1.pdf'):
+            f = classify_names(name)[0]
+            f.obs[0].form_name = '06-20230921-1038-货款支付-13件-项目'
+            classify.classify([f], Config())
+            self.assertEqual(f.type_name, '付款凭证')
+        f = classify_names('水单.pdf')[0]
+        f.obs[0].form_name = '06-20230921-1038-其他流程-13件-标题提到货款支付'
+        classify.classify([f], Config())
+        self.assertFalse(f.type_name)
 
     def test_payment_direction(self):
         for name, expected in [('退款凭证.pdf', '退款凭证'), ('收款凭证.pdf', '收款凭证'),

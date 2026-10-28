@@ -56,6 +56,9 @@ def assign(files, cfg, project_no):
 
     auto = {}
     for (kind, base), entries in candidates.items():
+        # Backfilling original directories must retain distinct contents regardless of import order.
+        if cfg.raw.get('preserve_distinct_revisions'):
+            continue
         existing = [(key, unit) for key, unit in records.items()
                     if unit['type'] == kind and unit.get('base') == base]
         # 同名的后续提交按内容变化递增；文件名中的数字不决定输出版本号。

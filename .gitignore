@@ -10,3 +10,6 @@ venv/
 
 .cache/web-session/
 .cache/*
+# Local environments and archive exports
+.venv/
+archive-*.zip
