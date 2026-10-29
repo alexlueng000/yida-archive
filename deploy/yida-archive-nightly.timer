@@ -1,0 +1,12 @@
+[Unit]
+Description=每天凌晨跑一次宜搭附件归档
+
+[Timer]
+OnCalendar=*-*-* *:*:00
+# 关机错过的唤醒在启动后补一次；具体运行时间由网页配置。
+Persistent=true
+AccuracySec=1s
+Unit=yida-archive-nightly.service
+
+[Install]
+WantedBy=timers.target

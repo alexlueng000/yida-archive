@@ -48,6 +48,22 @@ class ProjectAppTests(unittest.TestCase):
         return self.request('/api/project/upload?id=' + ident, dict(files=[
             dict(name=name, data=base64.b64encode(content.encode()).decode()) for name, content in files]))
 
+    def test_pdf_preview_is_inline_and_other_files_remain_downloads(self):
+        ident = self.create()
+        data = self.upload(ident, [('资料.PDF', '%PDF-test'), ('资料.txt', 'plain text')])
+        pdf = next(f for f in data['files'] if f['name'].lower().endswith('.pdf'))
+        text_file = next(f for f in data['files'] if f['name'].endswith('.txt'))
+        for file, view, disposition in ((pdf, True, 'inline'), (pdf, False, 'attachment'),
+                                        (text_file, True, 'attachment')):
+            path = urllib.parse.quote(file['path'])
+            url = self.base + '/api/project/file?id=' + ident + '&path=' + path + ('&view=1' if view else '')
+            with urllib.request.urlopen(url) as response:
+                self.assertTrue(response.headers['Content-Disposition'].startswith(disposition))
+                if disposition == 'inline':
+                    self.assertEqual(response.headers['Content-Type'], 'application/pdf')
+                    self.assertEqual(response.headers['X-Content-Type-Options'], 'nosniff')
+                    self.assertEqual(response.read(), b'%PDF-test')
+
     def test_auto_save_dedupe_unknown_plain_and_download(self):
         ident = self.create()
         first = self.upload(ident, [('采购合同.pdf', 'contract'), ('陌生资料.txt', 'unknown')])

@@ -79,7 +79,8 @@ def run(cfg, instances, client=None, dry_run=True, do_hash=True,
         for f, dest in items[:10]:
             print('  %s' % os.path.relpath(dest, os.path.abspath(cfg.out_dir)))
         if len(items) > 10:
-            print('  ... 其余 %d 条见报告' % (len(items) - 10))
+            print('  ... 其余 %d 条未显示' % (len(items) - 10))
+        return res
     else:
         if client is None:
             raise RuntimeError('落盘模式需要下载能力，请用在线取数。')

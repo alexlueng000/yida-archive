@@ -294,18 +294,16 @@ class TestWebFlow(WebTestBase):
             self.assertNotIn('DEFAULT_RULES', body)
             self.assertNotIn('def main()', body)
 
-    def test_empty_state_shows_upload_box(self):
-        """一条上传记录都没有时，页面上必须有个能拖能选的上传框。
-
-        这是踩过的：空状态下只显示一句「还没有上传记录」，
-        用户找不到上传入口。所以「新建上传」这个动作要能从空状态直接完成。
-        """
+    def test_empty_state_shows_date_extraction_without_upload(self):
+        """空状态通过审批日期拉取附件，不再提供新建和上传入口。"""
         post('/api/reset')
         s = get('/api/state')
         self.assertEqual(s['batches'], [], 'reset 后应该是空的')
         html = fetch_page()
-        for needle in ('fileInput', 'dropzone', '选择文件'):
-            self.assertIn(needle, html, '空状态上传框缺了：%s' % needle)
+        for needle in ('id="extractForm"', 'id="extractDate"', '开始拉取'):
+            self.assertIn(needle, html)
+        for needle in ('id="newBtn"', 'id="fileInput"', 'id="dropzone"'):
+            self.assertNotIn(needle, html)
 
     def test_empty_state_upload_flow(self):
         """空状态下「建一条 + 传文件」这条链路要通，这正是上传框做的事。"""

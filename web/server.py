@@ -472,8 +472,8 @@ class Handler(BaseHTTPRequestHandler):
         sys.stderr.write('  %s\n' % (fmt % args))
 
     # ---- 工具 ----
-    def _json(self, obj, code=200):
-        if self.command == 'POST' and code < 400 and not obj.get('error'):
+    def _json(self, obj, code=200, save=True):
+        if save and self.command == 'POST' and code < 400 and not obj.get('error'):
             try:
                 save_session()
             except OSError as exc:
@@ -517,6 +517,15 @@ class Handler(BaseHTTPRequestHandler):
 
     # ---- 路由 ----
     def do_GET(self):
+        if self.path.split('?')[0] == '/api/schedule':
+            from yida_archive import schedule
+            try:
+                return self._json({'ok': True, **schedule.get_status()})
+            except (ValueError, OSError) as exc:
+                return self._json({'error': '无法读取定时设置：' + str(exc)}, 500)
+        if self.path.split('?')[0] == '/api/extraction':
+            from web import extract_job
+            return self._json({'ok': True, 'job': extract_job.latest()})
         if self.path.split('?')[0] == '/api/source/classify-status':
             from web import source_classify
             return source_classify.dispatch(self)
@@ -534,6 +543,18 @@ class Handler(BaseHTTPRequestHandler):
         return self._file(self.path.split('?')[0])
 
     def do_POST(self):
+        if self.path.split('?')[0] == '/api/schedule':
+            from yida_archive import schedule
+            try:
+                return self._json({'ok': True, 'settings': schedule.set_time(self._body().get('time'))}, save=False)
+            except (ValueError, OSError) as exc:
+                return self._json({'error': str(exc)}, 400)
+        if self.path.split('?')[0] == '/api/extraction':
+            from web import extract_job
+            try:
+                return self._json({'ok': True, 'job': extract_job.start(self._body().get('date'))}, 202, save=False)
+            except ValueError as exc:
+                return self._json({'error': str(exc)}, 400)
         if self.path.split('?')[0] == '/api/source/classify':
             from web import source_classify
             return source_classify.dispatch(self, self._body())

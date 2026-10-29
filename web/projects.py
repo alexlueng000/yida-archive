@@ -108,6 +108,9 @@ def inventory(item):
             continue
         unit = metadata.get(path.resolve().relative_to(output).as_posix(), {})
         raw = unit.get('file') or {}
+        obs = raw.get('obs') or []
+        # 同一份文件可能来自多条单据，取最晚的那次审批通过时间；网页用它核对来源。
+        approved = max([o.get('approved_at') or 0 for o in obs] or [0])
         folder = rel.parts[-2]
         if folder == '待归类':
             folder = '未归类'
@@ -116,26 +119,58 @@ def inventory(item):
                           reason=raw.get('review_note') or (raw.get('ai_result') or {}).get('reason')
                           or '历史归档未记录归类理由',
                           type=unit.get('type', ''), needs_review=not bool(unit.get('type')), size=path.stat().st_size,
-                          modified=int(path.stat().st_mtime * 1000),
-                          uploads=len(raw.get('obs', [])) or 1))
+                          modified=int(path.stat().st_mtime * 1000), approved=approved,
+                          uploads=len(obs) or 1))
     return files
+
+
+def sources(item):
+    """项目里的文件分别来自哪些单据，带提交和审批通过时间。
+
+    网页上用这张表核对数据真伪：每条单据都能拿去宜搭里对上。
+    编号记录里每条来源记录都存了流程、单据 id、标题和时间，不用重新查接口。
+    """
+    base = root_for(item)
+    ledger = base / numbering.FILENAME
+    if not ledger.exists():
+        return []
+    units = json.loads(ledger.read_text(encoding='utf-8')).get('units', {})
+    seen = {}
+    for unit in units.values():
+        for obs in (unit.get('file') or {}).get('obs') or []:
+            instance = obs.get('instance_id') or ''
+            if not instance:
+                continue
+            key = (obs.get('form_uuid') or '', instance)
+            row = seen.setdefault(key, dict(form=obs.get('form_name') or '未知流程',
+                                            title=obs.get('instance_title') or '',
+                                            submitted=obs.get('submitted_at') or 0,
+                                            approved=0, files=set()))
+            row['approved'] = max(row['approved'], obs.get('approved_at') or 0)
+            row['files'].add(unit.get('path') or '')
+    rows = [dict(row, files=len(row['files'])) for row in seen.values()]
+    return sorted(rows, key=lambda r: (r['submitted'], r['form']))
 
 
 def detail(item):
     files = inventory(item)
     uploads = sum(len(b['files']) for b in web.STATE['batches'])
-    return dict(project=item, files=files, uploads=uploads,
+    return dict(project=item, files=files, uploads=uploads, sources=sources(item),
                 pending=sum(f['needs_review'] for f in files),
+                folders=web._config().folders,
                 types=[dict(type=r['type'], folder=r['folder']) for r in web._config().rules],
                 path=str(root_for(item)), batches=len(web.STATE['batches']))
 
 
-def send_bytes(handler, data, filename, content_type):
+def send_bytes(handler, data, filename, content_type, inline=False):
     handler.send_response(200)
     handler.send_header('Content-Type', content_type)
-    handler.send_header('Content-Disposition', "attachment; filename*=UTF-8''" + quote(filename))
+    handler.send_header('Content-Disposition', ('inline' if inline else 'attachment') + "; filename*=UTF-8''" + quote(filename))
     handler.send_header('Content-Length', str(len(data)))
     handler.send_header('X-Content-Type-Options', 'nosniff')
+    if inline:
+        handler.send_header('Cache-Control', 'no-store')
+        handler.send_header('Content-Security-Policy', "sandbox; default-src 'none'")
     handler.end_headers()
     handler.wfile.write(data)
 
@@ -263,8 +298,10 @@ def dispatch(handler, body=None):
             if rel not in {f['path'] for f in inventory(item)}:
                 return respond(dict(error='文件不存在'), 404)
             path = root_for(item) / rel
+            inline = query.get('view', [''])[0] == '1' and path.suffix.lower() == '.pdf'
             return send_bytes(handler, path.read_bytes(), path.name,
-                              mimetypes.guess_type(path.name)[0] or 'application/octet-stream')
+                              'application/pdf' if inline else (mimetypes.guess_type(path.name)[0] or 'application/octet-stream'),
+                              inline=inline)
         if url.path == '/api/project/export' and handler.command == 'GET':
             buf = io.BytesIO()
             with zipfile.ZipFile(buf, 'w', zipfile.ZIP_DEFLATED) as archive:

@@ -46,6 +46,48 @@ class SourceBrowserTests(unittest.TestCase):
         self.assertTrue(data['entries'][0]['preview'])
         self.assertEqual(data['entries'][0]['size'], len(b'%PDF-original'))
 
+    def test_projects_group_batches_and_nightly_archive_by_project_number(self):
+        # 同一个项目下会有多个下载批次，夜间归档又是另一套目录结构，都要并到一个项目里。
+        key = '24JZBTPFB157-401'
+        for folder in ('archive-%s' % key, 'archive-%s-全流程' % key):
+            path = self.root / folder / '每次上传' / '01-合同审批'
+            path.mkdir(parents=True)
+            (path / '合同.pdf').write_bytes(b'%PDF-batch')
+        nightly = Path(self.app.tmp.name) / 'nightly'
+        (nightly / '南方科技大学' / key / '公共' / '合同').mkdir(parents=True)
+        (nightly / '南方科技大学' / key / '公共' / '合同' / '1-采购合同.pdf').write_bytes(b'%PDF-archived')
+        (nightly / '南方科技大学' / '不是项目号的目录').mkdir(parents=True)
+        with patch.object(source_browser, '_archive_root', lambda: nightly):
+            data = self.request('/api/sources')
+        group = next(g for g in data['projects'] if g['project'] == key)
+        self.assertEqual(len(group['sources']), 2)
+        self.assertEqual(group['files'], 2)
+        self.assertFalse(group['archived'])
+        self.assertEqual(group['batches'], 2)
+        self.assertEqual(group['sources'][0]['kind'], 'batch')
+        # 认不出项目号的目录不硬塞进别的项目
+        unknown = next(g for g in data['projects'] if g['project'] == source_browser.UNKNOWN_PROJECT)
+        self.assertEqual(sorted(s['name'] for s in unknown['sources']), ['P1-全流程', 'P2'])
+
+    def test_old_style_project_number_and_unattributed_directories_are_listed(self):
+        key = 'B22026LD001'
+        nightly = Path(self.app.tmp.name) / 'nightly2'
+        (nightly / '深圳理工大学' / key / '公共' / '合同').mkdir(parents=True)
+        (nightly / '深圳理工大学' / key / '公共' / '合同' / '1-采购合同.pdf').write_bytes(b'%PDF')
+        (nightly / source_browser.UNATTRIBUTED_DIR / '2026-10-27' / '总代理协议' / '单据A').mkdir(parents=True)
+        (nightly / source_browser.UNATTRIBUTED_DIR / '2026-10-27' / '总代理协议' / '单据A' /
+         '结算单.xlsx').write_bytes(b'x')
+        with patch.object(source_browser, '_archive_root', lambda: nightly):
+            data = self.request('/api/sources')
+        by_key = {g['project']: g for g in data['projects']}
+        # 分类结果不混入原始附件浏览。
+        self.assertNotIn(key, by_key)
+        # 认领不了的单据单独成组，日期作为目录列出来
+        self.assertIn(source_browser.UNATTRIBUTED_PROJECT, by_key)
+        self.assertEqual(by_key[source_browser.UNATTRIBUTED_PROJECT]['files'], 1)
+        self.assertEqual([s['name'] for s in by_key[source_browser.UNATTRIBUTED_PROJECT]['sources']],
+                         ['2026-10-27'])
+
     def test_download_and_view_original_file_without_changes(self):
         from urllib.parse import quote
         path = '01-合同审批/附件/合同.pdf'

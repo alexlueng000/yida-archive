@@ -45,6 +45,7 @@ class AttachmentObs:
     source_order: int = 0     # 同一时间的附件按输入列表顺序排序
     document_id: str = ''     # 上游明确提供的逻辑文件ID（不是物理 fileUuid）
     revision: int = 0         # 上游明确提供的修订号
+    approved_at: int = 0      # 这条单据最终审批通过的时间，毫秒；网页上用来核对来源
 
     @property
     def ext(self) -> str:
@@ -65,6 +66,10 @@ class Instance:
     originator: str = ''
     status: str = ''
     attachments: List[AttachmentObs] = field(default_factory=list)
+    project_key: str = ''      # 归一后的项目号，用于分组和落盘路径
+    # 最终审批通过时间（平台 modifiedTimeGMT）。夜间任务按这个时间判断「当天审批完成」，
+    # 存下来是为了网页上能和宜搭里的单据对上，不然归档结果没法核实。
+    approved_at: int = 0
 
 
 @dataclass

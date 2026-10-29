@@ -1,0 +1,26 @@
+[Unit]
+Description=宜搭合同审批附件归档（当晚审批通过的流程）
+Documentation=file:/opt/yida-archive/deploy/README.md
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=yida
+Group=yida
+WorkingDirectory=/opt/yida-archive
+Environment=PYTHONIOENCODING=utf-8
+# 凭证从 /opt/yida-archive/.env 读，程序自己解析；这里不重复声明，免得两份值不一致。
+ExecStart=/opt/yida-archive/venv/bin/python -u -m yida_archive.schedule
+TimeoutStartSec=12h
+# 整夜跑，CPU 让给别人
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+NoNewPrivileges=yes
+PrivateTmp=yes
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

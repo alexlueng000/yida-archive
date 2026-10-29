@@ -10,6 +10,10 @@ venv/
 
 .cache/web-session/
 .cache/*
+# 凭证文件，任何情况下都不进版本库
+.env
+.env.*
+!.env.example
 # Local environments and archive exports
 .venv/
 archive-*.zip

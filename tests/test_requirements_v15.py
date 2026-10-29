@@ -83,15 +83,27 @@ class RequirementsV15(unittest.TestCase):
             self.assertTrue(all('/' + root + '/' in naming.target_dir(f, self.cfg) for f in files))
 
     def test_missing_secret_blocks_write_and_export(self):
+        # 命令行配置必须显式写清加不加密，缺了就拒绝落盘，避免猜错把涉密文件放出公共区。
         self.cfg.raw['scope']['project_secret'] = None
         files = prepare(grouped(attachment('采购合同.pdf', 'a', b'A')), self.cfg)
         with self.assertRaisesRegex(ValueError, '是否南科大企业项目'):
             archive.write(files, self.cfg, ContentClient({'a': b'A'}), self.temp.name)
         self.assertFalse(list(Path(self.temp.name).rglob('*.pdf')))
+
+    def test_web_export_ignores_secret_flag_and_lands_in_public(self):
+        # 网页端统一不加密，不再要求填「是否南科大企业项目」，一律进公共区。
         with patch.object(web, 'OUTPUT_ROOT', self.temp.name), \
-             patch.dict(web.STATE, {'project_secret': '', 'last_result': {'ok': True}}):
-            with self.assertRaisesRegex(ValueError, '是否南科大企业项目'):
-                web.export_zip()
+             patch.object(web, 'SESSION_DIR', Path(self.temp.name)), \
+             patch.dict(web.STATE, {'project_no': 'P1', 'purchaser': '甲单位',
+                                    'project_secret': '', 'last_result': {'ok': True},
+                                    'batches': [], 'files': [], 'file_reviews': {}}):
+            payload, error = web.export_zip()
+            self.assertIsNone(error)
+            self.assertTrue(payload)
+            cfg = web._config()
+            files = prepare(grouped(attachment('采购合同.pdf', 'a', b'A')), cfg)
+            self.assertEqual(cfg.project_secret, False)
+            self.assertFalse(any('加密' in naming.target_dir(f, cfg) for f in files))
 
     def test_old_ledger_is_blocked_and_preview_does_not_modify_files(self):
         source = Path(self.temp.name) / 'P1_文件分类'

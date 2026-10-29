@@ -31,16 +31,28 @@ class AIError(ValueError):
 
 
 def credentials(options):
-    """兼容百炼纵向CSV导出与常见单行列式CSV；不输出凭证。"""
+    """兼容百炼纵向CSV导出与常见单行列式CSV；不输出凭证。
+
+    CSV 缺失但环境变量里有密钥时继续走。无人值守的服务器只放 .env，不放 CSV。
+    """
     values = {}
+    env_key = os.environ.get(options.get('api_key_env', 'ARCHIVE_AI_API_KEY'))
     path = options.get('credentials_file')
     if path:
         try:
             raw = Path(path).read_bytes()
+        except OSError:
+            if not env_key:
+                raise AIError('无法读取模型凭证CSV，请检查路径与编码') from None
+            raw = b''
+        if raw:
             try:
-                text = raw.decode('utf-8-sig')
-            except UnicodeDecodeError:
-                text = raw.decode('gb18030')
+                try:
+                    text = raw.decode('utf-8-sig')
+                except UnicodeDecodeError:
+                    text = raw.decode('gb18030')
+            except UnicodeError:
+                raise AIError('无法读取模型凭证CSV，请检查路径与编码') from None
             rows = list(csv.reader(io.StringIO(text)))
             if rows and all(len(r) == 2 for r in rows) and rows[0][0].strip().lower() in {'id', 'apikey', 'apihost'}:
                 values = {r[0].strip(): r[1].strip() for r in rows if len(r) == 2}
@@ -48,9 +60,7 @@ def credentials(options):
                 values = dict(zip(rows[0], rows[1]))
             else:
                 raise AIError('凭证CSV应为键值格式或单行记录')
-        except (OSError, UnicodeError):
-            raise AIError('无法读取模型凭证CSV，请检查路径与编码') from None
-    key = os.environ.get(options.get('api_key_env', 'ARCHIVE_AI_API_KEY')) or values.get('apiKey') or values.get('api_key')
+    key = env_key or values.get('apiKey') or values.get('api_key')
     base = options.get('base_url') or values.get('openAiCompatible') or values.get('base_url')
     model = options.get('model') or values.get('model')
     if not key or not base or not model:
