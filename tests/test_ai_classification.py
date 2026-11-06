@@ -192,15 +192,38 @@ class AIClassificationTest(unittest.TestCase):
             with self.subTest(error=error):
                 files = files_for('彩页1-Sigma 560.pdf')
                 classify.classify(files, self.cfg)
-                with patch.object(document_text, 'extract', side_effect=error), \
+                with patch.object(ai, 'pdf_text_layer', side_effect=error), \
                      patch.object(ai, 'Client') as client:
                     ai.apply(files, self.cfg, lambda f: b'body')
                 f = files[0]
-                self.assertEqual((f.folder, f.type_name, f.confidence), ('办证', '彩页说明书', classify.SUGGESTED))
-                self.assertEqual(f.ai_result['status'], 'rule_fallback')
+                self.assertEqual((f.folder, f.type_name, f.confidence), ('', '', classify.MANUAL))
+                self.assertEqual(f.ai_result['status'], 'failed')
                 self.assertIn(note, f.review_note)
                 self.assertNotIn('private-internal-detail', f.review_note)
                 client.assert_not_called()
+
+    def test_pdf_original_is_sent_and_scanned_page_needs_review(self):
+        data = b'pdf original'
+        files = files_for('资料.pdf', data)
+        classify.classify(files, self.cfg)
+        with patch.object(ai, 'pdf_text_layer', return_value=([], True)), \
+             patch.object(ai.Client, 'classify', return_value=(decision(), {})) as call:
+            ai.apply(files, self.cfg, lambda f: data)
+        self.assertEqual(call.call_args.kwargs['pdf_data'], data)
+        self.assertEqual(files[0].ai_result['status'], 'unknown')
+        self.assertEqual(files[0].confidence, classify.MANUAL)
+        self.assertIn('人工确认', files[0].review_note)
+
+    def test_pdf_text_evidence_can_be_verified(self):
+        data = b'pdf original'
+        files = files_for('资料.pdf', data)
+        classify.classify(files, self.cfg)
+        result = decision()
+        result['evidence'][0]['location'] = '第1页'
+        with patch.object(ai, 'pdf_text_layer', return_value=([{'location': '第1页', 'text': TEXT}], False)), \
+             patch.object(ai.Client, 'classify', return_value=(result, {})):
+            ai.apply(files, self.cfg, lambda f: data)
+        self.assertEqual(files[0].confidence, classify.CONFIRMED)
 
     def test_removed_rule_cannot_be_restored(self):
         files = files_for('箱单2024.docx')
