@@ -20,6 +20,7 @@ import re
 import sys
 import time
 import unicodedata
+from concurrent.futures import ThreadPoolExecutor
 from contextlib import contextmanager
 
 from . import by_instance, extract, fetch_openapi as api, naming, pipeline
@@ -211,8 +212,16 @@ def modified_window(start, end, grace_days=DEFAULT_GRACE_DAYS, full_window=False
     return max(end, min(dt.datetime.now(api.CST), end + dt.timedelta(days=max(0, grace_days))))
 
 
+def _lookup_agree_time(client, instance_id):
+    """查单条实例的最后同意时间；失败返回 (0, False)，由调用方计数。"""
+    try:
+        return api.final_agree_time(client.operation_records(instance_id)), True
+    except Exception:
+        return 0, False
+
+
 def scan_day(day, client=None, hours_back=0, on_form=None, stats=None,
-             grace_days=DEFAULT_GRACE_DAYS, full_window=False):
+             grace_days=DEFAULT_GRACE_DAYS, full_window=False, record_workers=8):
     """取某一天（北京时间）审批通过并完结的全部实例，按表单顺序返回。"""
     start, end = api.day_window(day)
     if hours_back:
@@ -229,19 +238,26 @@ def scan_day(day, client=None, hours_back=0, on_form=None, stats=None,
     out = []
     for form in FORMS:
         found = []
+        candidates = []
         for record in client.iter_window(
                 form['form_uuid'], start, modified_end,
                 instanceStatus='COMPLETED', approvedResult='agree'):
             if not is_finished(record):
                 stats['skipped'] += 1
                 continue
-            inst = build_instance(form, record)
-            # modifiedTimeGMT 只是最后一次修改，审批通过后还可能被抄送或重定向改掉，
-            # 所以再查一次操作记录，取最后一条「同意」的时间。查不到就沿用修改时间。
-            try:
-                when = api.final_agree_time(client.operation_records(inst.instance_id))
-            except Exception:
-                when = 0
+            candidates.append(build_instance(form, record))
+
+        # 操作记录是逐条 GET，串行查是补跑旧日期时的主要耗时。这里并发查，
+        # 结果顺序仍与 candidates 对齐，失败条数在主线程统一统计。
+        if record_workers and record_workers > 1 and len(candidates) > 1:
+            with ThreadPoolExecutor(max_workers=record_workers) as pool:
+                outcomes = list(pool.map(
+                    lambda inst: _lookup_agree_time(client, inst.instance_id), candidates))
+        else:
+            outcomes = [_lookup_agree_time(client, inst.instance_id) for inst in candidates]
+
+        for inst, (when, ok) in zip(candidates, outcomes):
+            if not ok:
                 stats['records_failed'] = stats.get('records_failed', 0) + 1
             if when:
                 inst.approved_at = when
@@ -620,6 +636,8 @@ def _main(argv=None):
                              % DEFAULT_GRACE_DAYS)
     parser.add_argument('--full-window', action='store_true',
                         help='修改时间一直查到现在（旧行为，补很早的日期会很慢）')
+    parser.add_argument('--record-workers', type=int, default=8,
+                        help='并发查询操作记录的线程数，默认 8；设 1 恢复串行')
     parser.add_argument('--config', default='config.yaml', help='基础配置，项目级参数会按项目覆盖')
     parser.add_argument('--out', help='覆盖落盘根目录')
     parser.add_argument('--project', action='append', default=None,
@@ -653,10 +671,13 @@ def _main(argv=None):
         print('  %-24s 单据 %-3d 附件 %-4d' % (form['name'], len(found), files))
 
     print()
-    print('逐流程扫描')
+    print('逐流程扫描（%d 个流程）' % len(FORMS))
     stats = {}
+    scan_started = time.time()
     instances = scan_day(day, hours_back=args.hours_back, on_form=on_form, stats=stats,
-                         grace_days=args.grace_days, full_window=args.full_window)
+                         grace_days=args.grace_days, full_window=args.full_window,
+                         record_workers=args.record_workers)
+    print('扫描完成，用时 %.1f 秒' % (time.time() - scan_started))
     summarize(instances, args.limit)
     groups, missing = group_by_project(instances)
     report_projects(groups, missing)
