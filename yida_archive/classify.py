@@ -27,7 +27,6 @@ ENGLISH_RULES = (
     ('箱单', r'(?<![a-z])(?:packing|pascking)[\s_-]*list(?![a-z])|(?<![a-z])pl(?=[\s_-]+[a-z0-9])', CONFIRMED),
     ('运单/提单', r'(?<![a-z])(?:awb|air[\s_-]*waybill|bill[\s_-]*of[\s_-]*lading)(?![a-z])', CONFIRMED),
     ('采购合同', r'(?<![a-z])(?:purchase[\s_-]*order(?![a-z])|p\.?o\.?(?![a-z]))', SUGGESTED),
-    ('发票（进口）', r'(?<![a-z])invoice(?![a-z])', SUGGESTED),
 )
 ENGLISH_REVIEW = re.compile(
     r'(?<![a-z])(?:sample|draft|template|specimen)(?![a-z])'
@@ -208,6 +207,14 @@ def classify(files, cfg):
                    for kind, keys in direct_matches):
                 f.review_note = '文件名称命中多个不相容类型，无法确定主体文件，自动跳过'
                 continue
+        # 发票名称只能确定大类时，不推断进口或国内交易性质。
+        invoice_name = any(re.search(r'发票|(?<![a-z])(?:invoice|inv)(?![a-z])',
+                                     unicodedata.normalize('NFKC', o.name), re.I)
+                           for o in f.obs)
+        if invoice_name and not best_score[0] and not english:
+            f.folder, f.type_name, f.confidence = '结算移交', '发票', SUGGESTED
+            f.review_note = '文件名识别为发票，具体类型待确认'
+            continue
         if best and not tied:
             f.folder = best['folder']
             f.type_name = best['type']

@@ -202,17 +202,18 @@ class AIClassificationTest(unittest.TestCase):
                 self.assertNotIn('private-internal-detail', f.review_note)
                 client.assert_not_called()
 
-    def test_pdf_original_is_sent_and_scanned_page_needs_review(self):
+    def test_pdf_original_is_sent_and_scanned_page_can_be_classified(self):
         data = b'pdf original'
         files = files_for('资料.pdf', data)
         classify.classify(files, self.cfg)
+        result = decision()
+        result['evidence'][0]['location'] = '第1页'
         with patch.object(ai, 'pdf_text_layer', return_value=([], True)), \
-             patch.object(ai.Client, 'classify', return_value=(decision(), {})) as call:
+             patch.object(ai.Client, 'classify', return_value=(result, {})) as call:
             ai.apply(files, self.cfg, lambda f: data)
         self.assertEqual(call.call_args.kwargs['pdf_data'], data)
-        self.assertEqual(files[0].ai_result['status'], 'unknown')
-        self.assertEqual(files[0].confidence, classify.MANUAL)
-        self.assertIn('人工确认', files[0].review_note)
+        self.assertEqual(files[0].ai_result['status'], 'classified')
+        self.assertEqual(files[0].confidence, classify.CONFIRMED)
 
     def test_pdf_text_evidence_can_be_verified(self):
         data = b'pdf original'

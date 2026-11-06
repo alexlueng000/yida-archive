@@ -45,6 +45,7 @@ DEFAULT_RULES = [
     ('结算移交', '结算表', ['结算表', '结算单']),
     ('结算移交', '退款凭证', ['退款凭证']),
     ('结算移交', '移交资料收件回执', ['移交资料', '收件回执', '移交回执']),
+    ('结算移交', '发票', []),
 ]
 
 DEFAULT_FOLDERS = ['合同', '办证', '清关送货', '收付款', '结算移交']
@@ -207,6 +208,8 @@ class Config:
                 raise ValueError('文件类型与业务阶段不匹配：' + kind)
             if allowed is None or kind in allowed:
                 result.append(dict(r, type=kind))
+        if not any(r['type'] == '发票' for r in result):
+            result.append({'folder': '结算移交', 'type': '发票', 'keywords': []})
         return result
 
     @property
