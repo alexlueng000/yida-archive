@@ -120,6 +120,8 @@ def inventory(item):
                           or '历史归档未记录归类理由',
                           type=unit.get('type', ''), needs_review=not bool(unit.get('type')), size=path.stat().st_size,
                           modified=int(path.stat().st_mtime * 1000), approved=approved,
+                          sources=list(dict.fromkeys(o.get('form_name', '').strip() for o in obs
+                                                     if o.get('form_name', '').strip())),
                           uploads=len(obs) or 1))
     return files
 
