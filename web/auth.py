@@ -33,7 +33,10 @@ def authorized(handler):
 
 def same_origin(handler):
     origin = handler.headers.get('Origin')
-    return not origin or origin == 'http://' + handler.headers.get('Host', '')
+    # TLS may terminate at the reverse proxy. Keep an exact authority match
+    # (including the port), while accepting either public HTTP scheme.
+    host = handler.headers.get('Host', '')
+    return not origin or bool(host) and origin in {'http://' + host, 'https://' + host}
 
 def reply(handler, data, status=200, cookie=None):
     body = json.dumps(data, ensure_ascii=False).encode('utf-8')
