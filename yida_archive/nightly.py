@@ -195,19 +195,37 @@ def is_finished(record):
             and str(record.get('approvedResult') or '').lower() == 'agree')
 
 
-def scan_day(day, client=None, hours_back=0, on_form=None, stats=None):
+DEFAULT_GRACE_DAYS = 30
+
+
+def modified_window(start, end, grace_days=DEFAULT_GRACE_DAYS, full_window=False):
+    """实例 modifiedTimeGMT 查询上界。
+
+    审批动作本身会刷新修改时间，所以目标日审批通过的单据，修改时间不会早于当天；
+    但审批通过后还可能被抄送、重定向改到更晚。默认只向后多看 grace_days 天，
+    避免补跑很早的日期时把几个月的数据全部取回、再逐条查操作记录。
+    --full-window 保留旧行为，一直查到现在，只在需要严格兜底时使用。
+    """
+    if full_window:
+        return max(end, dt.datetime.now(api.CST))
+    return max(end, min(dt.datetime.now(api.CST), end + dt.timedelta(days=max(0, grace_days))))
+
+
+def scan_day(day, client=None, hours_back=0, on_form=None, stats=None,
+             grace_days=DEFAULT_GRACE_DAYS, full_window=False):
     """取某一天（北京时间）审批通过并完结的全部实例，按表单顺序返回。"""
     start, end = api.day_window(day)
     if hours_back:
         start -= dt.timedelta(hours=hours_back)
     # modifiedTimeGMT 是最后修改时间，审批后又修改过的实例可能落在次日或更晚。
-    # 搜到当前时刻，再以操作记录的最终同意时间筛回目标日期。
-    modified_end = max(end, dt.datetime.now(api.CST))
+    # 默认按审批日宽限若干天，再用操作记录的最终同意时间筛回目标日期。
+    modified_end = modified_window(start, end, grace_days, full_window)
     client = client or api.OpenApiClient()
     stats = stats if stats is not None else {}
     stats.setdefault('kept', 0)
     stats.setdefault('skipped', 0)
     stats.setdefault('times', [])
+    stats['modified_window'] = (start, modified_end)
     out = []
     for form in FORMS:
         found = []
@@ -597,6 +615,11 @@ def _main(argv=None):
     parser.add_argument('--hours-back', type=int, default=0,
                         help='时间窗往前多留几小时，补跑漏掉的单据')
     parser.add_argument('--limit', type=int, default=8, help='明细打印条数')
+    parser.add_argument('--grace-days', type=int, default=DEFAULT_GRACE_DAYS,
+                        help='审批日之后继续按修改时间补查的天数，默认 %d；0 表示只查当天'
+                             % DEFAULT_GRACE_DAYS)
+    parser.add_argument('--full-window', action='store_true',
+                        help='修改时间一直查到现在（旧行为，补很早的日期会很慢）')
     parser.add_argument('--config', default='config.yaml', help='基础配置，项目级参数会按项目覆盖')
     parser.add_argument('--out', help='覆盖落盘根目录')
     parser.add_argument('--project', action='append', default=None,
@@ -615,8 +638,12 @@ def _main(argv=None):
         day = dt.date.fromisoformat(args.date)
 
     start, end = api.day_window(day)
+    modified_end = modified_window(start, end, args.grace_days, args.full_window)
     print('扫描日期：%s（北京时间 00:00-24:00）' % day)
     print('时间窗（北京时间）：%s 至 %s' % (api.utc_text(start), api.utc_text(end)))
+    print('实例修改时间窗（北京时间）：%s 至 %s%s' % (
+        api.utc_text(start), api.utc_text(modified_end),
+        '（全量兜底）' if args.full_window else '（审批日后宽限 %d 天）' % max(0, args.grace_days)))
 
     counter = {'calls': 0}
 
@@ -628,7 +655,8 @@ def _main(argv=None):
     print()
     print('逐流程扫描')
     stats = {}
-    instances = scan_day(day, hours_back=args.hours_back, on_form=on_form, stats=stats)
+    instances = scan_day(day, hours_back=args.hours_back, on_form=on_form, stats=stats,
+                         grace_days=args.grace_days, full_window=args.full_window)
     summarize(instances, args.limit)
     groups, missing = group_by_project(instances)
     report_projects(groups, missing)

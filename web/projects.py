@@ -152,11 +152,19 @@ def sources(item):
     return sorted(rows, key=lambda r: (r['submitted'], r['form']))
 
 
+def accuracy(item, files):
+    path = root_for(item) / '归类调整统计.json'
+    data = json.loads(path.read_text(encoding='utf-8')) if path.exists() else {}
+    adjusted = sum(bool(f['id'] and f['id'] in data) for f in files)
+    total = len(files)
+    return dict(total=total, adjusted=adjusted, percent=round((total-adjusted)*100/total, 1) if total else None)
+
+
 def detail(item):
     files = inventory(item)
     uploads = sum(len(b['files']) for b in web.STATE['batches'])
     return dict(project=item, files=files, uploads=uploads, sources=sources(item),
-                pending=sum(f['needs_review'] for f in files),
+                pending=sum(f['needs_review'] for f in files), accuracy=accuracy(item, files),
                 folders=web._config().folders,
                 types=[dict(type=r['type'], folder=r['folder']) for r in web._config().rules],
                 path=str(root_for(item)), batches=len(web.STATE['batches']))
@@ -282,7 +290,7 @@ def dispatch(handler, body=None):
             for item in items.values():
                 files = inventory(item)
                 rows.append(dict(item, count=len(files), size=sum(f['size'] for f in files),
-                                 pending=sum(f['needs_review'] for f in files),
+                                 pending=sum(f['needs_review'] for f in files), accuracy=accuracy(item, files),
                                  updated=max([f['modified'] for f in files] + [item['created']])))
             return respond(dict(ok=True, projects=sorted(rows, key=lambda i: -i['updated'])))
         ident = query.get('id', [None])[0]
@@ -317,6 +325,7 @@ def dispatch(handler, body=None):
                     raise ValueError('文件不存在或缺少分类记录')
                 if kind not in {r['type'] for r in web._config().rules}:
                     raise ValueError('请选择当前项目允许的文件类型')
+                before = next(f for f in inventory(item) if f['id'] == fid)
                 previous = dict(web.STATE['file_reviews'])
                 web.STATE['file_reviews'][fid] = dict(previous.get(fid, {}), type=kind)
                 try:
@@ -324,6 +333,13 @@ def dispatch(handler, body=None):
                     if not result.get('ok'):
                         raise ValueError('分类保存失败，原文件保持不变')
                     web.save_session()
+                    if before['type'] != kind:
+                        stat_path = root_for(item) / '归类调整统计.json'
+                        stats = json.loads(stat_path.read_text(encoding='utf-8')) if stat_path.exists() else {}
+                        stats[fid] = True
+                        tmp = stat_path.with_suffix('.tmp')
+                        tmp.write_text(json.dumps(stats, ensure_ascii=False), encoding='utf-8')
+                        os.replace(tmp, stat_path)
                 except Exception:
                     web.STATE['file_reviews'] = previous
                     raise

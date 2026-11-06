@@ -517,6 +517,19 @@ class Handler(BaseHTTPRequestHandler):
 
     # ---- 路由 ----
     def do_GET(self):
+        from web import auth
+        path = self.path.split('?')[0]
+        if path == '/api/auth/status':
+            return auth.reply(self, {'configured': auth.configured(), 'authenticated': auth.authorized(self)})
+        if path == '/login.html':
+            return self._file('login.html')
+        if not auth.authorized(self):
+            if path.startswith('/api/'):
+                return auth.reply(self, {'error': '请先登录'}, 401)
+            self.send_response(302)
+            self.send_header('Location', '/login.html')
+            self.end_headers()
+            return
         if self.path.split('?')[0] == '/api/schedule':
             from yida_archive import schedule
             try:
@@ -543,6 +556,14 @@ class Handler(BaseHTTPRequestHandler):
         return self._file(self.path.split('?')[0])
 
     def do_POST(self):
+        from web import auth
+        path = self.path.split('?')[0]
+        if path in ('/api/auth/setup', '/api/auth/login', '/api/auth/logout'):
+            return auth.post(self, path)
+        if not auth.same_origin(self):
+            return auth.reply(self, {'error': '请求来源无效'}, 403)
+        if not auth.authorized(self):
+            return auth.reply(self, {'error': '请先登录'}, 401)
         if self.path.split('?')[0] == '/api/schedule':
             from yida_archive import schedule
             try:

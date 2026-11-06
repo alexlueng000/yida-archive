@@ -16,7 +16,8 @@ let lastBody;
 let release;
 const context = vm.createContext({
   document: {getElementById: id => id === 'split' ? null : node(id), addEventListener() {}},
-  window: {}, console, setTimeout: () => 1, clearTimeout() {},
+  window: {addEventListener() {}}, location: {hash: ''},
+  console, setTimeout: () => 1, clearTimeout() {}, URLSearchParams,
   fetch: async (url, options) => {
     if (url === '/api/state') return {json: async () => server};
     lastBody = JSON.parse(options.body);

@@ -1,5 +1,6 @@
-"""正文提取。只读取文字，不渲染图片，不执行宏或外部链接。"""
+"""正文提取；扫描版 PDF 使用本地 OCR，不执行宏或外部链接。"""
 import io
+from functools import lru_cache
 import zipfile
 
 
@@ -26,6 +27,7 @@ def extract(data, extension, max_chars=48000, max_units=120):
         except zipfile.BadZipFile:
             raise TextError('文档格式损坏或已加密') from None
     sections = []
+    ocr_document = None
     total = 0
 
     def add(location, text):
@@ -53,8 +55,13 @@ def extract(data, extension, max_chars=48000, max_units=120):
                     raise TextError('PDF页面内容流过大')
                 text = page.extract_text() or ''
                 # 不让混合扫描文档凭少量文字被误认成已全文核验。
-                if not text.strip() and page.get('/Resources', {}).get('/XObject'):
-                    raise TextError('PDF含无正文的扫描或图片页面，首期不做OCR')
+                if not text.strip():
+                    if ocr_document is None:
+                        import pymupdf as fitz
+                        ocr_document = fitz.open(stream=data, filetype='pdf')
+                    text = _ocr_page(ocr_document[n - 1])
+                    if not text.strip():
+                        raise TextError('扫描页未识别到文字，请人工确认')
                 add('第%d页' % n, text)
         elif ext == '.docx':
             from docx import Document
@@ -102,6 +109,27 @@ def extract(data, extension, max_chars=48000, max_units=120):
         raise
     except Exception:
         raise TextError('文档损坏、加密或正文无法解析') from None
+    finally:
+        if ocr_document is not None:
+            ocr_document.close()
     if sum(len(s['text']) for s in sections) < 20:
-        raise TextError('未提取到足够正文；扫描件首期不做OCR')
+        raise TextError('未提取到足够正文，请人工确认')
     return sections
+
+
+@lru_cache(maxsize=1)
+def _ocr_engine():
+    from rapidocr import RapidOCR
+    return RapidOCR()
+
+
+def _ocr_page(page):
+    """Render a bounded page and recognize Chinese and English locally."""
+    import numpy as np
+    import pymupdf as fitz
+    rect = page.rect
+    scale = min(2.0, 2400 / max(rect.width, rect.height))
+    pix = page.get_pixmap(matrix=fitz.Matrix(scale, scale), colorspace=fitz.csRGB, alpha=False)
+    image = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.height, pix.width, 3)
+    result = _ocr_engine()(image)
+    return '\n'.join(result.txts or [])
