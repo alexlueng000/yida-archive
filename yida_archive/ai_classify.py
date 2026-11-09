@@ -8,6 +8,7 @@ import re
 import os
 import tempfile
 import time
+import unicodedata
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -326,6 +327,13 @@ def apply(files, cfg, content_loader, log=None):
             if prior_folder and not prior_type and prior_confidence == classify.MANUAL:
                 f.folder = prior_folder
                 f.review_note += '；' + prior_note
+        # 正文无法确定具体类型时，保留文件名明确标识的发票作为通用类型。
+        if (not f.type_name and not classify._exclusion_reason(f, cfg.manual_keywords)
+                and any(re.search(r'发票|(?<![a-z])(?:invoice|inv)(?![a-z])',
+                                  unicodedata.normalize('NFKC', o.name), re.I)
+                        for o in f.obs)):
+            f.folder, f.type_name, f.confidence = '结算移交', '发票', classify.SUGGESTED
+            f.review_note += '；未确定具体类型，按文件名归为发票'
         if log:
             log('正文分类 %d/%d：%s（%s）' % (n, len(files), f.name, f.ai_result.get('status', '')))
     return files
