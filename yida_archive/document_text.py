@@ -76,7 +76,29 @@ def extract(data, extension, max_chars=48000, max_units=120):
                 add('节%d页脚' % n, '\n'.join(p.text for p in section.footer.paragraphs))
         elif ext == '.xlsx':
             from openpyxl import load_workbook
-            book = load_workbook(io.BytesIO(data), read_only=True, data_only=False, keep_links=False)
+            try:
+                book = load_workbook(io.BytesIO(data), read_only=True, data_only=False, keep_links=False)
+            except TypeError as exc:
+                if 'openpyxl.styles.fills.Fill' not in str(exc):
+                    raise
+                # 仅修复内存副本的填充样式，保留单元格、公式和数字/日期格式。
+                import xml.etree.ElementTree as ET
+                buf = io.BytesIO()
+                with zipfile.ZipFile(io.BytesIO(data)) as source, zipfile.ZipFile(buf, 'w') as target:
+                    for item in source.infolist():
+                        body = source.read(item)
+                        if item.filename == 'xl/styles.xml':
+                            tree = ET.fromstring(body)
+                            ns = '{http://schemas.openxmlformats.org/spreadsheetml/2006/main}'
+                            fills = tree.find(ns + 'fills')
+                            if fills is None:
+                                raise TextError('工作簿缺少填充样式定义')
+                            for fill in fills:
+                                fill.clear()
+                                ET.SubElement(fill, ns + 'patternFill', {'patternType': 'none'})
+                            body = ET.tostring(tree, encoding='utf-8', xml_declaration=True)
+                        target.writestr(item, body)
+                book = load_workbook(io.BytesIO(buf.getvalue()), read_only=True, data_only=False, keep_links=False)
             try:
                 if len(book.worksheets) > max_units:
                     raise TextError('工作表数量超过识别上限')

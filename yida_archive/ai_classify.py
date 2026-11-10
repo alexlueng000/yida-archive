@@ -95,6 +95,10 @@ class Client:
             {'role': 'user', 'content': content}],
             'temperature': 0, 'max_tokens': 1800,
             'response_format': {'type': 'json_object'}}
+        streaming = pdf_data is not None
+        if streaming:
+            request.update(stream=True, stream_options={'include_usage': True})
+        timeout = min(600, max(1, int(self.options.get('pdf_timeout', 300)))) if streaming else min(120, max(1, int(self.options.get('timeout', 45))))
         retries = min(3, max(0, int(self.options.get('retries', 0))))
         for attempt in range(retries + 1):
             if self.calls >= int(self.options.get('max_calls', 100)):
@@ -105,7 +109,7 @@ class Client:
             try:
                 response = requests.post(self.base + '/chat/completions', json=request,
                     headers={'Authorization': 'Bearer ' + self.key},
-                    timeout=(10, min(120, max(1, int(self.options.get('timeout', 45))))),
+                    timeout=(10, timeout), stream=streaming,
                     allow_redirects=False)
             except requests.RequestException:
                 if attempt < retries:
@@ -114,12 +118,14 @@ class Client:
                 raise AIError('模型请求连接失败或超时') from None
             if response.status_code == 429 or response.status_code >= 500:
                 if attempt < retries:
+                    response.close()
                     time.sleep(min(4, 2 ** attempt))
                     continue
             if response.status_code != 200:
+                response.close()
                 raise AIError('模型调用失败（HTTP %d），请检查模型权限和配置' % response.status_code)
             try:
-                result = response.json()
+                result = _stream_result(response) if streaming else response.json()
                 choice = result['choices'][0]
                 if choice.get('finish_reason') != 'stop':
                     raise AIError('模型输出未完整结束')
@@ -132,6 +138,38 @@ class Client:
                 return value, usage
             except (ValueError, KeyError, IndexError, TypeError):
                 raise AIError('模型未返回有效的分类JSON') from None
+            except requests.RequestException:
+                raise AIError('模型流式读取失败或超时，未接受不完整结果') from None
+            finally:
+                response.close()
+
+
+def _stream_result(response):
+    chunks, usage, finish = [], {}, None
+    size = 0
+    started = time.monotonic()
+    for line in response.iter_lines(chunk_size=1024):
+        if time.monotonic() - started > 600:
+            raise AIError('PDF流式响应总耗时超过限制')
+        if not line or not line.startswith(b'data:'):
+            continue
+        value = line[5:].strip()
+        if value == b'[DONE]':
+            break
+        event = json.loads(value)
+        if event.get('error'):
+            raise AIError('模型返回流式错误，未接受不完整结果')
+        if event.get('usage'):
+            usage = event['usage']
+        for choice in event.get('choices', []):
+            content = choice.get('delta', {}).get('content') or ''
+            size += len(content)
+            if size > 100000:
+                raise AIError('模型输出超过长度限制')
+            chunks.append(content)
+            if choice.get('finish_reason'):
+                finish = choice['finish_reason']
+    return {'choices': [{'finish_reason': finish, 'message': {'content': ''.join(chunks)}}], 'usage': usage}
 
 
 def validate(result, sections, rules, threshold, allow_scanned=False):

@@ -114,11 +114,14 @@ def inventory(item):
         folder = rel.parts[-2]
         if folder == '待归类':
             folder = '未归类'
+        container = path.suffix.lower() == '.zip' and (raw.get('ai_result') or {}).get('status') == 'archive_container'
+        if container:
+            folder = '原始压缩包'
         files.append(dict(path=rel.as_posix(), id=raw.get('ident', ''), name=path.name,
                           origin=raw.get('name', path.name), folder=folder,
-                          reason=raw.get('review_note') or (raw.get('ai_result') or {}).get('reason')
+                          reason=('保留的ZIP原包；包内文件单独处理，解压异常请查看运行日志' if container else raw.get('review_note')) or (raw.get('ai_result') or {}).get('reason')
                           or '历史归档未记录归类理由',
-                          type=unit.get('type', ''), needs_review=not bool(unit.get('type')), size=path.stat().st_size,
+                          type=unit.get('type', ''), needs_review=not bool(unit.get('type')) and not container, archive_container=container, size=path.stat().st_size,
                           modified=int(path.stat().st_mtime * 1000), approved=approved,
                           sources=list(dict.fromkeys(o.get('form_name', '').strip() for o in obs
                                                      if o.get('form_name', '').strip())),
