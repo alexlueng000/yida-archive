@@ -29,6 +29,22 @@ def result_snapshot(files):
     return json.dumps(sorted(rows, key=lambda row: row['ident']), ensure_ascii=False, sort_keys=True)
 
 
+def inherit_archive_owner(staged, archive_root):
+    """Root-run maintenance must leave private files readable by the archive service."""
+    if not hasattr(os, 'chown'):
+        return
+    owner = archive_root.stat()
+    for directory, dirs, names in os.walk(staged, followlinks=False):
+        for path in [Path(directory)] + [Path(directory) / name for name in names]:
+            if path.is_symlink():
+                raise ValueError('暂存归档中不允许符号链接')
+            current = path.stat()
+            if (current.st_uid, current.st_gid) != (owner.st_uid, owner.st_gid):
+                os.chown(path, owner.st_uid, owner.st_gid)
+        if any((Path(directory) / name).is_symlink() for name in dirs):
+            raise ValueError('暂存归档中不允许符号链接')
+
+
 def run_project(ledger, write):
     import json
     data = json.loads(ledger.read_text(encoding='utf-8'))
@@ -69,6 +85,8 @@ def run_project(ledger, write):
         if not result.get('ok'):
             raise RuntimeError('保存失败，原目录未改动：' + str(result.get('failed') or result))
         fresh = Path(stage) / target.relative_to(root)
+        # 修复属主后才替换线上目录；失败时原目录保持原样。
+        inherit_archive_owner(fresh, root)
         backup_root = root / '.reclassify-backups'
         backup_root.mkdir(exist_ok=True)
         import uuid

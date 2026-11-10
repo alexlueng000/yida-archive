@@ -6,10 +6,26 @@ from unittest.mock import patch, Mock
 from test_ai_classification import files_for, decision, SECTIONS
 from yida_archive import ai_classify as ai, classify, document_text
 from yida_archive.config import Config
-from tools.reclassify_pending import result_snapshot
+from tools.reclassify_pending import result_snapshot, inherit_archive_owner
+from pathlib import Path
 
 
 class SpeedTests(unittest.TestCase):
+    def test_staged_files_inherit_service_owner(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            staged = Path(tmp) / 'project'
+            folder = staged / 'pending'
+            folder.mkdir(parents=True)
+            file = folder / 'file.pdf'
+            file.write_bytes(b'pdf')
+            root = Mock()
+            root.stat.return_value.st_uid = 12345
+            root.stat.return_value.st_gid = 12346
+            with patch('tools.reclassify_pending.os.chown', create=True) as chown:
+                inherit_archive_owner(staged, root)
+                self.assertEqual(chown.call_count, 3)
+                chown.assert_any_call(file, 12345, 12346)
+
     def test_parallel_requests_share_call_limit(self):
         with tempfile.TemporaryDirectory() as tmp:
             cfg = Config({'storage': {'work_dir': tmp}, 'ai': {
