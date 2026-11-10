@@ -575,7 +575,10 @@ class Handler(BaseHTTPRequestHandler):
         if self.path.split('?')[0] == '/api/extraction':
             from web import extract_job
             try:
-                return self._json({'ok': True, 'job': extract_job.start(self._body().get('date'))}, 202, save=False)
+                body = self._body()
+                job = (extract_job.start_project(body['project_no']) if 'project_no' in body
+                       else extract_job.start(body.get('date')))
+                return self._json({'ok': True, 'job': job}, 202, save=False)
             except ValueError as exc:
                 return self._json({'error': str(exc)}, 400)
         if self.path.split('?')[0] == '/api/source/classify':

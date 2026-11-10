@@ -8,8 +8,9 @@ extractInput.value=yesterday.toISOString().slice(0,10);
 function showExtraction(job){
   const status=$('extractStatus'),running=job&&(job.status==='queued'||job.status==='running');
   $('extractStart').disabled=Boolean(running);$('extractDate').disabled=Boolean(running);
+  $('projectPullStart').disabled=Boolean(running);$('projectPullNumber').disabled=Boolean(running);
   if(!job){status.hidden=true;$('extractDetails').hidden=true;return}
-  status.hidden=false;status.textContent=job.date+'：'+job.message;
+  status.hidden=false;status.textContent=(job.kind==='project'?'项目 '+job.project_no:job.date)+'：'+job.message;
   status.style.color=job.status==='failed'?'#9c3630':'';
   const lines=job.recent||[];$('extractDetails').hidden=!lines.length;$('extractLog').textContent=lines.join('\n');
   if((extractLastStatus==='running'||extractLastStatus==='queued')&&job.status==='succeeded'&&!$('home').hidden){
@@ -47,3 +48,9 @@ $('scheduleForm').onsubmit=async e=>{
   finally{$('scheduleSave').disabled=false}
 };
 refreshSchedule();
+
+$('projectPullForm').onsubmit=async e=>{
+  e.preventDefault();$('projectPullStart').disabled=true;
+  try{const r=await api('/api/extraction',{project_no:$('projectPullNumber').value.trim()});showExtraction(r.job);refreshExtraction()}
+  catch(err){$('projectPullStart').disabled=false;$('extractStatus').hidden=false;$('extractStatus').textContent=err.message;$('extractStatus').style.color='#9c3630'}
+};

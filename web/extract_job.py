@@ -87,6 +87,15 @@ def start(value):
         raise ValueError('请选择有效的审批日期') from exc
     if day > dt.datetime.now(CST).date():
         raise ValueError('审批日期不能晚于今天')
+    return _start(value, 'date')
+
+
+def start_project(value):
+    from yida_archive.project_pull import project_key
+    return _start(project_key(value), 'project')
+
+
+def _start(value, kind):
     with _guard:
         current = latest()
         if current and current['status'] in ('queued', 'running'):
@@ -95,6 +104,9 @@ def start(value):
         path = JOBS_DIR / (ident + '.json')
         job = {'id': ident, 'date': value, 'status': 'queued',
                'created': time.time(), 'message': '任务已提交，正在启动'}
+        job['kind'] = kind
+        if kind == 'project':
+            job['project_no'] = value
         _write(path, job)
         try:
             subprocess.Popen([sys.executable, '-u', '-m', 'web.extract_job', '--worker', ident, value],
@@ -118,8 +130,10 @@ def worker(ident, day):
     try:
         env = dict(os.environ, PYTHONIOENCODING='utf-8', PYTHONUNBUFFERED='1')
         with (JOBS_DIR / (ident + '.log')).open('ab') as log:
-            completed = subprocess.run([sys.executable, '-u', '-m', 'yida_archive.nightly',
-                                        '--date', day, '--write'], cwd=web.REPO,
+            command = ([sys.executable, '-u', '-m', 'yida_archive.project_pull',
+                        '--project', job['project_no'], '--write'] if job.get('kind') == 'project' else
+                       [sys.executable, '-u', '-m', 'yida_archive.nightly', '--date', day, '--write'])
+            completed = subprocess.run(command, cwd=web.REPO,
                                        stdout=log, stderr=subprocess.STDOUT, env=env,
                                        stdin=subprocess.DEVNULL, check=False)
         job.update(status='succeeded' if completed.returncode == 0 else 'failed',
