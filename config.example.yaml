@@ -46,11 +46,12 @@ scope:
         attachmentField_ky8afins: 附件
 
 ai:
-  enabled: false  # 开启后优先确认规则，再识别正文；图片继续使用原有规则
+  enabled: false  # 优先确认规则，再识别正文；未知图片使用本地OCR
   credentials_file: ../主账号空间-apiKey-7509302.csv
   model: qwen3.8-omni-flash
   pdf_model: qwen3.8-flash  # PDF 原文件上传须使用百炼支持 PDF 理解的模型
   threshold: 0.9
+  suggestion_threshold: 0.75  # 有可核实证据但分数不足0.9：归类并标记待复核
   # 技术失败时保留文件名建议并待复核；pending 则进入待归类。
   # 模型返回 excluded/unknown/mixed 时不回退。
   failure_policy: keep_suggested

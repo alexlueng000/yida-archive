@@ -172,7 +172,20 @@ def _stream_result(response):
     return {'choices': [{'finish_reason': finish, 'message': {'content': ''.join(chunks)}}], 'usage': usage}
 
 
-def validate(result, sections, rules, threshold, allow_scanned=False):
+def _normalize_evidence(value):
+    value = unicodedata.normalize('NFKC', value)
+    value = value.translate(str.maketrans({'“': '"', '”': '"', '‘': "'", '’': "'",
+                                          '\u200b': '', '\ufeff': '', '\u00ad': '', '_': ''}))
+    return re.sub(r'\s+', '', value)
+
+
+def _normalize_location(value):
+    compact = re.sub(r'\s+', '', unicodedata.normalize('NFKC', value))
+    page = re.fullmatch(r'(?:第(\d+)页|(?:page|p\.?)(\d+))', compact, re.I)
+    return '第%d页' % int(page[1] or page[2]) if page else compact
+
+
+def validate(result, sections, rules, threshold, allow_scanned=False, suggestion_threshold=0.75):
     if not isinstance(result, dict) or result.get('status') not in {'classified', 'unknown', 'excluded', 'mixed'}:
         raise AIError('模型分类状态不合法')
     if not isinstance(result.get('reason'), str) or not result['reason'].strip() or len(result['reason']) > 800:
@@ -186,18 +199,35 @@ def validate(result, sections, rules, threshold, allow_scanned=False):
     evidence = result.get('evidence')
     if not isinstance(evidence, list) or not 1 <= len(evidence) <= 8:
         raise AIError('模型缺少可核对的正文证据')
-    by_location = {s['location']: s['text'] for s in sections}
+    by_location = {_normalize_location(s['location']): s['text'] for s in sections}
+    accepted, rejected = [], 0
     for item in evidence:
         if not isinstance(item, dict):
-            raise AIError('模型证据格式不合法')
+            rejected += 1
+            continue
         quote, location = item.get('quote'), item.get('location')
         if not isinstance(location, str) or not isinstance(quote, str) or not 4 <= len(quote.strip()) <= 500:
-            raise AIError('模型证据格式不合法')
-        normalize = lambda value: re.sub(r'\s+', '', unicodedata.normalize('NFKC', value))
-        if normalize(quote) not in normalize(by_location.get(location, '')):
+            rejected += 1
+            continue
+        location = _normalize_location(location)
+        normalized = _normalize_evidence(quote)
+        if len(normalized) < 4:
+            rejected += 1
+            continue
+        if normalized not in _normalize_evidence(by_location.get(location, '')):
             if not (allow_scanned and location not in by_location and re.fullmatch(r'第[1-9]\d*页', location)):
-                raise AIError('模型证据无法在对应正文位置核实')
+                rejected += 1
+                continue
+        accepted.append(dict(item, location=location))
+    if not accepted:
+        raise AIError('模型证据无法在对应正文位置核实')
+    result = dict(result, evidence=accepted)
+    if rejected:
+        result['evidence_rejected'] = rejected
+        result['reason'] += '；已保留%d条可核实证据，忽略%d条无效引用' % (len(accepted), rejected)
     if score < threshold:
+        if score >= min(threshold, suggestion_threshold):
+            return dict(result, status='suggested', reason='正文有依据，先归类待复核：' + result['reason'])
         return dict(result, status='unknown', reason='评分低于自动归档门槛：' + result['reason'])
     return result
 
@@ -255,7 +285,7 @@ def _restore_suggestion(f, cfg, options, prior_type, prior_confidence):
         return
     f.folder, f.type_name, f.confidence = rule['folder'], rule['type'], classify.SUGGESTED
     f.ai_result['status'] = 'rule_fallback'
-    f.review_note += '；正文未能读取，按文件名规则归入「%s」，未经正文核验' % prior_type
+    f.review_note += '；正文识别或核验未完成，按文件名规则归入「%s」，未经正文核验' % prior_type
 
 
 class _CallBudget:
@@ -298,6 +328,9 @@ def _apply_serial(files, cfg, content_loader, log=None, budget=None):
     threshold = float(options.get('threshold', 0.9))
     if not 0 <= threshold <= 1:
         raise AIError('AI自动归档门槛必须在0至1之间')
+    suggestion_threshold = float(options.get('suggestion_threshold', min(0.75, threshold)))
+    if not 0 <= suggestion_threshold <= threshold:
+        raise AIError('建议归类门槛必须介于0与自动归档门槛之间')
     clients = {}
     calls = 0
     configuration_error = None
@@ -315,8 +348,8 @@ def _apply_serial(files, cfg, content_loader, log=None, budget=None):
             f.ai_result = {'status': 'excluded'}
             f.review_note = excluded
             continue
-        # 首期图片不调用模型，原有文件名规则仍保留。
-        if f.ext.lower() in document_text.IMAGES:
+        # 已明确识别的图片继续走规则；未知图片可用本地OCR提取正文。
+        if f.ext.lower() in document_text.IMAGES and f.type_name and f.confidence == classify.CONFIRMED:
             f.ai_result = {'status': 'image_skipped'}
             continue
         prior_folder, prior_note = f.folder, f.review_note
@@ -326,6 +359,7 @@ def _apply_serial(files, cfg, content_loader, log=None, budget=None):
             continue
         f.folder = f.type_name = ''
         f.confidence = classify.MANUAL
+        content_verified = False
         try:
             if f.ext.lower() not in document_text.SUPPORTED:
                 raise AIError('首期不识别此格式正文，请将旧版Word转为DOCX')
@@ -335,6 +369,7 @@ def _apply_serial(files, cfg, content_loader, log=None, budget=None):
             digest = hashlib.sha256(data).hexdigest()
             if f.content_hash and digest != f.content_hash:
                 raise AIError('识别前文件内容哈希校验失败')
+            content_verified = True
             is_pdf = f.ext.lower() == '.pdf'
             if is_pdf:
                 sections, missing_text = pdf_text_layer(data, int(options.get('max_chars', 48000)),
@@ -382,25 +417,27 @@ def _apply_serial(files, cfg, content_loader, log=None, budget=None):
                     calls = client.calls
                 # 保存原始结构化结果；证据校验失败也可在下次本地重验，避免重复付费请求。
                 _cache_write(cache, {'result': result, 'usage': usage})
-            result = validate(result, sections, cfg.rules, threshold, allow_scanned=is_pdf and missing_text)
+            result = validate(result, sections, cfg.rules, threshold, allow_scanned=is_pdf and missing_text,
+                              suggestion_threshold=suggestion_threshold)
             f.ai_result = dict(result, model=client.model, usage=usage, cached=cached)
             reason = classify._exclusion_reason(f, cfg.manual_keywords)
             if reason:
                 f.ai_result['status'] = 'excluded'
                 f.review_note = reason
-            elif result['status'] != 'classified':
+            elif result['status'] not in {'classified', 'suggested'}:
                 f.review_note = 'AI未自动归档：' + result['reason']
             elif prior_type and prior_confidence == classify.CONFIRMED and prior_type != result['type']:
                 f.ai_result['status'] = 'conflict'
                 f.review_note = '规则与正文分类冲突：%s / %s；%s' % (prior_type, result['type'], result['reason'])
             else:
                 rule = next(r for r in cfg.rules if r['type'] == result['type'])
-                f.folder, f.type_name, f.confidence = rule['folder'], rule['type'], classify.CONFIRMED
+                f.folder, f.type_name, f.confidence = rule['folder'], rule['type'], (
+                    classify.SUGGESTED if result['status'] == 'suggested' else classify.CONFIRMED)
                 f.review_note = 'AI正文识别：' + result['reason']
         except (AIError, document_text.TextError) as exc:
             f.ai_result = {'status': 'failed'}
             f.review_note = str(exc)
-            if f.ext.lower() != '.pdf':
+            if f.ext.lower() != '.pdf' or content_verified:
                 _restore_suggestion(f, cfg, options, prior_type, prior_confidence)
             if prior_folder and not prior_type and prior_confidence == classify.MANUAL:
                 f.folder = prior_folder
@@ -409,7 +446,7 @@ def _apply_serial(files, cfg, content_loader, log=None, budget=None):
             # SDK/文件异常不泄漏URL、密钥或响应原文，也不阻塞整批。
             f.ai_result = {'status': 'failed'}
             f.review_note = 'AI识别失败，未自动归档'
-            if f.ext.lower() != '.pdf':
+            if f.ext.lower() != '.pdf' or content_verified:
                 _restore_suggestion(f, cfg, options, prior_type, prior_confidence)
             if prior_folder and not prior_type and prior_confidence == classify.MANUAL:
                 f.folder = prior_folder

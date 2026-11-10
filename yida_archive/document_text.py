@@ -2,10 +2,16 @@
 import io
 from functools import lru_cache
 import zipfile
+import shutil
+import subprocess
+import tempfile
+from pathlib import Path
 
 
 SUPPORTED = {'.pdf', '.docx', '.xlsx', '.xls'}
 IMAGES = {'.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tif', '.tiff', '.webp', '.heic', '.svg'}
+OCR_IMAGES = {'.jpg', '.jpeg', '.png', '.bmp', '.tif', '.tiff', '.webp'}
+SUPPORTED |= OCR_IMAGES | {'.doc'}
 
 
 class TextError(ValueError):
@@ -41,7 +47,31 @@ def extract(data, extension, max_chars=48000, max_units=120):
         sections.append({'location': location, 'text': text})
 
     try:
-        if ext == '.pdf':
+        if ext in OCR_IMAGES:
+            import pymupdf as fitz
+            from PIL import Image
+            with Image.open(io.BytesIO(data)) as picture:
+                if picture.width * picture.height > 30_000_000:
+                    raise TextError('图片像素超过识别上限')
+                if getattr(picture, 'n_frames', 1) != 1:
+                    raise TextError('多帧图片需先转换为PDF，避免遗漏内容')
+                converted = io.BytesIO()
+                picture.convert('RGB').save(converted, format='PNG')
+            ocr_document = fitz.open(stream=converted.getvalue(), filetype='png')
+            add('第1页', _ocr_page(ocr_document[0]))
+        elif ext == '.doc':
+            reader = shutil.which('antiword')
+            if not reader:
+                raise TextError('缺少旧版Word读取器antiword，请安装或转为DOCX')
+            with tempfile.TemporaryDirectory(prefix='archive-doc-') as directory:
+                source = Path(directory) / 'document.doc'
+                source.write_bytes(data)
+                completed = subprocess.run([reader, '-m', 'UTF-8.txt', str(source)],
+                                           capture_output=True, timeout=30, check=False)
+                if completed.returncode:
+                    raise TextError('旧版Word正文读取失败，请转为DOCX')
+                add('正文1', completed.stdout.decode('utf-8', errors='strict'))
+        elif ext == '.pdf':
             from pypdf import PdfReader
             reader = PdfReader(io.BytesIO(data))
             # 部分PDF仅限制编辑/打印，打开密码为空，仍可正常读取正文。

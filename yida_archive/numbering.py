@@ -162,7 +162,7 @@ def include_history(files, cfg, loader=None, deduplicate=True):
             raw['obs'] = [AttachmentObs(**o) for o in raw['obs']]
             f = LogicalFile(**raw)
         else:
-            name = unit.get('base', '') + path.suffix
+            name = (unit.get('base') + path.suffix) if unit.get('base') else path.name
             obs = AttachmentObs('历史归档', 'ARCHIVE', key, '', 0, '', '附件',
                                 name, path.stat().st_size, '', '', unit['hash'])
             f = LogicalFile(unit['hash'], name, obs.size, '', '', unit['hash'], [obs])

@@ -173,7 +173,7 @@ class AIClassificationTest(unittest.TestCase):
         self.assertEqual(files[0].ai_result['status'], 'failed')
 
     def test_unsupported_format_falls_back(self):
-        files = files_for('代理协议 23-50-10.doc')
+        files = files_for('代理协议 23-50-10.rtf')
         classify.classify(files, self.cfg)
         reader = Mock()
         with patch.object(ai, 'Client') as client:
@@ -196,8 +196,8 @@ class AIClassificationTest(unittest.TestCase):
                      patch.object(ai, 'Client') as client:
                     ai.apply(files, self.cfg, lambda f: b'body')
                 f = files[0]
-                self.assertEqual((f.folder, f.type_name, f.confidence), ('', '', classify.MANUAL))
-                self.assertEqual(f.ai_result['status'], 'failed')
+                self.assertEqual((f.folder, f.type_name, f.confidence), ('办证', '彩页说明书', classify.SUGGESTED))
+                self.assertEqual(f.ai_result['status'], 'rule_fallback')
                 self.assertIn(note, f.review_note)
                 self.assertNotIn('private-internal-detail', f.review_note)
                 client.assert_not_called()

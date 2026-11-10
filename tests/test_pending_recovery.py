@@ -48,3 +48,15 @@ class PendingRecoveryTests(unittest.TestCase):
         self.ledger.write_text(json.dumps(data), encoding='utf-8')
         self.path.write_bytes(b'changed')
         self.assertEqual(numbering.include_history([], self.cfg), [])
+
+    def test_legacy_empty_base_keeps_real_filename_for_reclassification(self):
+        data = json.loads(self.ledger.read_text(encoding='utf-8'))
+        unit = next(iter(data['units'].values()))
+        unit['base'] = ''
+        unit.pop('file', None)
+        self.ledger.write_text(json.dumps(data), encoding='utf-8')
+        files = numbering.include_history([], self.cfg)
+        self.assertEqual(files[0].name, '未知资料.dat')
+        naming.assign(files, self.cfg, 'P1')
+        numbering.finalize(self.cfg, [], [])
+        self.assertEqual(numbering.include_history([], self.cfg)[0].name, '未知资料.dat')

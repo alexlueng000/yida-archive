@@ -45,7 +45,7 @@ def inherit_archive_owner(staged, archive_root):
             raise ValueError('暂存归档中不允许符号链接')
 
 
-def run_project(ledger, write):
+def run_project(ledger, write, recheck_all=False):
     import json
     data = json.loads(ledger.read_text(encoding='utf-8'))
     purchaser, project = data['purchaser'], data['project']
@@ -60,7 +60,8 @@ def run_project(ledger, write):
     original_count = len(files)
     files = merge(files, cfg.raw.get('file_reviews'))
     merged_count = original_count - len(files)
-    pending = [f for f in files if not f.type_name and 'type' not in cfg.raw['file_reviews'].get(f.ident, {})]
+    pending = [f for f in files if (recheck_all or not f.type_name)
+               and 'type' not in cfg.raw['file_reviews'].get(f.ident, {})]
     print(f'项目 {project}：加载文件 {len(files)}，待处理 {len(pending)}，DOCX合并 {merged_count}', flush=True)
     if not pending and not merged_count:
         return 0
@@ -68,9 +69,15 @@ def run_project(ledger, write):
         if hashlib.sha256(Path(f.cache_path).read_bytes()).hexdigest() != f.content_hash:
             raise ValueError('文件内容与账本哈希不一致：' + f.name)
     classify.classify(pending, cfg)
+    if recheck_all:
+        # Explicit full recheck must also inspect rule-confirmed files and images.
+        # Retain rule suggestions for the existing technical-failure fallback.
+        for f in pending:
+            if f.confidence == classify.CONFIRMED:
+                f.confidence = classify.SUGGESTED
     ai_classify.apply(pending, cfg, lambda f: Path(f.cache_path).read_bytes(), log=print)
     changed = [f for f in pending if f.type_name and f.folder and f.confidence != classify.MANUAL]
-    print(f'项目 {purchaser} / {project}：待归类 {len(pending)}，可归类 {len(changed)}', flush=True)
+    print(f'项目 {purchaser} / {project}：本轮检查 {len(pending)}，可归类 {len(changed)}', flush=True)
     if merged_count:
         print(f'  DOCX内容相同，合并重复副本 {merged_count} 份；上传来源全部保留', flush=True)
     if before == result_snapshot(files):
@@ -84,6 +91,9 @@ def run_project(ledger, write):
         print(f'  {f.name} -> {f.type_name} / {f.new_name}', flush=True)
     if not write:
         return len(changed) + merged_count
+    for f in pending:
+        # Persist changed evidence/confidence even when type and filename stay the same.
+        f._from_archive = False
     root = Path(web.OUTPUT_ROOT).resolve()
     target = ledger.parent.resolve()
     # Stage through the same writer used by the web application; preserve a complete backup.
@@ -111,6 +121,8 @@ def run_project(ledger, write):
 def main():
     parser = argparse.ArgumentParser(description='重新归类账本中未归类的文件；默认预览')
     parser.add_argument('--write', action='store_true', help='保存结果；默认只预览')
+    parser.add_argument('--all', dest='recheck_all', action='store_true',
+                        help='重新检查已归类和未归类文件；保留人工指定分类，复用模型缓存并重新核验')
     parser.add_argument('--project', help='只处理指定项目号')
     parser.add_argument('--config', default=str(ROOT / 'config.yaml'))
     parser.add_argument('--workers', type=int, choices=range(1, 9), help='AI并发数，默认3，最大8')
@@ -136,7 +148,7 @@ def main():
             continue
         projects += 1
         try:
-            count += run_project(ledger, args.write)
+            count += run_project(ledger, args.write, recheck_all=args.recheck_all)
         except Exception as exc:
             errors += 1
             print(f'失败 {ledger}: {exc}', file=sys.stderr, flush=True)
