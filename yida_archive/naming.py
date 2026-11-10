@@ -149,7 +149,7 @@ def assign(files, cfg, project_no):
         if current.version_order > 1:
             tname += 'v%d' % current.version_order
         pattern = cfg.multi_pattern if unit['multi'] else cfg.pattern
-        current.new_name = (sanitize('发票-' + current.name) if current.type_name == '发票' else
+        current.new_name = (sanitize(current.type_name + '-' + current.name) if current.type_name in {'发票', '合同'} else
                             sanitize(pattern.format(seq=unit['seq'], sub=unit['sub'], type=tname,
                                                     project=sanitize(project_no), ext=current.ext)))
     cfg._numbering_plan = state

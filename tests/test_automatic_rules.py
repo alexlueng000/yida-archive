@@ -6,6 +6,13 @@ from yida_archive.config import Config
 
 
 class TestAutomaticRules(unittest.TestCase):
+    def test_collection_slip_goes_to_settlement(self):
+        for name in ('收款小条 2026-10-27 代理费.pdf', '收款小条2026-10-23.pdf'):
+            f = classify_names(name)[0]
+            self.assertEqual((f.folder, f.type_name, f.confidence),
+                             ('结算移交', '收款小条', 'confirmed'))
+            self.assertTrue(f.new_name)
+
     def test_payment_subject_beats_referenced_contract(self):
         for name in ['支付两方合同SRS部分尾款凭证.png',
                      '两方支付凭证（参考19-157-428合同）.pdf',
@@ -37,7 +44,7 @@ class TestAutomaticRules(unittest.TestCase):
                 self.assertNotEqual(classify_names(name)[0].type_name, '付款凭证')
 
     def test_communication_and_unsupported_documents_skip(self):
-        for name in ['发展确认结算表.png', '进口增值税发票.pdf', '发票.pdf',
+        for name in ['发展确认结算表.png', '进口增值税发票.pdf',
                      '可行性测算表.xlsx', '机电产品报价.pdf', '最终用户名单.xlsx',
                      '离岸报价.pdf', '采购合同草稿.pdf', '箱单模板.xlsx',
                      'Pascking list sample.pdf', 'PO 779 作废.pdf']:

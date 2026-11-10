@@ -11,7 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from web import server as web
-from yida_archive import ai_classify, classify, dedupe, naming, numbering
+from yida_archive import ai_classify, classify, dedupe, naming, numbering, zip_members
 from yida_archive.config import load
 from yida_archive.fetch_openapi import load_env
 
@@ -25,6 +25,7 @@ def run_project(ledger, write):
     if numbering.project_dir(cfg).resolve() != ledger.parent.resolve():
         raise ValueError('账本与项目路径不一致')
     files = numbering.include_history([], cfg)
+    zip_members.expand(files, cfg, lambda f: Path(f.cache_path).read_bytes(), log=print)
     pending = [f for f in files if not f.type_name and 'type' not in cfg.raw['file_reviews'].get(f.ident, {})]
     if not pending:
         return 0
@@ -35,10 +36,10 @@ def run_project(ledger, write):
     ai_classify.apply(pending, cfg, lambda f: Path(f.cache_path).read_bytes(), log=print)
     changed = [f for f in pending if f.type_name and f.folder and f.confidence != classify.MANUAL]
     print(f'项目 {purchaser} / {project}：待归类 {len(pending)}，可归类 {len(changed)}', flush=True)
-    if not changed:
+    if not changed and not write:
         return 0
     classify.mark_secret(changed, cfg)
-    naming.assign(changed, cfg, project)
+    naming.assign(files, cfg, project)
     for f in changed:
         print(f'  {f.name} -> {f.type_name} / {f.new_name}', flush=True)
     if not write:

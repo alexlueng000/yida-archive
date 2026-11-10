@@ -151,7 +151,8 @@ def validate(result, sections, rules, threshold, allow_scanned=False):
         quote, location = item.get('quote'), item.get('location')
         if not isinstance(location, str) or not isinstance(quote, str) or not 4 <= len(quote.strip()) <= 500:
             raise AIError('模型证据格式不合法')
-        if quote not in by_location.get(location, ''):
+        normalize = lambda value: re.sub(r'\s+', '', unicodedata.normalize('NFKC', value))
+        if normalize(quote) not in normalize(by_location.get(location, '')):
             if not (allow_scanned and location not in by_location and re.fullmatch(r'第[1-9]\d*页', location)):
                 raise AIError('模型证据无法在对应正文位置核实')
     if score < threshold:
@@ -227,6 +228,9 @@ def apply(files, cfg, content_loader, log=None):
     configuration_error = None
     for n, f in enumerate(files, 1):
         f.ai_result = {}
+        if f.ext.lower() == '.zip':
+            f.ai_result = {'status': 'archive_container'}
+            continue
         if 'type' in (cfg.raw.get('file_reviews') or {}).get(f.ident, {}):
             continue
         # 首期图片不调用模型，原有文件名规则仍保留。
@@ -334,8 +338,14 @@ def apply(files, cfg, content_loader, log=None):
                         for o in f.obs)):
             f.folder, f.type_name, f.confidence = '结算移交', '发票', classify.SUGGESTED
             f.review_note += '；未确定具体类型，按文件名归为发票'
+        if (not f.type_name and prior_folder == '合同'
+                and not classify._exclusion_reason(f, cfg.manual_keywords)):
+            f.folder, f.type_name, f.confidence = '合同', '合同', classify.SUGGESTED
+            f.review_note += '；未确定具体类型，按文件名归为合同'
         if log:
-            log('正文分类 %d/%d：%s（%s）' % (n, len(files), f.name, f.ai_result.get('status', '')))
+            log('正文分类 %d/%d：%s（%s）最终：%s；%s' %
+                (n, len(files), f.name, f.ai_result.get('status', ''),
+                 f.type_name or '未归类', f.review_note))
     return files
 
 

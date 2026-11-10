@@ -180,9 +180,11 @@ def _source_cache(files):
 
 
 def _prepare(cfg, log=None):
+    from yida_archive import zip_members
     files, _ = dedupe.group(_instances())
     files = dedupe.refine(files)
     _source_cache(files)
+    zip_members.expand(files, cfg, _bytes_of, log)
     classify.classify(files, cfg)
     ai_classify.apply(files, cfg, _bytes_of, log=log)
     files = numbering.include_history(files, cfg)

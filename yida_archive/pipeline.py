@@ -10,7 +10,7 @@ dry_run 时跳过下载和落盘，只给方案。
 import os
 import json
 
-from . import ai_classify, archive, classify, dedupe, naming, numbering, report
+from . import ai_classify, archive, classify, dedupe, naming, numbering, report, zip_members
 
 
 class Result:
@@ -54,6 +54,8 @@ def run(cfg, instances, client=None, dry_run=True, do_hash=True,
         if len(files) != before:
             print('按内容哈希再合并：%d -> %d' % (before, len(files)))
 
+    if not dry_run:
+        zip_members.expand(files, cfg, ai_classify.file_content, log)
     files = dedupe.refine(files)
     findings = dedupe.findings_for(files)
     numbering.restore_reviews(cfg)

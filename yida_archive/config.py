@@ -46,6 +46,8 @@ DEFAULT_RULES = [
     ('结算移交', '退款凭证', ['退款凭证']),
     ('结算移交', '移交资料收件回执', ['移交资料', '收件回执', '移交回执']),
     ('结算移交', '发票', []),
+    ('结算移交', '收款小条', ['收款小条']),
+    ('合同', '合同', []),
 ]
 
 DEFAULT_FOLDERS = ['合同', '办证', '清关送货', '收付款', '结算移交']
@@ -63,7 +65,7 @@ TYPE_ALIASES.update({label: kind for kind, label in TYPE_LABELS.items()})
 def canonical_type(value):
     return TYPE_ALIASES.get(value, value)
 
-DEFAULT_ENCRYPTED = ['收款凭证', '付款凭证', '退款凭证', '结算表',
+DEFAULT_ENCRYPTED = ['收款凭证', '付款凭证', '退款凭证', '结算表', '收款小条',
                      '发票（国内货物类）', '发票（国内服务类）']
 
 
@@ -210,6 +212,10 @@ class Config:
                 result.append(dict(r, type=kind))
         if not any(r['type'] == '发票' for r in result):
             result.append({'folder': '结算移交', 'type': '发票', 'keywords': []})
+        if not any(r['type'] == '收款小条' for r in result):
+            result.append({'folder': '结算移交', 'type': '收款小条', 'keywords': ['收款小条']})
+        if not any(r['type'] == '合同' for r in result):
+            result.append({'folder': '合同', 'type': '合同', 'keywords': []})
         return result
 
     @property
