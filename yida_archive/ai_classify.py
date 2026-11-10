@@ -9,6 +9,8 @@ import os
 import tempfile
 import time
 import unicodedata
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -93,15 +95,17 @@ class Client:
             {'role': 'user', 'content': content}],
             'temperature': 0, 'max_tokens': 1800,
             'response_format': {'type': 'json_object'}}
-        retries = min(3, max(0, int(self.options.get('retries', 2))))
+        retries = min(3, max(0, int(self.options.get('retries', 0))))
         for attempt in range(retries + 1):
             if self.calls >= int(self.options.get('max_calls', 100)):
                 raise AIError('本轮模型调用次数已达上限')
+            if hasattr(self, '_budget'):
+                self._budget.reserve()
             self.calls += 1
             try:
                 response = requests.post(self.base + '/chat/completions', json=request,
                     headers={'Authorization': 'Bearer ' + self.key},
-                    timeout=(10, min(120, max(1, int(self.options.get('timeout', 60))))),
+                    timeout=(10, min(120, max(1, int(self.options.get('timeout', 45))))),
                     allow_redirects=False)
             except requests.RequestException:
                 if attempt < retries:
@@ -216,7 +220,40 @@ def _restore_suggestion(f, cfg, options, prior_type, prior_confidence):
     f.review_note += '；正文未能读取，按文件名规则归入「%s」，未经正文核验' % prior_type
 
 
+class _CallBudget:
+    def __init__(self, limit):
+        self.remaining = limit
+        self.lock = threading.Lock()
+
+    def reserve(self):
+        with self.lock:
+            if self.remaining <= 0:
+                raise AIError('本轮模型调用次数已达上限')
+            self.remaining -= 1
+
+
 def apply(files, cfg, content_loader, log=None):
+    options = cfg.raw.get('ai') or {}
+    if not options.get('enabled', False):
+        return files
+    workers = min(8, max(1, int(options.get('workers', 3))))
+    budget = _CallBudget(int(options.get('max_calls', 100)))
+    if workers == 1 or len(files) < 2:
+        return _apply_serial(files, cfg, content_loader, log, budget)
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futures = {pool.submit(_apply_serial, [f], cfg, content_loader, None, budget): f
+                   for f in files}
+        for done, future in enumerate(as_completed(futures), 1):
+            future.result()
+            f = futures[future]
+            if log:
+                log('归类进度 %d/%d：%s（%s）最终：%s；%s' %
+                    (done, len(files), f.name, f.ai_result.get('status', ''),
+                     f.type_name or '未归类', f.review_note))
+    return files
+
+
+def _apply_serial(files, cfg, content_loader, log=None, budget=None):
     options = cfg.raw.get('ai') or {}
     if not options.get('enabled', False):
         return files
@@ -232,6 +269,13 @@ def apply(files, cfg, content_loader, log=None):
             f.ai_result = {'status': 'archive_container'}
             continue
         if 'type' in (cfg.raw.get('file_reviews') or {}).get(f.ident, {}):
+            continue
+        excluded = classify._exclusion_reason(f, cfg.manual_keywords)
+        if excluded:
+            f.folder = f.type_name = ''
+            f.confidence = classify.MANUAL
+            f.ai_result = {'status': 'excluded'}
+            f.review_note = excluded
             continue
         # 首期图片不调用模型，原有文件名规则仍保留。
         if f.ext.lower() in document_text.IMAGES:
@@ -269,6 +313,8 @@ def apply(files, cfg, content_loader, log=None):
                     if is_pdf:
                         client_options['model'] = options.get('pdf_model', 'qwen3.8-flash')
                     clients[is_pdf] = Client(client_options)
+                    if budget is not None:
+                        clients[is_pdf]._budget = budget
                 except AIError as exc:
                     configuration_error = str(exc)
                     raise
@@ -286,7 +332,6 @@ def apply(files, cfg, content_loader, log=None):
             try:
                 saved = json.loads(cache.read_text(encoding='utf-8'))
                 result, usage = saved['result'], saved['usage']
-                validate(result, sections, cfg.rules, 0, allow_scanned=is_pdf and missing_text)
                 cached = True
             except (OSError, ValueError, KeyError, TypeError):
                 client.calls = calls
@@ -297,7 +342,7 @@ def apply(files, cfg, content_loader, log=None):
                         result, usage = client.classify(payload)
                 finally:
                     calls = client.calls
-                validate(result, sections, cfg.rules, 0, allow_scanned=is_pdf and missing_text)
+                # 保存原始结构化结果；证据校验失败也可在下次本地重验，避免重复付费请求。
                 _cache_write(cache, {'result': result, 'usage': usage})
             result = validate(result, sections, cfg.rules, threshold, allow_scanned=is_pdf and missing_text)
             f.ai_result = dict(result, model=client.model, usage=usage, cached=cached)
