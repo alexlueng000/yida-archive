@@ -32,12 +32,48 @@ def load(cfg):
         if (data.get('schema') != 2 or data.get('project') != cfg.project_no
                 or data.get('purchaser') != cfg.purchaser):
             raise ValueError('编号记录版本或项目号不匹配，已停止以避免重新编号')
-        return data
+        return _recover_pending_paths(data, cfg)
     data = {'schema': 2, 'project': cfg.project_no, 'purchaser': cfg.purchaser,
             'types': {}, 'units': {}}
     if (any((base / name).exists() for name in ('清单.csv', 'archive-清单.csv'))
             and not (base / '归档规范.json').exists()):
         raise ValueError('旧清单需要先迁移至固定编号，原文件未修改')
+    return data
+
+
+def _recover_pending_paths(data, cfg):
+    """Repair legacy pending entries in memory, only with project-local hash proof."""
+    from .archive import _sha256
+    root = Path(cfg.out_dir).resolve()
+    base = project_dir(cfg).resolve()
+    missing = {}
+    for key, unit in data['units'].items():
+        if unit.get('type') or not key.startswith('pending:'):
+            continue
+        old = (root / unit.get('path', '')).resolve()
+        if unit.get('path') and unit.get('hash') and old.is_file():
+            continue
+        for digest in unit.get('hashes', {}):
+            missing.setdefault(digest, []).append(unit)
+    if not missing or not base.is_dir():
+        return data
+    folders = {'未归类', '待归类', (cfg.raw.get('storage') or {}).get('pending_folder', '待归类')}
+    matches = {}
+    for path in base.rglob('*'):
+        if (not path.is_file() or path.parent.name not in folders or path.is_symlink()
+                or any(p.is_symlink() for p in path.parents if p != base.parent)
+                or base not in path.resolve().parents):
+            continue
+        digest = _sha256(path)
+        if digest in missing:
+            matches.setdefault(digest, []).append(path)
+    for digest, paths in matches.items():
+        if len(paths) != 1 or len(missing[digest]) != 1:
+            continue  # Ambiguous copies require review, never guess by filename.
+        unit = missing[digest][0]
+        unit['path'] = paths[0].resolve().relative_to(root).as_posix()
+        unit['hash'] = digest
+        unit['base'] = paths[0].stem
     return data
 
 

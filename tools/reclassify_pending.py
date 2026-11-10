@@ -61,6 +61,7 @@ def run_project(ledger, write):
     files = merge(files, cfg.raw.get('file_reviews'))
     merged_count = original_count - len(files)
     pending = [f for f in files if not f.type_name and 'type' not in cfg.raw['file_reviews'].get(f.ident, {})]
+    print(f'项目 {project}：加载文件 {len(files)}，待处理 {len(pending)}，DOCX合并 {merged_count}', flush=True)
     if not pending and not merged_count:
         return 0
     for f in pending:
@@ -139,7 +140,7 @@ def main():
         except Exception as exc:
             errors += 1
             print(f'失败 {ledger}: {exc}', file=sys.stderr, flush=True)
-    print(f'处理项目 {projects}，可归类文件 {count}，失败项目 {errors}；' + ('已保存' if args.write else '预览，未修改归档'))
+    print(f'处理项目 {projects}，可归类或合并文件 {count}，失败项目 {errors}；' + ('写入模式（无变化时不写入）' if args.write else '预览，未修改归档'))
     return 1 if errors or (args.project and not projects) else 0
 
 

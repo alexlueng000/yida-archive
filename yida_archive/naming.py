@@ -45,9 +45,11 @@ def assign(files, cfg, project_no):
                 f.new_name = sanitize(f.name)
                 previous = hash_index.get(f.content_hash)
                 key = previous if previous and not records[previous]['type'] else 'pending:' + f.ident
-                records[key] = dict(seq=0, sub=0, multi=False, type='', base='',
-                                    hashes={f.content_hash: 1} if f.content_hash else {},
-                                    latest=1, path='', hash='')
+                # Historical pending files may be skipped by the writer. Preserve
+                # their persisted path/hash/source metadata until a successful save.
+                unit = records.setdefault(key, dict(path='', hash=''))
+                unit.update(seq=0, sub=0, multi=False, type='', base='',
+                            hashes={f.content_hash: 1} if f.content_hash else {}, latest=1)
                 f.numbering_id = key
             continue
         active.append(f)
