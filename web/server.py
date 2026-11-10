@@ -892,11 +892,10 @@ class Handler(BaseHTTPRequestHandler):
 
 
 class Server(ThreadingHTTPServer):
-    # http.server 默认开 SO_REUSEADDR；在 Windows 上这会让第二个实例
-    # 也能绑上同一个端口而不报错。那样两个进程各有一份内存状态，
-    # 请求轮流落到两边，看起来就像「刚传的文件有时在有时不在」。
-    # 关掉它，重复启动直接失败，比默默出错强。
-    allow_reuse_address = False
+    # Linux 快速重启须允许复用 TIME_WAIT 地址；它不会允许两个监听者共用端口。
+    # Windows 的 SO_REUSEADDR 语义不同，仍禁用以防重复实例绑定。
+    allow_reuse_address = os.name != 'nt'
+    allow_reuse_port = False
     daemon_threads = True
 
 
