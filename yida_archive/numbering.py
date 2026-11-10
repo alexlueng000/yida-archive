@@ -60,6 +60,10 @@ def finalize(cfg, files, done, cleanup=False, base=None, preserve_modified=False
     root = Path(cfg.out_dir).resolve()
     active_keys = {f.numbering_id for f in files if f.numbering_id}
     active_hashes = {h for k in active_keys for h in state['units'][k]['hashes']}
+    # Only successfully saved representatives authorize retiring equivalent copies.
+    equivalent_hashes = {h for f, _ in done for h in f.equivalent_hashes}
+    preserved_hashes = set()
+    active_hashes.update(equivalent_hashes)
     for f, path in done:
         if f.numbering_id:
             unit = state['units'][f.numbering_id]
@@ -86,15 +90,20 @@ def finalize(cfg, files, done, cleanup=False, base=None, preserve_modified=False
             if not old.is_file() or _sha256(old) != unit.get('hash'):
                 if preserve_modified:
                     # 本轮附件已另存成功，外部修改的旧副本原样留下。
+                    preserved_hashes.add(unit.get('hash'))
                     continue
                 raise ValueError('旧归档文件已被外部修改，未删除：' + str(old))
             stale.append(old)
         for old in stale:
             old.unlink()
+    for key, unit in list(state['units'].items()):
+        if (key not in active_keys and unit.get('hash') in equivalent_hashes
+                and unit.get('hash') not in preserved_hashes):
+            del state['units'][key]
     write(cfg, base)
 
 
-def include_history(files, cfg):
+def include_history(files, cfg, loader=None, deduplicate=True):
     """读已归档的最新文件与来源记录；无需重新上传旧附件。"""
     from .models import AttachmentObs, LogicalFile
     from .dedupe import refine
@@ -144,6 +153,7 @@ def include_history(files, cfg):
                 return (o.form_uuid, o.instance_id, o.field_id, o.file_uuid, o.name, o.submitted_at)
             seen = {identity(o) for o in current.obs}
             current.obs.extend(o for o in f.obs if identity(o) not in seen)
+            current.equivalent_hashes = sorted(set(current.equivalent_hashes + f.equivalent_hashes))
             current.cache_path = str(path)
             if ((cfg.raw.get('ai') or {}).get('enabled') and f.folder
                     and 'type' not in (cfg.raw.get('file_reviews') or {}).get(current.ident, {}) and (
@@ -154,4 +164,6 @@ def include_history(files, cfg):
                 current.ai_result = dict(current.ai_result, status='history_preserved')
             continue
         historical.append(f)
-    return refine(files + historical)
+    from .document_dedupe import merge
+    combined = refine(files + historical)
+    return merge(combined, cfg.raw.get('file_reviews'), loader) if deduplicate else combined

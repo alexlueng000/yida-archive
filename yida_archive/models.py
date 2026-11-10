@@ -98,6 +98,7 @@ class LogicalFile:
     review_note: str = ''
     numbering_id: str = ''
     ai_result: dict = field(default_factory=dict)  # 正文识别状态、证据及调用量
+    equivalent_hashes: List[str] = field(default_factory=list)  # DOCX等价副本的物理哈希
 
     @property
     def upload_count(self) -> int:

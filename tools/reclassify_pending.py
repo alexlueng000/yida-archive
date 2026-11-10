@@ -53,11 +53,15 @@ def run_project(ledger, write):
     cfg = web._config()
     if numbering.project_dir(cfg).resolve() != ledger.parent.resolve():
         raise ValueError('账本与项目路径不一致')
-    files = numbering.include_history([], cfg)
+    files = numbering.include_history([], cfg, deduplicate=False)
     before = result_snapshot(files)
     zip_members.expand(files, cfg, lambda f: Path(f.cache_path).read_bytes(), log=print)
+    from yida_archive.document_dedupe import merge
+    original_count = len(files)
+    files = merge(files, cfg.raw.get('file_reviews'))
+    merged_count = original_count - len(files)
     pending = [f for f in files if not f.type_name and 'type' not in cfg.raw['file_reviews'].get(f.ident, {})]
-    if not pending:
+    if not pending and not merged_count:
         return 0
     for f in pending:
         if hashlib.sha256(Path(f.cache_path).read_bytes()).hexdigest() != f.content_hash:
@@ -66,17 +70,19 @@ def run_project(ledger, write):
     ai_classify.apply(pending, cfg, lambda f: Path(f.cache_path).read_bytes(), log=print)
     changed = [f for f in pending if f.type_name and f.folder and f.confidence != classify.MANUAL]
     print(f'项目 {purchaser} / {project}：待归类 {len(pending)}，可归类 {len(changed)}', flush=True)
+    if merged_count:
+        print(f'  DOCX内容相同，合并重复副本 {merged_count} 份；上传来源全部保留', flush=True)
     if before == result_snapshot(files):
         print('  分类结果未变化，跳过保存和备份', flush=True)
         return 0
-    if not changed and not write:
+    if not changed and not merged_count and not write:
         return 0
     classify.mark_secret(changed, cfg)
     naming.assign(files, cfg, project)
     for f in changed:
         print(f'  {f.name} -> {f.type_name} / {f.new_name}', flush=True)
     if not write:
-        return len(changed)
+        return len(changed) + merged_count
     root = Path(web.OUTPUT_ROOT).resolve()
     target = ledger.parent.resolve()
     # Stage through the same writer used by the web application; preserve a complete backup.
@@ -98,7 +104,7 @@ def run_project(ledger, write):
             os.replace(backup, target)
             raise
         print('  备份：' + str(backup), flush=True)
-    return len(changed)
+    return len(changed) + merged_count
 
 
 def main():

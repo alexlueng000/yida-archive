@@ -187,7 +187,7 @@ def _prepare(cfg, log=None):
     zip_members.expand(files, cfg, _bytes_of, log)
     classify.classify(files, cfg)
     ai_classify.apply(files, cfg, _bytes_of, log=log)
-    files = numbering.include_history(files, cfg)
+    files = numbering.include_history(files, cfg, loader=_bytes_of)
     _source_cache(files)
     classify.mark_secret(files, cfg)
     naming.assign(files, cfg, cfg.project_no)
@@ -410,9 +410,11 @@ def _save_to(output, prepared=None):
                 fh.write(data)
     # 历史附件已随旧目录保留，本轮不校验、重写或提交其编号记录。
     current_files = [f for f in files if not getattr(f, '_from_archive', False)
+                     or f.equivalent_hashes
                      or Path(f.cache_path) != Path(OUTPUT_ROOT) / naming.target_dir(f, cfg) / f.new_name]
     for f in current_files:
-        f.url = next((o.file_uuid for o in f.obs if o.file_uuid in STATE['blobs']), '')
+        f.url = next((o.file_uuid for o in f.obs if o.file_uuid in STATE['blobs']
+                      and o.content_hash == f.content_hash), '')
         if f.url:
             # 同内容重传也必须使用本轮上传内容，不能读取历史归档副本。
             f.cache_path = ''
